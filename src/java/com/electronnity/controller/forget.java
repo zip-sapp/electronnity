@@ -99,7 +99,7 @@ public class forget extends HttpServlet {
                     response.sendRedirect("verifyPin");
                 } else {
                     response.getWriter().println("Email is not registered.");
-                    request.getRequestDispatcher("/forget.jsp").forward(request, response);
+                    response.sendRedirect("forget");
                 }
             } catch (SQLException e) {
                 response.getWriter().println("Error: " + e.getMessage());

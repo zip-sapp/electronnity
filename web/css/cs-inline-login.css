@@ -4650,6 +4650,10 @@
   background: var(--eq-200);
 }
 
+.e22311-e230 .woocommerce-error {
+  background: var(--eq-300);
+}
+
 .e22311-e226 .woocommerce-info {
   background: var(--filter-100);
 }
@@ -6088,6 +6092,7 @@
     --eq: #E21900;
     --eq-100: #FFCCC6;
     --eq-200: #00FF80;
+    --eq-300: #E5FF00;
     --eq-rgb: 226, 25, 0;
     --filter: #EF5300;
     --filter-100: #FFD9C4;

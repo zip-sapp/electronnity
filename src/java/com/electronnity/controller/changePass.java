@@ -68,7 +68,7 @@ public class changePass extends HttpServlet {
                         updatePstmt.executeUpdate();
 
                         response.getWriter().println("Password changed successfully.");
-                        request.getRequestDispatcher("/login.jsp").forward(request, response);
+                        response.sendRedirect("changepass_success");
                     }
                 } else {
                     response.getWriter().println("Error: Unable to find user account.");
