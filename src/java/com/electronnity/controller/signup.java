@@ -1,7 +1,11 @@
 package com.electronnity.controller;
 
 import com.electronnity.dao.register;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.MessagingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 public class signup extends HttpServlet {
 
@@ -28,7 +36,7 @@ public class signup extends HttpServlet {
             throws ServletException, IOException {
         try {
             createAccount(request, response);
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | MessagingException ex) {
             Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -42,8 +50,57 @@ public class signup extends HttpServlet {
         
     }
     
+    private boolean checkEmailExistence(String email) throws IOException {
+        String apiKey = "ema_live_NQ7FJilf6Whsn3EGAaKVET0Oph8G0ISBdaJOxCYg";
+        String apiUrl = "https://api.emailvalidation.io/v1/info?";
+
+        // Create a URL with the email as a query parameter
+        URL url = new URL(apiUrl + "?apikey=" + apiKey + "&email=" + email);
+
+        // Set up the HTTP request
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+
+        // Send the request and get the response
+        connection.connect();
+        int responseCode = connection.getResponseCode();
+
+        if (responseCode == 200) {
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+                StringBuilder responseBodyBuilder = new StringBuilder();
+                String inputLine;
+                while ((inputLine = in.readLine()) != null) {
+                    responseBodyBuilder.append(inputLine);
+                }
+
+                String responseBody = responseBodyBuilder.toString();
+                System.out.println("API Response: " + responseBody); // Log the API response
+
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode responseJson = mapper.readTree(responseBody);
+                String status = responseJson.get("status").asText();
+
+                if (status.equals("success")) {
+                    int isValid = responseJson.get("is_valid").asInt();
+                    if (isValid == 1) {
+                        return true; // Email exists
+                    } else {
+                        System.out.println("Email is not valid or does not exist");
+                        return false; // Email does not exist
+                    }
+                } else {
+                    System.out.println("API error: " + responseJson.get("message").asText());
+                    return false; // API error
+                }
+            }
+        } else {
+            System.out.println("API error: " + responseCode);
+            return false; // API error
+        }
+    }
+
     private void createAccount(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException, ClassNotFoundException {
+        throws ServletException, IOException, ClassNotFoundException, MessagingException {
     
     String username = request.getParameter("username");
     String password = request.getParameter("password");
@@ -77,7 +134,7 @@ public class signup extends HttpServlet {
         response.sendRedirect("signup_email_error");
         return;
     }
-
+    
     if (firstname == null || firstname.trim().isEmpty() ||!firstname.matches ("^[a-zA-Z\\s]+$")) {
         response.sendRedirect("signup_firstname_error");
         return;
@@ -112,11 +169,28 @@ public class signup extends HttpServlet {
         // If all credentials are valid, create the client and store in database
         register reg = new register();
         boolean isRegistered = reg.createClient(username, password, email, firstname, middlename, lastname, address, birthday, number);
+        
+        //checks if email account actually exist through smtp providers
+        boolean emailExists = checkEmailExistence(email); 
+        
+        //checks whether the user had already existed
+        boolean userExists = reg.checkUserExists(username, email);
+        
+            if (emailExists) {
+                response.sendRedirect("signup_email_exists_error");
+                return;
+            }
+            
+            if (userExists) {
+                response.sendRedirect("signup_userexist");
+                return;
+            }
 
             if (isRegistered) {
                 /*System.out.println("Registered: " + username + " " + password + " " + email + " " + firstname + " " + middlename + " " + lastname + " " + address + " " + birthday + " " + number); */ // printing for debugging purpose
                 response.sendRedirect("success");
                 return;
+            
             } else {
                 // Registration failed, redirect back to signup page
                 response.sendRedirect("signup");

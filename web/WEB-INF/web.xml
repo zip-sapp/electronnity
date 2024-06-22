@@ -124,6 +124,14 @@
         <servlet-name>success</servlet-name>
         <servlet-class>com.electronnity.controller.success</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>signup_email_notexist</servlet-name>
+        <servlet-class>com.electronnity.controller.signup_email_notexist</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>signup_userexist</servlet-name>
+        <servlet-class>com.electronnity.controller.signup_userexist</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/shop</url-pattern>
@@ -247,6 +255,14 @@
     <servlet-mapping>
         <servlet-name>success</servlet-name>
         <url-pattern>/success</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>signup_email_notexist</servlet-name>
+        <url-pattern>/signup_email_notexist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>signup_userexist</servlet-name>
+        <url-pattern>/signup_userexist</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

@@ -4,6 +4,12 @@
     Author     : Aaron
 --%>
 
+<%-- 
+    Document   : signup
+    Created on : 20 Apr 2024, 2:55:14 pm
+    Author     : Aaron
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -85,7 +91,7 @@
                             <div class="woocommerce-notices-wrapper">
                                 <ul class="woocommerce-error" role="alert">
                                     <li>
-                                        <strong>ERROR:</strong> Password length should be between 8 and 16 characters, and must include at least one uppercase letter, one lowercase letter, one number, and one special character.
+                                        <strong>ERROR:</strong> This email isn't registered to any domain (Gmail, Yahoo, Hotmail, Outlook).
                                     </li>
                                 </ul>
                             </div>

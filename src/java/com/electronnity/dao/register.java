@@ -2,6 +2,7 @@ package com.electronnity.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class register {
@@ -67,6 +68,49 @@ public class register {
         }
         return success; 
     } 
+
+    public boolean checkUserExists(String username, String email) throws ClassNotFoundException {
+        boolean exists = false;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            String query = "SELECT * FROM clientinfo WHERE email = ? OR username = ?";
+            conn = connect.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, email);
+            ps.setString(2, username);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                exists = true;
+            }
+        } catch (SQLException e) {
+            System.out.println("SQLException" + e);
+        } finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException" + e.getMessage());
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException" + e.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException" + e.getMessage());
+                }
+            }
+        }
+        return exists;
+    }
 }
-
-

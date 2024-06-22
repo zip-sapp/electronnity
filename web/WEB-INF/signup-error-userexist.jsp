@@ -91,7 +91,7 @@
                             <div class="woocommerce-notices-wrapper">
                                 <ul class="woocommerce-error" role="alert">
                                     <li>
-                                        <strong>ERROR:</strong> The birthdate format should be MM-DD-YYYY, e.g. 01-01-1970.
+                                        <strong>ERROR:</strong> Email already exist, can't access account? Please reset your password.
                                     </li>
                                 </ul>
                             </div>
