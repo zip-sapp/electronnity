@@ -115,11 +115,11 @@ public class signup extends HttpServlet {
 
             if (isRegistered) {
                 /*System.out.println("Registered: " + username + " " + password + " " + email + " " + firstname + " " + middlename + " " + lastname + " " + address + " " + birthday + " " + number); */ // printing for debugging purpose
-                response.sendRedirect(request.getContextPath() + "/login.jsp");
+                response.sendRedirect("success");
                 return;
             } else {
                 // Registration failed, redirect back to signup page
-                response.sendRedirect(request.getContextPath() + "/signup.jsp");
+                response.sendRedirect("signup");
                 return;
             }
         }

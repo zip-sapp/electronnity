@@ -120,6 +120,10 @@
         <servlet-name>shipment</servlet-name>
         <servlet-class>com.electronnity.controller.shipment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>success</servlet-name>
+        <servlet-class>com.electronnity.controller.success</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/shop</url-pattern>
@@ -239,6 +243,10 @@
     <servlet-mapping>
         <servlet-name>shipment</servlet-name>
         <url-pattern>/shipment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>success</servlet-name>
+        <url-pattern>/success</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
