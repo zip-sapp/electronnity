@@ -112,31 +112,33 @@ public class signup extends HttpServlet {
     }
 
     if (isValid) {
-        // If all credentials are valid, create the client and store in database
-        register reg = new register();
-        boolean isRegistered = reg.createClient(username, password, email, firstname, middlename, lastname, address, birthday, number);
-
-        //checks whether the user had already existed
-        boolean userExists = reg.checkUserExists(username, email);
+    // If all credentials are valid, check if user exists
+    register reg = new register();
+    boolean userExists = reg.checkUserExists(username, email);
+        
+        //If user or email exist, redirect back to signup page
+        if (userExists) {
+            response.sendRedirect("signup_userexist");
+            return;
             
-            if (userExists) {
-                response.sendRedirect("signup_userexist");
-                return;
-            }
-
-            if (isRegistered) {
-                /*System.out.println("Registered: " + username + " " + password + " " + email + " " + firstname + " " + middlename + " " + lastname + " " + address + " " + birthday + " " + number); */ // printing for debugging purpose
-                response.sendRedirect("success");
-                return;
+        } else {
             
+            // User doesn't exist, create the client and store in database
+            boolean isRegistered = reg.createClient(username, password, email, firstname, middlename, lastname, address, birthday, number);
+                if (isRegistered) {
+                    response.sendRedirect("success");
+                    return;
+                    
             } else {
-                // Registration failed, redirect back to signup page
-                response.sendRedirect("signup");
-                return;
+                    // Registration failed, redirect back to signup page
+                    response.sendRedirect("signup");
+                    return;
+                }
             }
         }
     }
 }
+
 
 
 /*      private void createAccount (HttpServletRequest request, HttpServletResponse response)// I'll be needing this just in case if something goes wrong
