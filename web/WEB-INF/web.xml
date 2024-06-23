@@ -120,6 +120,22 @@
         <servlet-name>shipment</servlet-name>
         <servlet-class>com.electronnity.controller.shipment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>success</servlet-name>
+        <servlet-class>com.electronnity.controller.success</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>signup_userexist</servlet-name>
+        <servlet-class>com.electronnity.controller.signup_userexist</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>changepass_success</servlet-name>
+        <servlet-class>com.electronnity.controller.changepass_success</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>login_warning</servlet-name>
+        <servlet-class>com.electronnity.controller.login_warning</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/shop</url-pattern>
@@ -239,6 +255,22 @@
     <servlet-mapping>
         <servlet-name>shipment</servlet-name>
         <url-pattern>/shipment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>success</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>signup_userexist</servlet-name>
+        <url-pattern>/signup_userexist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>changepass_success</servlet-name>
+        <url-pattern>/changepass_success</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>login_warning</servlet-name>
+        <url-pattern>/login_warning</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

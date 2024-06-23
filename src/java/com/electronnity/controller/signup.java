@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.MessagingException;
+
+
 
 public class signup extends HttpServlet {
 
@@ -28,7 +31,7 @@ public class signup extends HttpServlet {
             throws ServletException, IOException {
         try {
             createAccount(request, response);
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | MessagingException ex) {
             Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -43,7 +46,7 @@ public class signup extends HttpServlet {
     }
     
     private void createAccount(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException, ClassNotFoundException {
+        throws ServletException, IOException, ClassNotFoundException, MessagingException {
     
     String username = request.getParameter("username");
     String password = request.getParameter("password");
@@ -77,7 +80,7 @@ public class signup extends HttpServlet {
         response.sendRedirect("signup_email_error");
         return;
     }
-
+    
     if (firstname == null || firstname.trim().isEmpty() ||!firstname.matches ("^[a-zA-Z\\s]+$")) {
         response.sendRedirect("signup_firstname_error");
         return;
@@ -113,13 +116,22 @@ public class signup extends HttpServlet {
         register reg = new register();
         boolean isRegistered = reg.createClient(username, password, email, firstname, middlename, lastname, address, birthday, number);
 
+        //checks whether the user had already existed
+        boolean userExists = reg.checkUserExists(username, email);
+            
+            if (userExists) {
+                response.sendRedirect("signup_userexist");
+                return;
+            }
+
             if (isRegistered) {
                 /*System.out.println("Registered: " + username + " " + password + " " + email + " " + firstname + " " + middlename + " " + lastname + " " + address + " " + birthday + " " + number); */ // printing for debugging purpose
-                response.sendRedirect(request.getContextPath() + "/login.jsp");
+                response.sendRedirect("success");
                 return;
+            
             } else {
                 // Registration failed, redirect back to signup page
-                response.sendRedirect(request.getContextPath() + "/signup.jsp");
+                response.sendRedirect("signup");
                 return;
             }
         }
