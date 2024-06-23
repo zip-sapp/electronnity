@@ -84,7 +84,7 @@
                             <div class="woocommerce-notices-wrapper">
                                 <ul class="woocommerce-error" role="alert">
                                     <li>
-                                        <strong>NOTICE:</strong> Registered Successfully. Please log-in to continue!
+                                        <strong>NOTICE:</strong> Password changed successfully! Please log-in to continue.
                                     </li>
                                 </ul>
                             </div>
