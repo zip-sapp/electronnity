@@ -20,6 +20,6 @@ import java.sql.DriverManager;
             } catch (SQLException e) {
                 System.out.println("SQLException" + e); 
             }
-            return conn;
-        }
+        return conn;
+    }
 }   
