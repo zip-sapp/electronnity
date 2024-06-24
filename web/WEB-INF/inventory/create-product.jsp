@@ -126,20 +126,28 @@
                                 <div class="card-body">
                                     <div class="example-container">
                                         <div class="example-content">
-                                            <label for="productname" class="form-label">Product Name</label>
-                                            <input type="productname" class="form-control" id="productname" aria-describedby="emailHelp">
+                                            <label for="productid" class="form-label">Product ID</label>
+                                            <input type="productid" class="form-control" id="productid">
                                         </div>
                                         <div class="example-content">
-                                            <label for="productid" class="form-label">Product ID</label>
-                                            <input type="productid" class="form-control" id="productid" aria-describedby="emailHelp">
+                                            <label for="productname" class="form-label">Product Name</label>
+                                            <input type="productname" class="form-control" id="productname">
+                                        </div>
+                                        <div class="example-content">
+                                            <label for="description" class="form-label">Product Description</label>
+                                            <input type="description" class="form-control" id="description">
+                                        </div>
+                                        <div class="example-content">
+                                            <label for="size" class="form-label">Product Size</label>
+                                            <input type="size" class="form-control" id="size">
                                         </div>
                                         <div class="example-content">
                                             <label for="price" class="form-label">Price</label>
-                                            <input type="price" class="form-control" id="price" aria-describedby="emailHelp">
+                                            <input type="price" class="form-control" id="price">
                                         </div>
                                         <div class="example-content">
                                             <label for="quantity" class="form-label">Quantity</label>
-                                            <input type="quantity" class="form-control" id="quantity" aria-describedby="emailHelp">
+                                            <input type="quantity" class="form-control" id="quantity">
                                         </div>
                                     </div>
                                 </div>
