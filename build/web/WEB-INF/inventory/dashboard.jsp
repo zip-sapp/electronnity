@@ -17,7 +17,7 @@
         <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!-- Title -->
-        <title>Electronnity - Dashboard</title>
+        <title>electronnity | dashboard </title>
 
         <!-- Styles -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
