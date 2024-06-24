@@ -149,9 +149,9 @@
                         </a>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-22311.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-21811.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-15280.js"></script>

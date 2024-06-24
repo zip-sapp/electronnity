@@ -101,24 +101,12 @@
         <servlet-class>com.electronnity.controller.clients_list</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>shipment</servlet-name>
-        <servlet-class>com.electronnity.controller.shipment</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>jacket</servlet-name>
         <servlet-class>com.electronnity.controller.jacket</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>create_product</servlet-name>
-        <servlet-class>com.electronnity.controller.create_product</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>dashboard</servlet-name>
         <servlet-class>com.electronnity.controller.dashboard</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>admins_list</servlet-name>
-        <servlet-class>com.electronnity.controller.admins_list</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>cart</servlet-name>
@@ -133,12 +121,24 @@
         <servlet-class>com.electronnity.controller.all_products</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>sales_list</servlet-name>
-        <servlet-class>com.electronnity.controller.sales_list</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>create_user</servlet-name>
         <servlet-class>com.electronnity.controller.create_user</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>productslist</servlet-name>
+        <servlet-class>com.electronnity.controller.productslist</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>createuser</servlet-name>
+        <servlet-class>com.electronnity.controller.createuser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>createproduct</servlet-name>
+        <servlet-class>com.electronnity.controller.createproduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userlist</servlet-name>
+        <servlet-class>com.electronnity.controller.userlist</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
@@ -241,24 +241,12 @@
         <url-pattern>/clients_list</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>shipment</servlet-name>
-        <url-pattern>/shipment</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>jacket</servlet-name>
         <url-pattern>/jacket</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>create_product</servlet-name>
-        <url-pattern>/create_product</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>dashboard</servlet-name>
         <url-pattern>/dashboard</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>admins_list</servlet-name>
-        <url-pattern>/admins_list</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>cart</servlet-name>
@@ -273,12 +261,24 @@
         <url-pattern>/all_products</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>sales_list</servlet-name>
-        <url-pattern>/sales_list</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>create_user</servlet-name>
         <url-pattern>/create_user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productslist</servlet-name>
+        <url-pattern>/productslist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createuser</servlet-name>
+        <url-pattern>/createuser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createproduct</servlet-name>
+        <url-pattern>/createproduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userlist</servlet-name>
+        <url-pattern>/userlist</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
