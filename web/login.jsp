@@ -11,9 +11,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>electronnity | account</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cs-theme.7.4.15.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cs-inline-login.css">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cs-theme.7.4.15.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cs-inline-login.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/jquery.min.3.7.1.js"></script>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="32x32" type="image/png" />
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="16x16" type="image/png" />
     <style>
@@ -143,8 +143,8 @@
             </div>
         </div>
     </div>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-22311.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-21811.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-15280.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-22311.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-21811.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-15280.js"></script>
 </body>
 </html>
