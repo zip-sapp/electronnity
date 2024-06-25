@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -127,11 +128,14 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col"></th>
+                                                <th scope="col">Product ID</th>
                                                 <th scope="col">Product Name</th>
-                                                <th scope="col">ID</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Size</th>
                                                 <th scope="col">Price</th>
                                                 <th scope="col">Quantity</th>
-                                                <th scope="col">Delete</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -144,8 +148,13 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
+                                                <td></td>
+                                                <td></td>
                                                 <td>   
                                                     <button type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
+                                                </td>
+                                                <td>    
+                                                    <button type="button" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</button>    
                                                 </td>
                                             </tr>
                                         </tbody>

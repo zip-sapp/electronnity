@@ -138,8 +138,8 @@
                                                 <th scope="col">Birthday</th>
                                                 <th scope="col">Mobile Number</th>
                                                 <th scope="col">Attempts</th>
-                                                <th scope="col">Delete</th>
-                                                <th scope="col">Edit</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -163,7 +163,7 @@
                                                     <button type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
                                                 </td>
                                                 <td>    
-                                                    <button type="button" class="btn btn-success btn-burger"><i class="material-icons">edit_outline</i></button>    
+                                                    <button type="button" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</button>    
                                                 </td>
                                             </tr>
                                         </tbody>
