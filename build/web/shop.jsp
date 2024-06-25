@@ -2009,8 +2009,8 @@
   <script type="text/javascript" src="js/merch-js/cs-classic.js"></script>
   <script type="text/javascript" src="js/merch-js/rocketlazyload-extra.min.js"></script>
   <script type="text/javascript" src="js/merch-js/LazyloadOptions.js"></script>
-  <script type="text/javascript" src="js/cs-22655.js"></script>
-  <script type="text/javascript" src="js/cs-21968.js"></script>
+  <script type="text/javascript" src="js/merch-js/cs-22655.js"></script>
+  <script type="text/javascript" src="js/merch-js/cs-21968.js"></script>
 </body>
 
 </html>
