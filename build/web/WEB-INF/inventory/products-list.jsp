@@ -134,29 +134,32 @@
                                                 <th scope="col">Size</th>
                                                 <th scope="col">Price</th>
                                                 <th scope="col">Quantity</th>
-                                                <th scope="col"></th>
+                                                <th scope="col">Actions</th>
                                                 <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                </th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td>   
-                                                    <button type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
-                                                </td>
-                                                <td>    
-                                                    <button type="button" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</button>    
-                                                </td>
-                                            </tr>
+                                        <tbody>
+                                            <c:forEach var="product" items="${listproductmodels}">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                    </th>
+                                                    <td><c:out value="${product.productid}"/></td>
+                                                    <td><c:out value="${product.productname}"/></td>
+                                                    <td><c:out value="${product.description}"/></td>
+                                                    <td><c:out value="${product.size}"/></td>
+                                                    <td><c:out value="${product.price}"/></td>
+                                                    <td><c:out value="${product.quantity}"/></td>
+                                                    <td>   
+                                                        <button type="button" class="btn btn-danger btn-burger" href="/delete?id=<c:out value='${product.productid}' />"><i class="material-icons">delete_outline</i></button>    
+                                                    </td>
+                                                    <td>    
+                                                        <button type="button" class="btn btn-success btn-burger" href="/edit?id=<c:out value='${product.productid}' />"><i class="material-icons"></i>Edit</button>    
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
                                         </tbody>
                                     </table>
                                 </div>
