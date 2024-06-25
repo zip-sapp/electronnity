@@ -18,8 +18,8 @@
   <title>electronnity</title>
   <link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}/css/merch-css/cs-theme.7.4.15.css"/>
   <link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}/css/merch-css/cs-inline.min.css">
-  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="32x32" type="image/png" />
-  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="16x16" type="image/png" />
+  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="32x32" type="image/png" />
+  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="16x16" type="image/png" />
   <style>
     @font-face {
     font-family: "inter-variable";
@@ -181,9 +181,9 @@
                 <div class="x-bg-layer-lower-custom">
                   <picture class="parallax-container">
                     <img class="bg-img" src="data:image/svg+xml,%3Csvg%20
-                      xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-srcset="images/logo banner 2.0.png 3200w, images/logo banner 2.0.png 1240w" data-lazy-sizes="(max-width: 3200px) 100vw, (max-width: 1720px) 1720px, 1240px" alt data-lazy-src="images/logo banner 2.0.png">
+                      xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-srcset="/images/merch-images/logo banner 2.0.png 3200w, images/logo banner 2.0.png 1240w" data-lazy-sizes="(max-width: 3200px) 100vw, (max-width: 1720px) 1720px, 1240px" alt data-lazy-src="images/logo banner 2.0.png">
                     <noscript>
-                      <img class="bg-img" src="images/logo banner 2.0.png" srcset="images/logo banner 2.0.png 3200w, images/logo banner 2.0.png 1720w, images/logo banner 2.0.png 1240w" sizes="(max-width: 3200px) 100vw, (max-width: 1720px) 1720px, 1240px" alt>
+                      <img class="bg-img" src="/images/merch-images/logo banner 2.0.png" srcset="images/logo banner 2.0.png 3200w, images/logo banner 2.0.png 1720w, images/logo banner 2.0.png 1240w" sizes="(max-width: 3200px) 100vw, (max-width: 1720px) 1720px, 1240px" alt>
                     </noscript>
                   </picture>
                 </div>
