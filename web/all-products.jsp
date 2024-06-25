@@ -29,7 +29,7 @@
 
         <title>Electronnity - All Products</title>
 
-        <link rel="icon" type="image/png" href="images/merch-images/favicon.png">
+        <link rel="icon" type="image/png" href="images/inventory-images/favicon.png">
     </head>
     <body>
 
@@ -456,21 +456,21 @@
 
         <!-- Links of JS files -->
         <script src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/popper.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/bootstrap.bundle.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/owl.carousel.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/magnific-popup.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/parallax.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/rangeSlider.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/nice-select.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/meanmenu.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/isotope.pkgd.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/slick.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/sticky-sidebar.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/wow.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/form-validator.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/contact-form-script.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/ajaxchimp.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/main.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/parallax.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/rangeSlider.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/nice-select.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/meanmenu.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/isotope.pkgd.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/slick.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/sticky-sidebar.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/wow.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/form-validator.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/contact-form-script.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/ajaxchimp.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/main.js"></script>
     </body>
 </html>
