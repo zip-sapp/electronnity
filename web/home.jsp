@@ -16,8 +16,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>electronnity</title>
-  <link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}/css/cs-theme.7.4.15.css"/>
-  <link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}/css/cs-inline.min.css">
+  <link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}/css/merch-css/cs-theme.7.4.15.css"/>
+  <link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}/css/merch-css/cs-inline.min.css">
   <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="32x32" type="image/png" />
   <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="16x16" type="image/png" />
   <style>
@@ -1536,9 +1536,9 @@
   </div>
 </div>
 </body>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-classic.js"></script>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/rocketlazyload-extra.min.js"></script>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/LazyloadOptions.js"></script>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/LazyloadOptions.min.js"></script>
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-classic.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/rocketlazyload-extra.min.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/LazyloadOptions.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/LazyloadOptions.min.js"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/jquery.min.3.7.1.js"></script>
 </html>
