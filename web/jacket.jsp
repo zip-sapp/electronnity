@@ -29,7 +29,7 @@
 
         <title>electronnity | windbreaker</title>
 
-        <link rel="icon" type="image/png" href="merch/merch-images/favicon.png">
+        <link rel="icon" type="image/png" href="images/merch-images/favicon.png">
     </head>
     <body>
         
@@ -40,8 +40,8 @@
                     <div class="xton-responsive-menu">
                         <div class="logo">
                             <a href="#">
-                                <img src="merch/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                                <img src="merch/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                                <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                                <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="#">
-                            <img src="merch/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                            <img src="merch/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
@@ -95,8 +95,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="#">
-                            <img src="merch/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                            <img src="merch/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
@@ -177,35 +177,35 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="products-details-image">
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/black-jacket_front.png" alt="image">
+                                <img src="images/merch-images/black-jacket_front.png" alt="image">
                             </div>
 
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_black-jacket_back.png" alt="image">
+                                <img src="images/merch-images/sp_black-jacket_back.png" alt="image">
                             </div>
 
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_blue-jacket_front.png" alt="image">
+                                <img src="images/merch-images/sp_blue-jacket_front.png" alt="image">
                             </div>
 
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_blue-jacket_back.png" alt="image">
+                                <img src="images/merch-images/sp_blue-jacket_back.png" alt="image">
                             </div>
 
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_green-jacket_front.png" alt="image">
+                                <img src="images/merch-images/sp_green-jacket_front.png" alt="image">
                             </div>
 
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_green-jacket_back.png" alt="image">
+                                <img src="images/merch-images/sp_green-jacket_back.png" alt="image">
                             </div>
                             
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_teal-jacket_front.png" alt="image">
+                                <img src="images/merch-images/sp_teal-jacket_front.png" alt="image">
                             </div>
 
                             <div class="single-products-details-image">
-                                <img src="merch/merch-images/sp_teal-jacket_back.png" alt="image">
+                                <img src="images/merch-images/sp_teal-jacket_back.png" alt="image">
                             </div>
                         </div>
                     </div>
@@ -312,7 +312,7 @@
                         <div class="products-cart-content">
                             <div class="products-cart">
                                 <div class="products-image">
-                                    <a href="#"><img src="merch/merch-images/guitar_plush.png" alt="image"></a>
+                                    <a href="#"><img src="images/merch-images/guitar_plush.png" alt="image"></a>
                                 </div>
 
                                 <div class="products-content">
@@ -328,7 +328,7 @@
 
                             <div class="products-cart">
                                 <div class="products-image">
-                                    <a href="#"><img src="merch/merch-images/gray-shirt_front.png" alt="image"></a>
+                                    <a href="#"><img src="images/merch-images/gray-shirt_front.png" alt="image"></a>
                                 </div>
 
                                 <div class="products-content">
@@ -345,7 +345,7 @@
 
                             <div class="products-cart">
                                 <div class="products-image">
-                                    <a href="#"><img src="merch/merch-images/black-cap_front.png" alt="image"></a>
+                                    <a href="#"><img src="images/merch-images/black-cap_front.png" alt="image"></a>
                                 </div>
 
                                 <div class="products-content">
