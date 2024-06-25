@@ -397,7 +397,7 @@
                         <div class="products-cart-content">
                             <div class="products-cart">
                                 <div class="products-image">
-                                    <a href="#"><img src="assets/img/products/img1.jpg" alt="image"></a>
+                                    <a href="#"><img src="images/merch-images/products/img1.jpg" alt="image"></a>
                                 </div>
 
                                 <div class="products-content">
@@ -414,7 +414,7 @@
 
                             <div class="products-cart">
                                 <div class="products-image">
-                                    <a href="#"><img src="assets/img/products/img2.jpg" alt="image"></a>
+                                    <a href="#"><img src="images/merch-images/img2.jpg" alt="image"></a>
                                 </div>
 
                                 <div class="products-content">
@@ -431,7 +431,7 @@
 
                             <div class="products-cart">
                                 <div class="products-image">
-                                    <a href="#"><img src="assets/img/products/img3.jpg" alt="image"></a>
+                                    <a href="#"><img src="images/merch-images/img3.jpg" alt="image"></a>
                                 </div>
 
                                 <div class="products-content">
