@@ -29,7 +29,7 @@
 
         <title>electronnity | guitar plush</title>
 
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="images/inventory-images/favicon.png">
     </head>
     <body>
         
@@ -40,8 +40,8 @@
                     <div class="xton-responsive-menu">
                         <div class="logo">
                             <a href="home.html">
-                                <img src="assets/img/light-mode_logo.png" class="main-logo" alt="logo">
-                                <img src="assets/img/dark-mode_logo.png" class="white-logo" alt="logo">
+                                <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                                <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="home.html">
-                            <img src="assets/img/logo.png" class="main-logo" alt="logo">
-                            <img src="assets/img/white-logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/white-logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
@@ -95,8 +95,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="home.html">
-                            <img src="assets/img/logo.png" class="main-logo" alt="logo">
-                            <img src="assets/img/white-logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-imagesg/logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/img/white-logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
@@ -177,7 +177,7 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="products-details-image">
                             <div class="single-products-details-image">
-                                <img src="assets/img/guitar_plush.png" alt="image">
+                                <img src="images/merch-images/guitar_plush.png" alt="image">
                             </div>
                         </div>
                     </div>
@@ -508,21 +508,21 @@
 
         <!-- Links of JS files -->
         <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/popper.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/bootstrap.bundle.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/owl.carousel.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/magnific-popup.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/parallax.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/rangeSlider.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/nice-select.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/meanmenu.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/isotope.pkgd.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/slick.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/sticky-sidebar.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/wow.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/form-validator.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/contact-form-script.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/ajaxchimp.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/main.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/parallax.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/rangeSlider.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/nice-select.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/meanmenu.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/isotope.pkgd.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/slick.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/sticky-sidebar.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/wow.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/form-validator.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/contact-form-script.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/ajaxchimp.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/main.js"></script>
     </body>
 </html>
