@@ -13,23 +13,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Links of CSS files -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/boxicons.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <link rel="stylesheet" href="assets/css/nice-select.min.css">
-        <link rel="stylesheet" href="assets/css/slick.min.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <link rel="stylesheet" href="assets/css/rangeSlider.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/dark.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="css/merch-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/merch-css/animate.min.css">
+        <link rel="stylesheet" href="css/merch-css/boxicons.min.css">
+        <link rel="stylesheet" href="css/merch-css/flaticon.css">
+        <link rel="stylesheet" href="css/merch-css/magnific-popup.min.css">
+        <link rel="stylesheet" href="css/merch-css/nice-select.min.css">
+        <link rel="stylesheet" href="css/merch-css/slick.min.css">
+        <link rel="stylesheet" href="css/merch-css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/merch-css/meanmenu.min.css">
+        <link rel="stylesheet" href="css/merch-css/rangeSlider.min.css">
+        <link rel="stylesheet" href="css/merch-css/style.css">
+        <link rel="stylesheet" href="css/merch-css/dark.css">
+        <link rel="stylesheet" href="css/merch-css/responsive.css">
 
         <title>electronnity | home</title>
 
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="images/inventory-images/favicon.png">
     </head>
     <body>
 
@@ -39,8 +39,8 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <img src="assets/img/light-mode_logo.png" class="main-logo" alt="logo">
-                            <img src="assets/img/dark-mode_logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand">
-                            <img src="assets/img/logo.png" class="main-logo" alt="logo">
-                            <img src="assets/img/white-logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/white-logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
@@ -93,8 +93,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand">
-                            <img src="assets/img/logo.png" class="main-logo" alt="logo">
-                            <img src="assets/img/white-logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/white-logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
@@ -198,8 +198,8 @@
                             <div class="single-products-box">
                                 <div class="products-image">
                                     <a href="hoodie.html">
-                                        <img src="assets/img/DUMP!/hoodie_merch2.png" class="main-image" alt="image">
-                                        <img src="assets/img/DUMP!/model_hoodie.png" class="hover-image" alt="image">
+                                        <img src="images/merch-images/hoodie_merch2.png" class="main-image" alt="image">
+                                        <img src="images/merch-images/model_hoodie.png" class="hover-image" alt="image">
                                     </a><div></div>
                                 </div>
     
@@ -214,8 +214,8 @@
                             <div class="single-products-box">
                                 <div class="products-image">
                                     <a href="shirt.html">
-                                        <img src="assets/img/DUMP!/shirt_merch.png" class="main-image" alt="image">
-                                        <img src="assets/img/DUMP!/shirt_model.png" class="hover-image" alt="image">
+                                        <img src="images/merch-images/shirt_merch.png" class="main-image" alt="image">
+                                        <img src="images/merch-images/shirt_model.png" class="hover-image" alt="image">
                                     </a><div></div>
                                     
                                 </div>
@@ -231,8 +231,8 @@
                             <div class="single-products-box">
                                 <div class="products-image">
                                     <a href="jacket.html">
-                                        <img src="assets/img/DUMP!/jacket_merch1.png" class="main-image" alt="image">
-                                        <img src="assets/img/DUMP!/jacket_merch2.png" class="hover-image" alt="image">
+                                        <img src="images/merch-images/jacket_merch1.png" class="main-image" alt="image">
+                                        <img src="images/merch-images/jacket_merch2.png" class="hover-image" alt="image">
                                     </a><div></div>
                                 </div>
     
@@ -247,8 +247,8 @@
                             <div class="single-products-box">
                                 <div class="products-image">
                                     <a href="cap.html">
-                                        <img src="assets/img/DUMP!/cap_merch2.png" class="main-image" alt="image">
-                                        <img src="assets/img/DUMP!/cap_merch2.png" class="hover-image" alt="image">
+                                        <img src="images/merch-images/cap_merch2.png" class="main-image" alt="image">
+                                        <img src="images/merch-images/cap_merch2.png" class="hover-image" alt="image">
                                     </a><div></div>
                                 </div>
     
@@ -332,7 +332,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="assets/img/black-hoodie_front.png" alt="image">
+                                    <img src="images/merch-images/black-hoodie_front.png" alt="image">
 
                                     <div class="content">
                                         <span>Hoodie</span>                                                                     
@@ -344,7 +344,7 @@
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="assets/img/gray-shirt_front.png" alt="image">
+                                    <img src="images/merch-images/gray-shirt_front.png" alt="image">
 
                                     <div class="content">
                                         <span>Shirt</span>                                     
@@ -356,7 +356,7 @@
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="assets/img/DUMP!/jacket_merch1.png" alt="image">
+                                    <img src="images/merch-images/jacket_merch1.png" alt="image">
 
                                     <div class="content">
                                         <span>Jacket</span>                                       
@@ -368,7 +368,7 @@
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="assets/img/DUMP!/MODEL CAP.png" alt="image">
+                                    <img src="images/merch-images/MODEL CAP.png" alt="image">
 
                                     <div class="content">
                                         <span>Cap</span>                                       
@@ -495,22 +495,22 @@
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
         <!-- Links of JS files -->
-        <script src="${pageContext.request.contextPath}/merch-js/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/popper.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/bootstrap.bundle.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/owl.carousel.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/magnific-popup.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/parallax.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/rangeSlider.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/nice-select.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/meanmenu.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/isotope.pkgd.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/slick.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/sticky-sidebar.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/wow.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/form-validator.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/contact-form-script.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/ajaxchimp.min.js"></script>
-        <script src="${pageContext.request.contextPath}/merch-js/main.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/jquery.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/parallax.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/rangeSlider.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/nice-select.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/meanmenu.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/isotope.pkgd.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/slick.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/sticky-sidebar.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/wow.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/form-validator.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/contact-form-script.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/ajaxchimp.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/main.js"></script>
     </body>
 </html>
