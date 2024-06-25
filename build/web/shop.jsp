@@ -9,11 +9,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>electronnity | shop</title>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cs-theme.7.4.15-shop.css" />
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/css-inline-shop.css">
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/jquery.min.3.7.1.js"></script>
-  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="32x32" type="image/png" />
-  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="16x16" type="image/png" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cs-theme.7.4.15-shop.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/css-inline-shop.css">
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
+  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="32x32" type="image/png" />
+  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="16x16" type="image/png" />
   <style>
     @font-face {
       font-family: "inter-variable";
@@ -2006,11 +2006,11 @@
     </div>
   </div>
   </div>
-  <script type="text/javascript" src="js/merch-js/cs-classic.js"></script>
-  <script type="text/javascript" src="js/merch-js/rocketlazyload-extra.min.js"></script>
-  <script type="text/javascript" src="js/merch-js/LazyloadOptions.js"></script>
-  <script type="text/javascript" src="js/merch-js/cs-22655.js"></script>
-  <script type="text/javascript" src="js/merch-js/cs-21968.js"></script>
+  <script type="text/javascript" src="js/cs-classic.js"></script>
+  <script type="text/javascript" src="js/rocketlazyload-extra.min.js"></script>
+  <script type="text/javascript" src="js/LazyloadOptions.js"></script>
+  <script type="text/javascript" src="js/cs-22655.js"></script>
+  <script type="text/javascript" src="js/cs-21968.js"></script>
 </body>
 
 </html>
