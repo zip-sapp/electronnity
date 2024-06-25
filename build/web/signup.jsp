@@ -11,11 +11,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>electronnity | signup</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cs-theme.7.4.15.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cs-inline-login.css">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="32x32" type="image/png" />
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cs-theme.7.4.15.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cs-inline-login.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/jquery.min.3.7.1.js"></script>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="32x32" type="image/png" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="16x16" type="image/png" />
 <style>
         @font-face {
             font-family: "inter-variable";
@@ -74,7 +74,7 @@
                 <div class="x-section e22311-e224 mh7r-0 mh7r-2">
                     <div class="x-bg" aria-hidden="true">
                         <div class="x-bg-layer-lower-custom">
-                            <img class="s-background-image" src="images/logo banner 2.0.png" sizes="(max-width: 2887px) 100vw, (max-width: 1923px) 1924px, (max-width: 1623px) 1624px, (max-width: 1271px) 1272px, (max-width: 965px) 966px, 767px" alt />
+                            <img class="s-background-image" src="images/merch-images/logo banner 2.0.png" sizes="(max-width: 2887px) 100vw, (max-width: 1923px) 1924px, (max-width: 1623px) 1624px, (max-width: 1271px) 1272px, (max-width: 965px) 966px, 767px" alt />
                         </div>
                     </div>
                     <div class="x-div e22311-e225 mh7r-7 mh7r-8 mh7r-a mh7r-b mh7r-c mh7r-g mh7r-i mh7r-j mh7r-k mh7r-l mh7r-u mh7r-1j mh7r-3">
@@ -183,8 +183,8 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-22311.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-21811.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-15280.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-22311.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-21811.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/cs-15280.js"></script>
 </body>
 </html>
