@@ -9,11 +9,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>electronnity | shop</title>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cs-theme.7.4.15-shop.css" />
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/css-inline-shop.css">
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
-  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="32x32" type="image/png" />
-  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/logo (transparent).png" sizes="16x16" type="image/png" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cs-theme.7.4.15-shop.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/css-inline-shop.css">
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/merch-js/jquery.min.3.7.1.js"></script>
+  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="32x32" type="image/png" />
+  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/merch-images/logo (transparent).png" sizes="16x16" type="image/png" />
   <style>
     @font-face {
       font-family: "inter-variable";
@@ -191,7 +191,7 @@
                     </div>
                   </div>
                   <div class="x-div e22655-e15 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-y mhhb-10">
-                    <div class="x-div e22655-e16 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-s mhhb-t mhhb-v mhhb-y mhhb-10 mhhb-15"><span class="x-image e22655-e17 mhhb-4k mhhb-4l mhhb-4m mhhb-3 mhhb-5"><img src="images/logo (transparent).png" width="200" height="200" alt="Image"></span></div>
+                    <div class="x-div e22655-e16 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-s mhhb-t mhhb-v mhhb-y mhhb-10 mhhb-15"><span class="x-image e22655-e17 mhhb-4k mhhb-4l mhhb-4m mhhb-3 mhhb-5"><img src="images/merch-images/logo (transparent).png" width="200" height="200" alt="Image"></span></div>
                     <div class="x-div e22655-e19 mhhb-8 mhhb-9 mhhb-a mhhb-f mhhb-g mhhb-h mhhb-i mhhb-l mhhb-m mhhb-o mhhb-p mhhb-s mhhb-t mhhb-y mhhb-14 mhhb-16 mhhb-17 mhhb-18">
                       <div class="x-div e22655-e20 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-10">
                         <div class="x-text x-text-headline e22655-e21 mhhb-1x mhhb-1y mhhb-1z mhhb-23 mhhb-29 mhhb-2c mhhb-2d mhhb-2j mhhb-2k mhhb-2l mhhb-2m">
@@ -2006,9 +2006,9 @@
     </div>
   </div>
   </div>
-  <script type="text/javascript" src="js/cs-classic.js"></script>
-  <script type="text/javascript" src="js/rocketlazyload-extra.min.js"></script>
-  <script type="text/javascript" src="js/LazyloadOptions.js"></script>
+  <script type="text/javascript" src="js/merch-js/cs-classic.js"></script>
+  <script type="text/javascript" src="js/merch-js/rocketlazyload-extra.min.js"></script>
+  <script type="text/javascript" src="js/merch-js/LazyloadOptions.js"></script>
   <script type="text/javascript" src="js/cs-22655.js"></script>
   <script type="text/javascript" src="js/cs-21968.js"></script>
 </body>
