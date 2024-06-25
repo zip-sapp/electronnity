@@ -140,7 +140,7 @@
                                         </thead>
                                         <tbody>
                                         <tbody>
-                                            <c:forEach var="product" items="${listproductmodels}">
+                                            <c:forEach var="product" items="${productmodel}">
                                                 <tr>
                                                     <th scope="row">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">

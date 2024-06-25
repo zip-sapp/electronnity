@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -122,37 +123,37 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="card" id="form" action="" method="POST">
+                            <form class="card" id="form" action="${pageContext.request.contextPath}/createproduct" method="POST">
                                 <div class="card-body">
                                     <div class="example-container">
                                         <div class="example-content">
                                             <label for="productid" class="form-label">Product ID</label>
-                                            <input type="productid" class="form-control" id="productid">
+                                            <input type="text" class="form-control" id="productid" name="productid">
                                         </div>
                                         <div class="example-content">
                                             <label for="productname" class="form-label">Product Name</label>
-                                            <input type="productname" class="form-control" id="productname">
+                                            <input type="text" class="form-control" id="productname" name="productname">
                                         </div>
                                         <div class="example-content">
                                             <label for="description" class="form-label">Product Description</label>
-                                            <input type="description" class="form-control" id="description">
+                                            <textarea class="form-control" id="description" name="description"></textarea>
                                         </div>
                                         <div class="example-content">
                                             <label for="size" class="form-label">Product Size</label>
-                                            <input type="size" class="form-control" id="size">
+                                            <input type="text" class="form-control" id="size" name="size">
                                         </div>
                                         <div class="example-content">
                                             <label for="price" class="form-label">Price</label>
-                                            <input type="price" class="form-control" id="price">
+                                            <input type="number" class="form-control" id="price" name="price">
                                         </div>
                                         <div class="example-content">
                                             <label for="quantity" class="form-label">Quantity</label>
-                                            <input type="quantity" class="form-control" id="quantity">
+                                            <input type="number" class="form-control" id="quantity" name="quantity">
                                         </div>
                                     </div>
                                 </div>
                             </form>
-                            <button type="button" class="btn btn-primary"><i class="material-icons">add</i>Add</button>
+                            <button id="add" type="button" class="btn btn-primary"><i class="material-icons">add</i>Add</button>
                             <button type="button" class="btn btn-danger"><i class="material-icons">delete_outline</i>Cancel</button>
                         </div>
                     </div>
@@ -160,6 +161,7 @@
             </div>
         </div>
         <!-- Javascripts -->
+        <script src="${pageContext.request.contextPath}/js/inventory-js/product-validation.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/jquery-3.5.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/bootstrap.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/perfect-scrollbar.min.js"></script>
