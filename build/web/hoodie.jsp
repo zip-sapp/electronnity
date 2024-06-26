@@ -59,13 +59,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="merch.jsp" class="nav-link">Home</a>
                                 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>             
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a>             
 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
+                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
                                 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -102,13 +102,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/home" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home</a>
                                   
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link active">Shop</a>
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop</a>
 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
+                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
                                    
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -193,7 +193,7 @@
             
                             <ul class="products-info">
                                 <li><span>Availability:</span> <a href="#">In stock</a></li>
-                                <li><span>Product Type:</span> <a href="#">Hoodie</a></li>
+                                <li><span>Product Type:</span> <a href="hoodie.jsp">Hoodie</a></li>
                             </ul>
 
                             <div class="products-size-wrapper">
