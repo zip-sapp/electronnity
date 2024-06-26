@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/dark.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/responsive.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cart-modal.css">
 
         <title>Electronnity - All Products</title>
 
@@ -472,5 +473,6 @@
         <script src="${pageContext.request.contextPath}/js/merch-js/contact-form-script.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/ajaxchimp.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/main.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/cart-modal.js"></script>
     </body>
 </html>
