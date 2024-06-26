@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <a href="home.html">
+                            <a href="home.jsp">
                                 <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                                 <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
@@ -59,11 +59,11 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.html" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home </a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>             
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop </a>             
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login </a>
                                 
                                 <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
 
@@ -102,11 +102,11 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.html" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home </a>
                                   
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop </a>
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login </a>
                                    
                                 <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
 
@@ -163,7 +163,7 @@
                 <div class="page-title-content">
                     <h1>Electric Guitar Plushie</h1>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="home.jsp">Home</a></li>
                         <li>Products Details</li>
                     </ul>
                 </div>
@@ -194,7 +194,7 @@
                             <ul class="products-info">
                                 <li><span>Vendor:</span> <a href="#">Lereve</a></li>
                                 <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
-                                <li><span>Products Type:</span> <a href="#">Plush</a></li>
+                                <li><span>Products Type:</span> <a href="guitar_plush.jsp">Plush</a></li>
                             </ul>
 
                             <div class="products-color-switch">

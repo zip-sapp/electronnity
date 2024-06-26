@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <a href="home.html">
+                            <a href="home.jsp">
                                 <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                                 <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
@@ -59,13 +59,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.html" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home </a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>             
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop </a>             
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login </a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="" class="nav-link">Main </a>
 
                                 </li>
                             </ul>
@@ -102,11 +102,11 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.html" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home </a>
                                   
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop </a>
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login </a>
                                    
                                 <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
 
@@ -163,7 +163,7 @@
                 <div class="page-title-content">
                     <h2>Signature Cap</h2>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="home.jsp">Home</a></li>
                         <li>Products Details</li>
                     </ul>
                 </div>
@@ -441,12 +441,12 @@
                                 <h3 class="woocommerce-widget-title">Collections</h3>
 
                                 <ul class="collections-list-row">
-                                    <li><a href="#">Products</a></li>
-                                    <li class="active"><a href="#" class="active">Limited Edition</a></li>
+                                    <li><a href="all_products.jsp">Products</a></li>
+                                    <li class="active"><a href="guitar_plush.jsp" class="active">Limited Edition</a></li>
                                     <li><a href="#"></a></li>
-                                    <li><a href="#">Shirt</a></li>
-                                    <li><a href="#">Hoodie</a></li>
-                                    <li><a href="#">Jacket</a></li>
+                                    <li><a href="shirt.jsp">Shirt</a></li>
+                                    <li><a href="hoodie.jsp">Hoodie</a></li>
+                                    <li><a href="jacket.jsp">Jacket</a></li>
                                 </ul>
                             </div>
 

@@ -467,7 +467,7 @@
             <div class="x-grid e22765-e3 mhkd-a">
               <div class="x-cell e22765-e4 mhkd-b">
                 <div class="x-div e22765-e5 mhkd-d mhkd-e mhkd-f mhkd-g mhkd-h mhkd-i mhkd-j mhkd-k mhkd-1">
-                  <a href="/" class="footer_logo" data-sa-event="footer_logo">
+                  <a href="home.jsp" class="footer_logo" data-sa-event="footer_logo">
                     <span class="visually-hidden">electronnity</span>
                     <?xml version="1.0" encoding="UTF-8"?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="87" height="28" viewBox="0 0 87 28" fill="none">
