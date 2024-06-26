@@ -6,6 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -123,42 +125,41 @@
                             </div>
                             <div class="example-content">
                                 <div class="table-responsive-lg">
-                                    <div class="form-check"></div>
+                                    <div class="form-check">${message}</div>
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">Product ID</th>
-                                                <th scope="col">Product Name</th>
-                                                <th scope="col">Description</th>
-                                                <th scope="col">Size</th>
-                                                <th scope="col">Price</th>
-                                                <th scope="col">Quantity</th>
-                                                <th scope="col">Actions</th>
-                                                <th scope="col"></th>
+                                                <th scope="col" style="text-align: center"></th>
+                                                <th scope="col" style="text-align: center">Product ID</th>
+                                                <th scope="col" style="text-align: center">Product Name</th>
+                                                <th scope="col" style="text-align: center">Description</th>
+                                                <th scope="col" style="text-align: center">Size</th>
+                                                <th scope="col" style="text-align: center">Price</th>
+                                                <th scope="col" style="text-align: center">Quantity</th>
+                                                <th scope="col" style="text-align: center">Actions</th>
+                                                <th scope="col" style="text-align: center"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <tbody>
-                                            <c:forEach var="product" items="${productmodel}">
-                                                <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                    </th>
-                                                    <td><c:out value="${product.productid}"/></td>
-                                                    <td><c:out value="${product.productname}"/></td>
-                                                    <td><c:out value="${product.description}"/></td>
-                                                    <td><c:out value="${product.size}"/></td>
-                                                    <td><c:out value="${product.price}"/></td>
-                                                    <td><c:out value="${product.quantity}"/></td>
-                                                    <td>   
-                                                        <button type="button" class="btn btn-danger btn-burger" href="/delete?id=<c:out value='${product.productid}' />"><i class="material-icons">delete_outline</i></button>    
-                                                    </td>
-                                                    <td>    
-                                                        <button type="button" class="btn btn-success btn-burger" href="/edit?id=<c:out value='${product.productid}' />"><i class="material-icons"></i>Edit</button>    
-                                                    </td>
-                                                </tr>
+                                            <c:forEach items="${allProduct}" var="product">
+                                            <tr>
+                                                <th scope="row">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault_${product.productId}">
+                                                    <label class="form-check-label" for="flexCheckDefault_${product.productId}">
+                                                </th>
+                                                <td style="text-align: center">${product.productId}</td>
+                                                <td style="text-align: center">${product.productName}</td>
+                                                <td style="text-align: center">${product.description}</td>
+                                                <td style="text-align: center">${product.size}</td>
+                                                <td style="text-align: center">₱ <fmt:formatNumber type="number" maxFractionDigits="0" value="${product.price}"/></td>
+                                                <td style="text-align: center">${product.quantity}</td>
+                                                <td>   
+                                                    <button type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
+                                                </td>
+                                                <td>    
+                                                    <a href="${pageContext.request.contextPath}/productslist?editproduct=true&id=${product.productId}" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</a>     
+                                                </td>
+                                            </tr>
                                             </c:forEach>
                                         </tbody>
                                     </table>
@@ -167,8 +168,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
         <!-- Javascripts -->
         <script src="${pageContext.request.contextPath}/js/inventory-js/jquery-3.5.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/bootstrap.min.js"></script>

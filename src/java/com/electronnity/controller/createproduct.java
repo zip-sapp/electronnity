@@ -55,11 +55,16 @@ public class createproduct extends HttpServlet {
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         
         product pro = new product();
-        pro.createProduct(productid, productname, description, size, price, quantity); 
+        boolean createProduct = pro.createProduct(productid, productname, description, size, price, quantity); 
         
-        response.sendRedirect(request.getContextPath() + "/productslist"); 
-        
+            if (createProduct) {
+                
+                response.sendRedirect(request.getContextPath() + "/productslist");
+                return;
+                 
+        }
         System.out.println(productid + productname + description + size + price + quantity); //printing the data input
     }
 }
+
 

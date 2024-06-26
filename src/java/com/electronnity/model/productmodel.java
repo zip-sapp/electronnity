@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 public class productmodel {
     private String productid;
-    private String productName;
+    private String productname;
     private String description;
     private String size;
     private BigDecimal price;
@@ -19,7 +19,7 @@ public class productmodel {
 
     public productmodel(String productid, String productName, String description, String size, BigDecimal price, int quantity) {
         this.productid = productid;
-        this.productName = productName;
+        this.productname = productname;
         this.description = description;
         this.size = size;
         this.price = price;
@@ -35,11 +35,11 @@ public class productmodel {
     }
 
     public String getProductName() {
-        return productName;
+        return productname;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String productname) {
+        this.productname = productname;
     }
 
     public String getDescription() {
