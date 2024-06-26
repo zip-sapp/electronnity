@@ -144,6 +144,14 @@
         <servlet-name>merch</servlet-name>
         <servlet-class>com.electronnity.controller.merch</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>listproduct</servlet-name>
+        <servlet-class>com.electronnity.controller.listproduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editproducts</servlet-name>
+        <servlet-class>com.electronnity.controller.editproducts</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/shop</url-pattern>
@@ -283,6 +291,14 @@
     <servlet-mapping>
         <servlet-name>userlist</servlet-name>
         <url-pattern>/userlist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listproduct</servlet-name>
+        <url-pattern>/listproduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editproducts</servlet-name>
+        <url-pattern>/editproducts</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>merch</servlet-name>
