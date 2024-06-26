@@ -140,6 +140,10 @@
         <servlet-name>userlist</servlet-name>
         <servlet-class>com.electronnity.controller.userlist</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>merch</servlet-name>
+        <servlet-class>com.electronnity.controller.merch</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/shop</url-pattern>
@@ -279,6 +283,10 @@
     <servlet-mapping>
         <servlet-name>userlist</servlet-name>
         <url-pattern>/userlist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>merch</servlet-name>
+        <url-pattern>/merch</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
