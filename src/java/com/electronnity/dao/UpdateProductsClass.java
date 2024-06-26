@@ -4,7 +4,7 @@
  */
 package com.electronnity.dao;
 
-import com.electronnity.model.productmodel;
+import com.electronnity.model.ProductModel;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,10 +16,10 @@ import java.util.ArrayList;
  *
  * @author Aaron
  */
-public class UpdateProducts {
+public class UpdateProductsClass {
 
-    public ArrayList<productmodel> getProductDetails(String productid) throws ClassNotFoundException {
-        ArrayList<productmodel> productDetails = new ArrayList<>();
+    public ArrayList<ProductModel> getProductDetails(String productid) throws ClassNotFoundException {
+        ArrayList<ProductModel> productDetails = new ArrayList<>();
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -43,7 +43,7 @@ public class UpdateProducts {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                productmodel product = new productmodel();
+                ProductModel product = new ProductModel();
                 product.setProductId(rs.getString("productid"));
                 product.setProductName(rs.getString("productname"));
                 product.setDescription(rs.getString("description"));

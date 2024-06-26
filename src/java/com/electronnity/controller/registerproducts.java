@@ -4,7 +4,7 @@
  */
 package com.electronnity.controller;
 
-import com.electronnity.dao.ProductModels;
+import com.electronnity.dao.RegisterProductsClass;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.logging.Level;
@@ -54,7 +54,7 @@ public class registerproducts extends HttpServlet {
         BigDecimal price = new BigDecimal(request.getParameter("price"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         
-        ProductModels pro = new ProductModels();
+        RegisterProductsClass pro = new RegisterProductsClass();
         boolean createProduct = pro.createProduct(productid, productname, description, size, price, quantity); 
         
             if (createProduct) {

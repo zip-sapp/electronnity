@@ -6,7 +6,7 @@ package com.electronnity.model;
 
 import java.math.BigDecimal;
 
-public class productmodel {
+public class ProductModel {
     private String productid;
     private String productname;
     private String description;
@@ -14,10 +14,10 @@ public class productmodel {
     private BigDecimal price;
     private int quantity;
 
-    public productmodel() {
+    public ProductModel() {
     }
 
-    public productmodel(String productid, String productName, String description, String size, BigDecimal price, int quantity) {
+    public ProductModel(String productid, String productName, String description, String size, BigDecimal price, int quantity) {
         this.productid = productid;
         this.productname = productname;
         this.description = description;

@@ -4,7 +4,7 @@
  */
 package com.electronnity.model;
 
-public class clientmodel {
+public class ClientModel {
     private String username;
     private String password;
     private String email;

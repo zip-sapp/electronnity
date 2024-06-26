@@ -4,17 +4,17 @@
  */
 package com.electronnity.dao;
 
-import com.electronnity.model.productmodel;
+import com.electronnity.model.ProductModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class SearchProducts {
+public class SearchProductsClass {
 
-    public ArrayList<productmodel> getAllProduct() throws ClassNotFoundException {
-        ArrayList<productmodel> allProducts = new ArrayList<>();
+    public ArrayList<ProductModel> getAllProducts() throws ClassNotFoundException {
+        ArrayList<ProductModel> allProducts = new ArrayList<>();
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -36,7 +36,7 @@ public class SearchProducts {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                productmodel product = new productmodel();
+                ProductModel product = new ProductModel ();
                 product.setProductId(rs.getString("productid"));
                 product.setProductName(rs.getString("productname"));
                 product.setDescription(rs.getString("description"));

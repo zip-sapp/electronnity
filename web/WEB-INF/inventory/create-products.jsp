@@ -123,7 +123,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="card" id="form" action="${pageContext.request.contextPath}/createproduct" method="POST">
+                            <form class="card" id="form" action="${pageContext.request.contextPath}/registerproducts" method="POST">
                                 <div class="card-body">
                                     <div class="example-container">
                                         <div class="example-content">
