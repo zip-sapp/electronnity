@@ -201,7 +201,7 @@
                                     <a href="${pageContext.request.contextPath}/hoodie">
                                         <img src="images/merch-images/hoodie_merch2.png" class="main-image" alt="image">
                                         <img src="images/merch-images/model_hoodie.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                 </div>
     
                                 <div class="products-content">
@@ -217,7 +217,7 @@
                                     <a href="${pageContext.request.contextPath}/shirt">
                                         <img src="images/merch-images/shirt_merch.png" class="main-image" alt="image">
                                         <img src="images/merch-images/shirt_model.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                     
                                 </div>
     
@@ -234,7 +234,7 @@
                                     <a href="${pageContext.request.contextPath}/jacket">
                                         <img src="images/merch-images/jacket_merch1.png" class="main-image" alt="image">
                                         <img src="images/merch-images/jacket_merch2.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                 </div>
     
                                 <div class="products-content">
@@ -250,7 +250,7 @@
                                     <a href="${pageContext.request.contextPath}/cap">
                                         <img src="images/merch-images/cap_merch2.png" class="main-image" alt="image">
                                         <img src="images/merch-images/cap_merch2.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                 </div>
     
                                 <div class="products-content">
