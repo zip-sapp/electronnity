@@ -59,10 +59,10 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link active">Home</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
+                                <li class="nav-item"><a href="home.jsp" class="nav-link active">Home</a></li>
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a></li>
+                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a></li>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a></li>
                             </ul>
                         
                             <div class="others-option">
@@ -97,13 +97,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="merch.jsp" class="nav-link">Home</a>
                                 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a>
                                     
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
+                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
                                   
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
                                   
                                 </li>
                             </ul>
@@ -210,7 +210,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="${pageContext.request.contextPath}/guitar_plush">
+                                <a href="guitar_plush.jsp">
                                     <img src="images/merch-images/guitar_plush.png" class="main-image" alt="image">
                                     <img src="images/merch-images/guitar_plush.png" class="hover-image" alt="image">
                                 </a>
@@ -220,7 +220,7 @@
 
                             <div class="products-content">
                                 <span class="category">Limited Edition</span>
-                                <h3><a href="${pageContext.request.contextPath}/guitar_plush">Electric Guitar Plush</a></h3>
+                                <h3><a href="guitar_plushjsp">Electric Guitar Plush</a></h3>
                                 <div class="price">
                                     <span class="new-price">₱150.00</span>
                                 </div>
@@ -231,7 +231,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="${pageContext.request.contextPath}/shirt">
+                                <a href="shirt.jsp">
                                     <img src="images/merch-images/gray-shirt_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/gray-shirt_front.png" class="hover-image" alt="image">
                                 </a><div></div>
@@ -239,7 +239,7 @@
 
                             <div class="products-content">
                                 <span class="category">Shirt</span>
-                                <h3><a href="${pageContext.request.contextPath}/shirt">Classic Patch Tee</a></h3>
+                                <h3><a href="shirt.jsp">Classic Patch Tee</a></h3>
                                 <div class="price">
                                     <span class="new-price">₱150.00</span>
                                 </div>
@@ -250,7 +250,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="${pageContext.request.contextPath}/cap">
+                                <a href="cap.jsp">
                                     <img src="images/merch-images/black-cap_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/black-cap_front.png" class="hover-image" alt="image">
                                 </a><div></div>
@@ -258,7 +258,7 @@
 
                             <div class="products-content">
                                 <span class="category">Cap</span>
-                                <h3><a href="${pageContext.request.contextPath}/cap">Signature Cap</a></h3>
+                                <h3><a href="cap.jsp">Signature Cap</a></h3>
                                 <div class="price">
                                     <span class="new-price">₱200.00</span>
                                 </div>
@@ -269,7 +269,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="${pageContext.request.contextPath}/jacket">
+                                <a href="jacket.jsp">
                                     <img src="images/merch-images/black-jacket_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/black-jacket_front.png" class="hover-image" alt="image">
                                 </a>
@@ -277,7 +277,7 @@
 
                             <div class="products-content">
                                 <span class="category">Jacket</span>
-                                <h3><a href="${pageContext.request.contextPath}/jacket">Windbreaker</a></h3>
+                                <h3><a href="jacket.jsp">Windbreaker</a></h3>
 
                                 <div class="price">
                                     <span class="new-price">₱500.00</span>
@@ -289,7 +289,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="${pageContext.request.contextPath}/hoodie">
+                                <a href="hoodie.jsp">
                                     <img src="images/merch-images/black-hoodie_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/black-hoodie_front.png" class="hover-image" alt="image">
                                 </a><div></div>
@@ -297,7 +297,7 @@
 
                             <div class="products-content">
                                 <span class="category">Hoodie</span>
-                                <h3><a href="${pageContext.request.contextPath}/hoodie">Signature Hoodie</a></h3>
+                                <h3><a href="hoodie.jsp">Signature Hoodie</a></h3>
 
                                 <div class="price">
                                     <span class="new-price">₱500.00</span>
