@@ -40,8 +40,10 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
+                                <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                                <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -100,13 +102,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/home" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Shop</a> 
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a> 
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main</a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
                                     
                                 </li>
                             </ul>
@@ -169,8 +171,8 @@
                                         <h1>Summer-2024!</h1>
                                         <p>Leap year offer ‘Sale Must-Haves'</p>
                                         <div class="btn-box">
-                                            <a href="all_products.html" class="default-btn">All Products</a>
-                                            <a href="guitar_plush.html" class="optional-btn">Limited Edition</a>
+                                            <a href="${pageContext.request.contextPath}/all_products" class="default-btn">All Products</a>
+                                            <a href="${pageContext.request.contextPath}/guitar_plush" class="optional-btn">Limited Edition</a>
                                         </div>
                                     </div>
                                 </div>
@@ -192,20 +194,20 @@
                         <div class="section-title text-start">
                             <span class="sub-title">See Our Collection</span>
                             <h2>Recent Products</h2>
-                            <a href="" class="default-btn">Shop More</a>
+                            <a href="${pageContext.request.contextPath}/all_products" class="default-btn">Shop More</a>
                         </div>
 
                         <div class="products-slides owl-carousel owl-theme">
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="hoodie.html">
+                                    <a href="${pageContext.request.contextPath}/hoodie">
                                         <img src="images/merch-images/hoodie_merch2.png" class="main-image" alt="image">
                                         <img src="images/merch-images/model_hoodie.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="hoodie.html">Signature Hoodie</a></h2>
+                                    <h3><a href="${pageContext.request.contextPath}/hoodie">Signature Hoodie</a></h2>
                                     <div class="price">
                                         <span class="new-price">₱500</span>
                                     </div>
@@ -214,15 +216,15 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="shirt.html">
+                                    <a href="${pageContext.request.contextPath}/shirt">
                                         <img src="images/merch-images/shirt_merch.png" class="main-image" alt="image">
                                         <img src="images/merch-images/shirt_model.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                     
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="shirt.html">Classic Patch Tee</a></h2>
+                                    <h3><a href="${pageContext.request.contextPath}/shirt">Classic Patch Tee</a></h2>
                                     <div class="price">
                                         <span class="new-price">₱150</span>
                                     </div>
@@ -231,14 +233,14 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="jacket.html">
+                                    <a href="${pageContext.request.contextPath}/jacket">
                                         <img src="images/merch-images/jacket_merch1.png" class="main-image" alt="image">
                                         <img src="images/merch-images/jacket_merch2.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="jacket.html">Windbreaker</a></h3>
+                                    <h3><a href="${pageContext.request.contextPath}/jacket">Windbreaker</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱500</span>
                                     </div>
@@ -247,14 +249,14 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="cap.html">
+                                    <a href="${pageContext.request.contextPath}/cap">
                                         <img src="images/merch-images/cap_merch2.png" class="main-image" alt="image">
                                         <img src="images/merch-images/cap_merch2.png" class="hover-image" alt="image">
-                                    </a><div></div>
+                                    </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="cap.html">Signature Cap</a></h3>
+                                    <h3><a href="${pageContext.request.contextPath}/cap">Signature Cap</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱200</span>
                                     </div>
@@ -337,9 +339,9 @@
 
                                     <div class="content">
                                         <span>Hoodie</span>                                                                     
-                                        <a href="hoodie.html" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/hoodie" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="hoodie.html" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/hoodie" class="link-btn"></a>
                                 </div>
                             </div>
 
@@ -349,9 +351,9 @@
 
                                     <div class="content">
                                         <span>Shirt</span>                                     
-                                        <a href="shirt.html" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/shirt" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="shirt.html" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/shirt" class="link-btn"></a>
                                 </div>
                             </div>
 
@@ -361,9 +363,9 @@
 
                                     <div class="content">
                                         <span>Jacket</span>                                       
-                                        <a href="jacket.html" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/jacket" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="jacket.html" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/jacket" class="link-btn"></a>
                                 </div>
                             </div>
 
@@ -373,9 +375,9 @@
 
                                     <div class="content">
                                         <span>Cap</span>                                       
-                                        <a href="cap.html" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/cap" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="cap.html" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/cap" class="link-btn"></a>
                                 </div>
                             </div>
                         </div>
@@ -393,70 +395,19 @@
                     </button>
 
                     <div class="modal-body">
-                        <h3>My Cart (3)</h3>
+                        <h3>My Cart</h3>
 
                         <div class="products-cart-content">
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/products/img1.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Long Sleeve Leopard T-Shirt</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$250.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img2.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Causal V-Neck Soft Raglan</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img3.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Hanes Men's Pullover</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
 
-                            <span class="subtotal">$524.00</span>
+                            <span class="subtotal">₱0.00</span>
                         </div>
 
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
-                            <a href="#" class="optional-btn">View Shopping Cart</a>
                         </div>
                     </div>
                 </div>
@@ -497,7 +448,6 @@
 
         <!-- Links of JS files -->
         <script src="${pageContext.request.contextPath}/js/merch-js/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
