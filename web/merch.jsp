@@ -59,13 +59,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="merch.jsp" class="nav-link">Home</a>
                                     
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a>
                                     
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
+                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -102,13 +102,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="merch.jsp" class="nav-link">Home</a>
 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a> 
+                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a> 
 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
+                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
                                 
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
                                     
                                 </li>
                             </ul>
@@ -171,8 +171,8 @@
                                         <h1>Summer-2024!</h1>
                                         <p>Leap year offer ‘Sale Must-Haves'</p>
                                         <div class="btn-box">
-                                            <a href="${pageContext.request.contextPath}/all_products" class="default-btn">All Products</a>
-                                            <a href="${pageContext.request.contextPath}/guitar_plush" class="optional-btn">Limited Edition</a>
+                                            <a href="all_products.jsp" class="default-btn">All Products</a>
+                                            <a href="guitar_plush.jsp" class="optional-btn">Limited Edition</a>
                                         </div>
                                     </div>
                                 </div>
@@ -194,20 +194,20 @@
                         <div class="section-title text-start">
                             <span class="sub-title">See Our Collection</span>
                             <h2>Recent Products</h2>
-                            <a href="${pageContext.request.contextPath}/all_products" class="default-btn">Shop More</a>
+                            <a href="all_products.jsp" class="default-btn">Shop More</a>
                         </div>
 
                         <div class="products-slides owl-carousel owl-theme">
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="${pageContext.request.contextPath}/hoodie">
+                                    <a href="hoodie.jsp">
                                         <img src="images/merch-images/hoodie_merch2.png" class="main-image" alt="image">
                                         <img src="images/merch-images/model_hoodie.png" class="hover-image" alt="image">
                                     </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="${pageContext.request.contextPath}/hoodie">Signature Hoodie</a></h2>
+                                    <h3><a href="hoodie.jsp">Signature Hoodie</a></h2>
                                     <div class="price">
                                         <span class="new-price">₱500</span>
                                     </div>
@@ -216,7 +216,7 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="${pageContext.request.contextPath}/shirt">
+                                    <a href="shirt.jsp">
                                         <img src="images/merch-images/shirt_merch.png" class="main-image" alt="image">
                                         <img src="images/merch-images/shirt_model.png" class="hover-image" alt="image">
                                     </a>
@@ -224,7 +224,7 @@
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="${pageContext.request.contextPath}/shirt">Classic Patch Tee</a></h2>
+                                    <h3><a href="shirt.jsp">Classic Patch Tee</a></h2>
                                     <div class="price">
                                         <span class="new-price">₱150</span>
                                     </div>
@@ -233,14 +233,14 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="${pageContext.request.contextPath}/jacket">
+                                    <a href="jacket.jsp">
                                         <img src="images/merch-images/jacket_merch1.png" class="main-image" alt="image">
                                         <img src="images/merch-images/jacket_merch2.png" class="hover-image" alt="image">
                                     </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="${pageContext.request.contextPath}/jacket">Windbreaker</a></h3>
+                                    <h3><a href="jacket.jsp">Windbreaker</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱500</span>
                                     </div>
@@ -249,14 +249,14 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="${pageContext.request.contextPath}/cap">
+                                    <a href="cap.jsp">
                                         <img src="images/merch-images/cap_merch2.png" class="main-image" alt="image">
                                         <img src="images/merch-images/cap_merch2.png" class="hover-image" alt="image">
                                     </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="${pageContext.request.contextPath}/cap">Signature Cap</a></h3>
+                                    <h3><a href="cap.jsp">Signature Cap</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱200</span>
                                     </div>
@@ -339,9 +339,9 @@
 
                                     <div class="content">
                                         <span>Hoodie</span>                                                                     
-                                        <a href="${pageContext.request.contextPath}/hoodie" class="default-btn">Discover Now</a>
+                                        <a href="hoodie.jsp" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="${pageContext.request.contextPath}/hoodie" class="link-btn"></a>
+                                    <a href="hoodie.jsp" class="link-btn"></a>
                                 </div>
                             </div>
 
@@ -351,9 +351,9 @@
 
                                     <div class="content">
                                         <span>Shirt</span>                                     
-                                        <a href="${pageContext.request.contextPath}/shirt" class="default-btn">Discover Now</a>
+                                        <a href="shirt.jsp" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="${pageContext.request.contextPath}/shirt" class="link-btn"></a>
+                                    <a href="shirt.jsp" class="link-btn"></a>
                                 </div>
                             </div>
 
@@ -363,9 +363,9 @@
 
                                     <div class="content">
                                         <span>Jacket</span>                                       
-                                        <a href="${pageContext.request.contextPath}/jacket" class="default-btn">Discover Now</a>
+                                        <a href="jacket.jsp" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="${pageContext.request.contextPath}/jacket" class="link-btn"></a>
+                                    <a href="jacket.jsp" class="link-btn"></a>
                                 </div>
                             </div>
 
@@ -375,9 +375,9 @@
 
                                     <div class="content">
                                         <span>Cap</span>                                       
-                                        <a href="${pageContext.request.contextPath}/cap" class="default-btn">Discover Now</a>
+                                        <a href="cap.jsp" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="${pageContext.request.contextPath}/cap" class="link-btn"></a>
+                                    <a href="cap.jsp" class="link-btn"></a>
                                 </div>
                             </div>
                         </div>
