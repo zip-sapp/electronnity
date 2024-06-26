@@ -53,13 +53,13 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand">
-                            <img src="images/merch-images/logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/white-logo.png" class="white-logo" alt="logo">
+                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="${pageContext.request.contextPath}/home" class="nav-link">Home</a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
                                     
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
                                     
