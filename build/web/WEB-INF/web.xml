@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
     <servlet>
-        <servlet-name>shop</servlet-name>
-        <servlet-class>com.electronnity.controller.shop</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>home</servlet-name>
         <servlet-class>com.electronnity.controller.home</servlet-class>
     </servlet>
@@ -25,8 +21,8 @@
         <servlet-class>com.electronnity.controller.verifyPin</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>changePass</servlet-name>
-        <servlet-class>com.electronnity.controller.changePass</servlet-class>
+        <servlet-name>changepass</servlet-name>
+        <servlet-class>com.electronnity.controller.changepass</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>accountlock</servlet-name>
@@ -97,65 +93,17 @@
         <servlet-class>com.electronnity.controller.login_warning</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>clients_list</servlet-name>
-        <servlet-class>com.electronnity.controller.clients_list</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>jacket</servlet-name>
-        <servlet-class>com.electronnity.controller.jacket</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>dashboard</servlet-name>
         <servlet-class>com.electronnity.controller.dashboard</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>cart</servlet-name>
-        <servlet-class>com.electronnity.controller.cart</servlet-class>
+        <servlet-name>registerproducts</servlet-name>
+        <servlet-class>com.electronnity.controller.registerproducts</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>hoodie</servlet-name>
-        <servlet-class>com.electronnity.controller.hoodie</servlet-class>
+        <servlet-name>searchproducts</servlet-name>
+        <servlet-class>com.electronnity.controller.searchproducts</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>all_products</servlet-name>
-        <servlet-class>com.electronnity.controller.all_products</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>create_user</servlet-name>
-        <servlet-class>com.electronnity.controller.create_user</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>productslist</servlet-name>
-        <servlet-class>com.electronnity.controller.productslist</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>createuser</servlet-name>
-        <servlet-class>com.electronnity.controller.createuser</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>createproduct</servlet-name>
-        <servlet-class>com.electronnity.controller.createproduct</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>userlist</servlet-name>
-        <servlet-class>com.electronnity.controller.userlist</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>merch</servlet-name>
-        <servlet-class>com.electronnity.controller.merch</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>listproduct</servlet-name>
-        <servlet-class>com.electronnity.controller.listproduct</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>editproducts</servlet-name>
-        <servlet-class>com.electronnity.controller.editproducts</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>shop</servlet-name>
-        <url-pattern>/shop</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -177,8 +125,8 @@
         <url-pattern>/verifyPin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>changePass</servlet-name>
-        <url-pattern>/changePass</url-pattern>
+        <servlet-name>changepass</servlet-name>
+        <url-pattern>/changepass</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>accountlock</servlet-name>
@@ -249,60 +197,16 @@
         <url-pattern>/login_warning</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>clients_list</servlet-name>
-        <url-pattern>/clients_list</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>jacket</servlet-name>
-        <url-pattern>/jacket</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>dashboard</servlet-name>
         <url-pattern>/dashboard</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>cart</servlet-name>
-        <url-pattern>/cart</url-pattern>
+        <servlet-name>registerproducts</servlet-name>
+        <url-pattern>/registerproducts</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>hoodie</servlet-name>
-        <url-pattern>/hoodie</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>all_products</servlet-name>
-        <url-pattern>/all_products</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>create_user</servlet-name>
-        <url-pattern>/create_user</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>productslist</servlet-name>
-        <url-pattern>/productslist</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>createuser</servlet-name>
-        <url-pattern>/createuser</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>createproduct</servlet-name>
-        <url-pattern>/createproduct</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>userlist</servlet-name>
-        <url-pattern>/userlist</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>listproduct</servlet-name>
-        <url-pattern>/listproduct</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>editproducts</servlet-name>
-        <url-pattern>/editproducts</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>merch</servlet-name>
-        <url-pattern>/merch</url-pattern>
+        <servlet-name>searchproducts</servlet-name>
+        <url-pattern>/searchproducts</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

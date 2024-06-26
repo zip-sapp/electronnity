@@ -1,5 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to changePass this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to changepass this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package com.electronnity.controller;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class changePass extends HttpServlet {
+public class changepass extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // MySQL database connection settings
@@ -77,7 +77,7 @@ public class changePass extends HttpServlet {
         } catch (SQLException e) {
             response.getWriter().println("Error: " + e.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(changePass.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(changepass.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

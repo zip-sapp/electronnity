@@ -16,7 +16,7 @@ import java.util.ArrayList;
  *
  * @author Aaron
  */
-public class editproduct {
+public class UpdateProducts {
 
     public ArrayList<productmodel> getProductDetails(String productid) throws ClassNotFoundException {
         ArrayList<productmodel> productDetails = new ArrayList<>();
@@ -37,7 +37,7 @@ public class editproduct {
                     + "FROM electronnity.productinfo "
                     + "WHERE productid = ?";
 
-            conn = connect.getConnection();
+            conn = ConnectionPool.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, productid);
             rs = ps.executeQuery();
@@ -97,15 +97,14 @@ public class editproduct {
 
         try {
             String query = "UPDATE electronnity.productinfo SET"
-                    + "productid = ?, "
-                    + "productname = ? "
-                    + "description = ? "
-                    + "size = ? "
-                    + "price = ? "
-                    + "quantity = ? "
-                    + "WHERE productid = ? ";
+                    + " productname =?,"
+                    + " description =?,"
+                    + " size =?,"
+                    + " price =?,"
+                    + " quantity =? "
+                    + " WHERE productid =? ";
 
-            conn = connect.getConnection();
+            conn = ConnectionPool.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, productname);
             ps.setString(2, description);
@@ -115,21 +114,21 @@ public class editproduct {
             ps.setString(6, productid);
 
             int rowsAffected = ps.executeUpdate();
-            if (rowsAffected != 0) {
+            if (rowsAffected!= 0) {
                 success = true;
             }
 
         } catch (SQLException e) {
             System.out.println("editProduct error: " + e);
         } finally {
-            if (ps != null) {
+            if (ps!= null) {
                 try {
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("SQLException" + e.getMessage());
                 }
             }
-            if (conn != null) {
+            if (conn!= null) {
                 try {
                     conn.close();
                 } catch (SQLException e) {
