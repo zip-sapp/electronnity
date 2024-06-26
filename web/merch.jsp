@@ -13,22 +13,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Links of CSS files -->
-        <link rel="stylesheet" href="css/merch-css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/merch-css/animate.min.css">
-        <link rel="stylesheet" href="css/merch-css/boxicons.min.css">
-        <link rel="stylesheet" href="css/merch-css/flaticon.css">
-        <link rel="stylesheet" href="css/merch-css/magnific-popup.min.css">
-        <link rel="stylesheet" href="css/merch-css/nice-select.min.css">
-        <link rel="stylesheet" href="css/merch-css/slick.min.css">
-        <link rel="stylesheet" href="css/merch-css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/merch-css/meanmenu.min.css">
-        <link rel="stylesheet" href="css/merch-css/rangeSlider.min.css">
-        <link rel="stylesheet" href="css/merch-css/style.css">
-        <link rel="stylesheet" href="css/merch-css/dark.css">
-        <link rel="stylesheet" href="css/merch-css/responsive.css">
-        <link rel="stylesheet" href="css/merch-css/cart-modal.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/animate.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/boxicons.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/flaticon.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/magnific-popup.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/nice-select.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/slick.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/owl.carousel.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/meanmenu.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/rangeSlider.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/style.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/dark.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/responsive.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cart-modal.css">
 
-        <title>electronnity | home</title>
+        <title>Electronnity | Merch</title>
 
         <link rel="icon" type="image/png" href="images/inventory-images/favicon.png">
     </head>
@@ -57,13 +57,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.html" class="nav-link active">Home</a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/home" class="nav-link">Home</a>
                                     
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Shop</a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
                                     
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login</a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -100,13 +100,13 @@
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.html" class="nav-link active">Home </a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/home" class="nav-link">Home</a>
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Shop </a> 
+                                <li class="nav-item megamenu"><a href="#" class="nav-link">Shop</a> 
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login</a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main</a>
                                     
                                 </li>
                             </ul>

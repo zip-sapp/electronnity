@@ -28,7 +28,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/responsive.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cart-modal.css">
 
-        <title>electronnity | signature hoodie</title>
+        <title>Electronnity | Signature Hoodie</title>
 
         <link rel="icon" type="image/png" href="images/merch-images/favicon.png">
     </head>
@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <a href="#">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
                                 <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                                 <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
@@ -52,20 +52,20 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
                             <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                             <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>             
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>             
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -95,20 +95,20 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/merch">
                             <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                             <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/home" class="nav-link">Home</a>
                                   
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link active">Shop</a>
 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
                                    
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -163,7 +163,7 @@
                 <div class="page-title-content">
                     <h2>Signature Hoodie</h2>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a>Home</a></li>
                         <li>Product Details</li>
                     </ul>
                 </div>
@@ -179,22 +179,6 @@
                         <div class="products-details-image">
                             <div class="single-products-details-image">
                                 <img src="images/merch-images/black-hoodie_front.png" alt="image">
-                            </div>
-
-                            <div class="single-products-details-image">
-                                <img src="images/merch-images/sp_lightblue-hoodie_front.png" alt="image">
-                            </div>
-
-                            <div class="single-products-details-image">
-                                <img src="images/merch-images/sp_green-hoodie_front.png" alt="image">
-                            </div>
-
-                            <div class="single-products-details-image">
-                                <img src="images/merch-images/sp_red-hoodie_front.png" alt="image">
-                            </div>
-
-                            <div class="single-products-details-image">
-                                <img src="images/merch-images/sp_teal-hoodie_front.png" alt="image">
                             </div>
                         </div>
                     </div>
@@ -212,55 +196,9 @@
                                 <li><span>Product Type:</span> <a href="#">Hoodie</a></li>
                             </ul>
 
-                            <div class="products-color-switch">
-                                <span>Color:</span>
-
-                                <ul>
-                                    <li><a href="#" title="Black" class="color-black"></a></li>
-                                    <li><a href="#" title="Blue" class="color-blue"></a></li>
-                                    <li><a href="#" title="Green" class="color-green"></a></li>
-                                    <li><a href="#" title="Red" class="color-red"></a></li>
-                                    <li><a href="#" title="Teal" class="color-teal"></a></li>
-                                </ul>
-                            </div>
-
                             <div class="products-size-wrapper">
-                                <span>Size:</span>
-
-                                <ul>
-                                    <li><a href="#">XS</a></li>
-                                    <li><a href="#">S</a></li>
-                                    <li><a href="#">M</a></li>
-                                    <li><a href="#">XL</a></li>
-                                    <li><a href="#">XXL</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="products-add-to-cart">
-                                <div class="input-counter">
-                                    <span class="minus-btn"><i class='bx bx-minus'></i></span>
-                                    <input type="text" value="1">
-                                    <span class="plus-btn"><i class='bx bx-plus'></i></span>
-                                </div>
-
-                                <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
-                            </div>
-
-                            <div class="buy-checkbox-btn">
-                                <div class="item">
-                                    <input class="inp-cbx" id="cbx" type="checkbox">
-                                    <label class="cbx" for="cbx">
-                                        <span>
-                                            <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                            </svg>
-                                        </span>
-                                        <span>I agree with the terms and conditions</span>
-                                    </label>
-                                </div>
-
-                                <div class="item">
-                                    <a href="#" class="default-btn">Buy it now!</a>
+                                <div class="products-add-to-cart">
+                                    <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -297,69 +235,19 @@
                     </button>
 
                     <div class="modal-body">
-                        <h3>My Cart (3)</h3>
+                        <h3>My Cart</h3>
 
                         <div class="products-cart-content">
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/guitar_plush.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Electric Guitar Plush</a></h3>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">₱250.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/gray-shirt_front.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Classic Patch Tee</a></h3>
-                                    <span>Gray / S</span>
-                                    <div class="products-price">
-                                        <span>2</span>
-                                        <span>x</span>
-                                        <span class="price">₱280.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/black-cap_front.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Signature Cap</a></h3>
-                                    <span>Black / S</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">₱200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
 
-                            <span class="subtotal">₱730.00</span>
+                            <span class="subtotal">₱0.00</span>
                         </div>
 
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
-                            <a href="#" class="optional-btn">View Shopping Cart</a>
                         </div>
                     </div>
                 </div>

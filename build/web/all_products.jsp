@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <a href="#">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
                                 <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                                 <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
@@ -52,23 +52,18 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
                             <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                             <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#" class="nav-link">Home </a>
-
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>
-                                  
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
-                                   
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
-
-                            </li>
-                        </ul>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link active">Home</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
+                            </ul>
                         
                             <div class="others-option">
                                 <div class="option-item">
@@ -95,20 +90,20 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
                             <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                             <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
                                 
-                                <li class="nav-item megamenu"><a href="#" class="nav-link active">Shop </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
                                     
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
                                   
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
                                   
                                 </li>
                             </ul>
@@ -163,7 +158,7 @@
                 <div class="page-title-content">
                     <h2>All Products</h2>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li>Home</li>
                         <li>Products</li>
                     </ul>
                 </div>
@@ -215,7 +210,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="#">
+                                <a href="${pageContext.request.contextPath}/guitar_plush">
                                     <img src="images/merch-images/guitar_plush.png" class="main-image" alt="image">
                                     <img src="images/merch-images/guitar_plush.png" class="hover-image" alt="image">
                                 </a>
@@ -225,7 +220,7 @@
 
                             <div class="products-content">
                                 <span class="category">Limited Edition</span>
-                                <h3><a href="#">Electric Guitar Plush</a></h3>
+                                <h3><a href="${pageContext.request.contextPath}/guitar_plush">Electric Guitar Plush</a></h3>
                                 <div class="price">
                                     <span class="new-price">₱150.00</span>
                                 </div>
@@ -236,7 +231,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="#">
+                                <a href="${pageContext.request.contextPath}/shirt">
                                     <img src="images/merch-images/gray-shirt_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/gray-shirt_front.png" class="hover-image" alt="image">
                                 </a><div></div>
@@ -244,7 +239,7 @@
 
                             <div class="products-content">
                                 <span class="category">Shirt</span>
-                                <h3><a href="#">Classic Patch Tee</a></h3>
+                                <h3><a href="${pageContext.request.contextPath}/shirt">Classic Patch Tee</a></h3>
                                 <div class="price">
                                     <span class="new-price">₱150.00</span>
                                 </div>
@@ -255,7 +250,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="#">
+                                <a href="${pageContext.request.contextPath}/cap">
                                     <img src="images/merch-images/black-cap_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/black-cap_front.png" class="hover-image" alt="image">
                                 </a><div></div>
@@ -263,7 +258,7 @@
 
                             <div class="products-content">
                                 <span class="category">Cap</span>
-                                <h3><a href="#">Signature Cap</a></h3>
+                                <h3><a href="${pageContext.request.contextPath}/cap">Signature Cap</a></h3>
                                 <div class="price">
                                     <span class="new-price">₱200.00</span>
                                 </div>
@@ -274,7 +269,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="#">
+                                <a href="${pageContext.request.contextPath}/jacket">
                                     <img src="images/merch-images/black-jacket_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/black-jacket_front.png" class="hover-image" alt="image">
                                 </a>
@@ -294,7 +289,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 products-col-item">
                         <div class="single-productsBox">
                             <div class="products-image">
-                                <a href="#">
+                                <a href="${pageContext.request.contextPath}/hoodie">
                                     <img src="images/merch-images/black-hoodie_front.png" class="main-image" alt="image">
                                     <img src="images/merch-images/black-hoodie_front.png" class="hover-image" alt="image">
                                 </a><div></div>
@@ -302,12 +297,11 @@
 
                             <div class="products-content">
                                 <span class="category">Hoodie</span>
-                                <h3><a href="#">Signature Hoodie</a></h3>
+                                <h3><a href="${pageContext.request.contextPath}/hoodie">Signature Hoodie</a></h3>
 
                                 <div class="price">
                                     <span class="new-price">₱500.00</span>
                                 </div>
-                                <a href="#" class="add-to-cart">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -383,69 +377,18 @@
                     </button>
 
                     <div class="modal-body">
-                        <h3>My Cart (3)</h3>
+                        <h3>My Cart</h3>
 
                         <div class="products-cart-content">
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/guitar_plush.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Electric Guitar Plush</a></h3>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">₱150.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/gray-shirt_front.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Classic Patch Tee</a></h3>
-                                    <span>Gray / S</span>
-                                    <div class="products-price">
-                                        <span>2</span>
-                                        <span>x</span>
-                                        <span class="price">₱300.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/black-cap_front.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Signature Cap</a></h3>
-                                    <span>Black / S</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">₱200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-
-                            <span class="subtotal">₱650.00</span>
+                            <span class="subtotal">₱0.00</span>
                         </div>
 
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
-                            <a href="#" class="optional-btn">View Shopping Cart</a>
                         </div>
                     </div>
                 </div>
@@ -457,7 +400,6 @@
 
         <!-- Links of JS files -->
         <script src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
-        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
