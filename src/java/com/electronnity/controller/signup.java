@@ -1,6 +1,6 @@
 package com.electronnity.controller;
 
-import com.electronnity.dao.register;
+import com.electronnity.dao.ClientModels;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -113,7 +113,7 @@ public class signup extends HttpServlet {
 
     if (isValid) {
     // If all credentials are valid, check if user exists
-    register reg = new register();
+    ClientModels reg = new ClientModels();
     boolean userExists = reg.checkUserExists(username, email);
         
         //If user or email exist, redirect back to signup page
@@ -153,7 +153,7 @@ public class signup extends HttpServlet {
         String birthday = request.getParameter("birthday");
         String number = request.getParameter("number");
     
-        register reg = new register();
+        ClientModels reg = new ClientModels();
         reg.createClient(username, password, firstname, middlename, lastname, address, birthday, number); 
         
         response.sendRedirect(request.getContextPath() + "/login"); 

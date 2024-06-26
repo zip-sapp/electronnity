@@ -11,10 +11,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class listproduct {
+public class SearchProducts {
 
     public ArrayList<productmodel> getAllProduct() throws ClassNotFoundException {
-        ArrayList<productmodel> allProduct = new ArrayList<>();
+        ArrayList<productmodel> allProducts = new ArrayList<>();
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -31,7 +31,7 @@ public class listproduct {
                     + "quantity "
                     + "FROM electronnity.productinfo";
 
-            conn = connect.getConnection();
+            conn = ConnectionPool.getConnection();
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
 
@@ -43,7 +43,7 @@ public class listproduct {
                 product.setSize(rs.getString("size"));
                 product.setPrice(rs.getBigDecimal("price"));
                 product.setQuantity(rs.getInt("quantity"));
-                allProduct.add(product);
+                allProducts.add(product);
             }
             
             conn.close();
@@ -74,7 +74,7 @@ public class listproduct {
                     System.out.println("SQLException" + e.getMessage());
                 }
             }
-            return allProduct;
+            return allProducts;
         } 
     }
 }

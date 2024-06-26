@@ -4,7 +4,7 @@
  */
 package com.electronnity.controller;
 
-import com.electronnity.dao.product;
+import com.electronnity.dao.ProductModels;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.logging.Level;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class createproduct extends HttpServlet {
+public class registerproducts extends HttpServlet {
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +40,7 @@ public class createproduct extends HttpServlet {
     private void viewcreateproduct (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher cp = getServletContext().getRequestDispatcher(
-                "/WEB-INF/inventory/create-product.jsp");
+                "/WEB-INF/inventory/create-products.jsp");
         cp.forward(request, response);
     }
     
@@ -54,15 +54,14 @@ public class createproduct extends HttpServlet {
         BigDecimal price = new BigDecimal(request.getParameter("price"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         
-        product pro = new product();
+        ProductModels pro = new ProductModels();
         boolean createProduct = pro.createProduct(productid, productname, description, size, price, quantity); 
         
             if (createProduct) {
                 
-                response.sendRedirect(request.getContextPath() + "/productslist");
-                return;
+                response.sendRedirect(request.getContextPath() + "/searchproducts");
                  
-        }
+            }
         System.out.println(productid + productname + description + size + price + quantity); //printing the data input
     }
 }

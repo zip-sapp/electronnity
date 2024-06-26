@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class product {
+public class ProductModels {
     
     public boolean createProduct (
         String productid,
@@ -32,7 +32,7 @@ public class product {
                     + "quantity) "
                     + "VALUES (?, ?, ?, ?, ?, ?)";
 
-            conn = connect.getConnection();
+            conn = ConnectionPool.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, productid);
             ps.setString(2, productname);

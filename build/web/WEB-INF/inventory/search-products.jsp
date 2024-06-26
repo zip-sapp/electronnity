@@ -1,12 +1,13 @@
 <%-- 
-    Document   : create-product
-    Created on : Jun 24, 2024, 7:42:53 PM
+    Document   : products-list
+    Created on : Jun 24, 2024, 7:50:11 PM
     Author     : Aaron
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +20,7 @@
         <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!-- Title -->
-        <title>electronnity | edit-products</title>
+        <title>electron nity | products-list</title>
 
         <!-- Styles -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,16 +31,14 @@
         <link href="${pageContext.request.contextPath}/css/inventory-css/perfect-scrollbar.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/inventory-css/pace.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/inventory-css/apexcharts.css" rel="stylesheet">
-        <link href="${pageContext.request.contextPath}/css/inventory-css/github-gist.css" rel="stylesheet">
-        <link href="${pageContext.request.contextPath}/css/inventory-css/dropzone.min.css" rel="stylesheet">
 
         <!-- Theme Styles -->
         <link href="${pageContext.request.contextPath}/css/inventory-css/main.min.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/inventory-css/darktheme.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/inventory-css/custom.css" rel="stylesheet">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/inventory-images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/inventory-images/favicon.png" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +52,7 @@
         <div class="app align-content-stretch d-flex flex-wrap">
             <div class="app-sidebar">
                 <div class="logo">
-                    <a href="#" class="logo-icon"><span class="logo-text">Logout</span></a>
+                    <a href="index.html" class="logo-icon"><span class="logo-text">Logout</span></a>
                     <div class="sidebar-user-switcher user-activity-online">
                         <a href="#">
                             <img src="images/inventory-images/profile-pic.png">
@@ -65,26 +64,26 @@
                 <div class="app-menu">
                     <ul class="accordion-menu">
                         <li>
-                            <a href="#"></i>Dashboard</a>
+                            <a href="index.html"></i>Dashboard</a>
                         </li>
 
                         <li>
                             <a href="#">Products<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
                             <ul class="sub-menu">
                                 <li class="active-page">
-                                    <a href="#" class="active">Edit Product</a>
+                                    <a href="#">Create Product</a>
                                 </li>
                                 <li>
-                                    <a href="#">Products List</a>
+                                    <a href="products-list.html" class="active">Products List</a>
                                 </li>
                             </ul>
                         </li>
-
+                        
                         <li>
                             <a href="#">People<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="#">Create User</a>
+                                    <a href="create-user.html">Create User</a>
                                 </li>
                                 <li>
                                     <a href="#">Users List</a>
@@ -120,50 +119,56 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="page-description">
-                                        <h1>Edit Product</h1>
+                                        <h1>Products List</h1>
                                     </div>
                                 </div>
                             </div>
-                            <h6>${message}</h6>
-                            <form class="card" id="form" action="${pageContext.request.contextPath}/editproducts" method="GET">
-                                <c:forEach items="${productDetails}" var="product">
-                                    <div class="card-body">
-                                        <div class="example-content">
-                                            <label for="productid" class="form-label">Product ID</label>
-                                            <input type="text" class="form-control" id="productid" name="productid" value="${product.productId}">
-                                        </div>
-                                        <div class="example-content">
-                                            <label for="productname" class="form-label">Product Name</label>
-                                            <input type="text" class="form-control" id="productname" name="productname" value="${product.productName}">
-                                        </div>
-                                        <div class="example-content">
-                                            <label for="description" class="form-label">Product Description</label>
-                                            <textarea class="form-control" id="description" name="description">${product.description}</textarea>
-                                        </div>
-                                        <div class="example-content">
-                                            <label for="size" class="form-label">Product Size</label>
-                                            <input type="text" class="form-control" id="size" name="size" value="${product.size}">
-                                        </div>
-                                        <div class="example-content">
-                                            <label for="price" class="form-label">Price</label>
-                                            <input type="number" class="form-control" id="price" name="price" value="${product.price}">
-                                        </div>
-                                        <div class="example-content">
-                                            <label for="quantity" class="form-label">Quantity</label>
-                                            <input type="number" class="form-control" id="quantity" name="quantity" value="${product.quantity}">
-                                        </div>
-                                    </div>
-                                </c:forEach>
-                            </form>
-                            <button id ="add" type="button" class="btn btn-primary" name="editproduct"><i class="material-icons">add</i>Edit</button>
-                            <button type="button" class="btn btn-danger"><i class="material-icons">delete_outline</i>Cancel</button>
+                            <div class="example-content">
+                                <div class="table-responsive-lg">
+                                    <div class="form-check">${message}</div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="text-align: center"></th>
+                                                <th scope="col" style="text-align: center">Product ID</th>
+                                                <th scope="col" style="text-align: center">Product Name</th>
+                                                <th scope="col" style="text-align: center">Description</th>
+                                                <th scope="col" style="text-align: center">Size</th>
+                                                <th scope="col" style="text-align: center">Price</th>
+                                                <th scope="col" style="text-align: center">Quantity</th>
+                                                <th scope="col" style="text-align: center">Actions</th>
+                                                <th scope="col" style="text-align: center"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${allProducts}" var="product">
+                                            <tr>
+                                                <th scope="row">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault_${product.productId}">
+                                                    <label class="form-check-label" for="flexCheckDefault_${product.productId}">
+                                                </th>
+                                                <td style="text-align: center">${product.productId}</td>
+                                                <td style="text-align: center">${product.productName}</td>
+                                                <td style="text-align: center">${product.description}</td>
+                                                <td style="text-align: center">${product.size}</td>
+                                                <td style="text-align: center">₱ <fmt:formatNumber type="number" maxFractionDigits="0" value="${product.price}"/></td>
+                                                <td style="text-align: center">${product.quantity}</td>
+                                                <td>   
+                                                    <button type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
+                                                </td>
+                                                <td>    
+                                                    <a href="${pageContext.request.contextPath}/${product.productId}" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</a>     
+                                                </td>
+                                            </tr>
+                                            </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
         <!-- Javascripts -->
-        <script src="${pageContext.request.contextPath}/js/inventory-js/product-validation.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/jquery-3.5.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/bootstrap.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/perfect-scrollbar.min.js"></script>
