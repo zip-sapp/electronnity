@@ -40,8 +40,10 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
+                                <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                                <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                            </a>
                         </div>
                     </div>
                 </div>
