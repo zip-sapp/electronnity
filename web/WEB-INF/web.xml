@@ -92,18 +92,6 @@
         <servlet-name>login_warning</servlet-name>
         <servlet-class>com.electronnity.controller.login_warning</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>dashboard</servlet-name>
-        <servlet-class>com.electronnity.controller.dashboard</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>registerproducts</servlet-name>
-        <servlet-class>com.electronnity.controller.registerproducts</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>searchproducts</servlet-name>
-        <servlet-class>com.electronnity.controller.searchproducts</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -195,18 +183,6 @@
     <servlet-mapping>
         <servlet-name>login_warning</servlet-name>
         <url-pattern>/login_warning</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>dashboard</servlet-name>
-        <url-pattern>/dashboard</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>registerproducts</servlet-name>
-        <url-pattern>/registerproducts</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>searchproducts</servlet-name>
-        <url-pattern>/searchproducts</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
