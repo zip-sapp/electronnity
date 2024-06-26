@@ -446,7 +446,6 @@
 
         <!-- Links of JS files -->
         <script src="${pageContext.request.contextPath}/js/merch-js/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
