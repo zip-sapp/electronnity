@@ -104,6 +104,22 @@
         <servlet-name>InventoryDashboard</servlet-name>
         <servlet-class>com.electronnity.controller.InventoryDashboard</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>all_products</servlet-name>
+        <servlet-class>com.electronnity.controller.all_products</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>hoodie</servlet-name>
+        <servlet-class>com.electronnity.controller.hoodie</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>jacket</servlet-name>
+        <servlet-class>com.electronnity.controller.jacket</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>merch</servlet-name>
+        <servlet-class>com.electronnity.controller.merch</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -247,6 +263,22 @@
     <servlet-mapping>
         <servlet-name>InventoryDashboard</servlet-name>
         <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>all_products</servlet-name>
+        <url-pattern>/all_products</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>hoodie</servlet-name>
+        <url-pattern>/hoodie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>jacket</servlet-name>
+        <url-pattern>/jacket</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>merch</servlet-name>
+        <url-pattern>/merch</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
