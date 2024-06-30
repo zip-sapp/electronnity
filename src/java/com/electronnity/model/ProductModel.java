@@ -17,7 +17,7 @@ public class ProductModel {
     public ProductModel() {
     }
 
-    public ProductModel(String productid, String productName, String description, String size, BigDecimal price, int quantity) {
+    public ProductModel(String productid, String productname, String description, String size, BigDecimal price, int quantity) {
         this.productid = productid;
         this.productname = productname;
         this.description = description;

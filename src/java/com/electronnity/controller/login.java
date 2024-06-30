@@ -19,21 +19,22 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class login extends HttpServlet {
-    
+
     private final int maxAttempts = 3; // maximum number of attempts before lockout
     private int attempts = 1; // current number of attempts
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         String action = request.getServletPath();
         switch (action) {
-            case "/login" -> viewlogin(request, response);
+            case "/login" ->
+                viewlogin(request, response);
             default -> // Handle unknown actions
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -52,9 +53,17 @@ public class login extends HttpServlet {
     }
 
     private void authenticateUser(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException, ClassNotFoundException {
-    String email = request.getParameter("email");
-    String password = request.getParameter("password");
+            throws ServletException, IOException, ClassNotFoundException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        // Premade administrator account
+        if (email.equals("administrator@electronnity.co") && password.equals("Giraffe#LemonTree88!")) {
+            // Administrator account, set usertype to "Administrator"
+            request.getSession().setAttribute("usertype", "Administrator");
+            response.sendRedirect("dashboard"); // Redirect to inventory dashboard
+            return;
+        }
 
         try {
             // Register the JDBC driver
@@ -69,6 +78,7 @@ public class login extends HttpServlet {
                 if (rs.next()) {
                     String storedPassword = rs.getString("password");
                     attempts = rs.getInt("attempts");
+                    String usertype = rs.getString("usertype"); // Get the usertype
 
                     if (attempts >= maxAttempts) {
                         // User is locked out
@@ -86,18 +96,23 @@ public class login extends HttpServlet {
 
                         request.setAttribute("error", "Invalid email or password");
                         response.sendRedirect("login_error");
-                        
+
                     } else {
                         // User authenticated, reset attempts
-                        pstmt = conn.prepareStatement("UPDATE electronnity.clientinfo SET attempts = 1 WHERE email =?");
+                        pstmt = conn.prepareStatement("UPDATE electronnity.clientinfo SET attempts = 1, loginstatus = 'Online' WHERE email =?");
                         pstmt.setString(1, email);
                         pstmt.executeUpdate();
-                        
+
                         // Set session attribute to indicate user is logged in
                         request.getSession().setAttribute("loggedIn", true);
 
-                        request.getRequestDispatcher("/home.jsp").forward(request, response);
-                        
+                        if (usertype.equals("Administrator")) {
+                            // Redirect to inventory dashboard
+                            response.sendRedirect("dashboard");
+                        } else {
+                            // Redirect to home page
+                            response.sendRedirect("home");
+                        }
                     }
                 } else {
                     // email not found, increment attempts

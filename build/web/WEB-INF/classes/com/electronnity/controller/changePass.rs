@@ -1,1 +1,0 @@
-com.electronnity.controller.changepass

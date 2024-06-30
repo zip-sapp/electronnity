@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class RegisterUsersClass {
+public class ClientDao {
     
     public boolean createClient (
             String username,

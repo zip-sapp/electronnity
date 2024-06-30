@@ -92,6 +92,18 @@
         <servlet-name>login_warning</servlet-name>
         <servlet-class>com.electronnity.controller.login_warning</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InventoryProduct</servlet-name>
+        <servlet-class>com.electronnity.controller.InventoryProduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InventoryUser</servlet-name>
+        <servlet-class>com.electronnity.controller.InventoryUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InventoryDashboard</servlet-name>
+        <servlet-class>com.electronnity.controller.InventoryDashboard</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -183,6 +195,58 @@
     <servlet-mapping>
         <servlet-name>login_warning</servlet-name>
         <url-pattern>/login_warning</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryProduct</servlet-name>
+        <url-pattern>/productlist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryProduct</servlet-name>
+        <url-pattern>/productlist/create</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryProduct</servlet-name>
+        <url-pattern>/productlist/create/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryProduct</servlet-name>
+        <url-pattern>/productlist/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryProduct</servlet-name>
+        <url-pattern>/productlist/update/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryProduct</servlet-name>
+        <url-pattern>/productlist/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryUser</servlet-name>
+        <url-pattern>/userlist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryUser</servlet-name>
+        <url-pattern>/userlist/create</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryUser</servlet-name>
+        <url-pattern>/userlist/create/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryUser</servlet-name>
+        <url-pattern>/userlist/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryUser</servlet-name>
+        <url-pattern>/userlist/update/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryUser</servlet-name>
+        <url-pattern>/userlist/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryDashboard</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
