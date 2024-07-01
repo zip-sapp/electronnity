@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 public class login extends HttpServlet {
 
     private final int maxAttempts = 3; // maximum number of attempts before lockout
-    private int attempts = 1; // current number of attempts
+    private int attempts = 0; // current number of attempts
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -61,6 +61,7 @@ public class login extends HttpServlet {
         if (email.equals("administrator@electronnity.co") && password.equals("Giraffe#LemonTree88!")) {
             // Administrator account, set usertype to "Administrator"
             request.getSession().setAttribute("usertype", "Administrator");
+            request.getSession().setAttribute("username", "Administrator"); // Set username to "Administrator"
             response.sendRedirect("dashboard"); // Redirect to inventory dashboard
             return;
         }
@@ -79,6 +80,7 @@ public class login extends HttpServlet {
                     String storedPassword = rs.getString("password");
                     attempts = rs.getInt("attempts");
                     String usertype = rs.getString("usertype"); // Get the usertype
+                    String username = rs.getString("username"); // Get the username
 
                     if (attempts >= maxAttempts) {
                         // User is locked out
@@ -99,12 +101,14 @@ public class login extends HttpServlet {
 
                     } else {
                         // User authenticated, reset attempts
-                        pstmt = conn.prepareStatement("UPDATE electronnity.clientinfo SET attempts = 1, loginstatus = 'Online' WHERE email =?");
+                        pstmt = conn.prepareStatement("UPDATE electronnity.clientinfo SET attempts = 0, loginstatus = 'Online' WHERE email =?");
                         pstmt.setString(1, email);
                         pstmt.executeUpdate();
 
                         // Set session attribute to indicate user is logged in
                         request.getSession().setAttribute("loggedIn", true);
+                        request.getSession().setAttribute("username", username); // Set username session attribute
+                        request.getSession().setAttribute("usertype", usertype); // Set usertype session attribute
 
                         if (usertype.equals("Administrator")) {
                             // Redirect to inventory dashboard

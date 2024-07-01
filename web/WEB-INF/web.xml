@@ -108,17 +108,25 @@
         <servlet-name>all_products</servlet-name>
         <servlet-class>com.electronnity.controller.all_products</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>hoodie</servlet-name>
         <servlet-class>com.electronnity.controller.hoodie</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>jacket</servlet-name>
         <servlet-class>com.electronnity.controller.jacket</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>merch</servlet-name>
         <servlet-class>com.electronnity.controller.merch</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>com.electronnity.controller.logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop</servlet-name>
+        <servlet-class>com.electronnity.controller.shop</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
@@ -279,6 +287,14 @@
     <servlet-mapping>
         <servlet-name>merch</servlet-name>
         <url-pattern>/merch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop</servlet-name>
+        <url-pattern>/shop</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
