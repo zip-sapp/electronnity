@@ -46,18 +46,140 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        <style>
+            .page-description {
+                margin-bottom: 20px;
+                text-align: center; /* Center the header text */
+            }
+
+            .example-content {
+                margin-bottom: 15px;
+            }
+
+            .form-label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 10px;
+            }
+           
+        </style>
+        
+        <script type="text/javascript">
+        function confirmDelete(event) {
+            event.preventDefault();
+            console.log("Delete button clicked."); // Debugging message
+            const target = event.currentTarget;
+            const confirmation = confirm("Are you sure you want to delete this product?");
+            if (confirmation) {
+                console.log("Confirmed deletion."); // Debugging message
+                window.location.href = target.href;  // Proceed with the delete action
+            } else {
+                console.log("Cancelled deletion."); // Debugging message
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("DOM fully loaded and parsed."); // Debugging message
+            const deleteButtons = document.querySelectorAll('.btn-danger');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', confirmDelete);
+            });
+
+            console.log("Event listeners added to delete buttons."); // Debugging message
+        });
+        </script>
+        
+        <style>
+            
+            .table-responsive-lg {
+                overflow-x: auto;
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Dark scrollbar styling */
+            .table-responsive-lg::-webkit-scrollbar {
+                height: 12px; /* Scrollbar height for horizontal scrolling */
+            }
+
+            .table-responsive-lg::-webkit-scrollbar-track {
+                background: #333; /* Track color */
+            }
+
+            .table-responsive-lg::-webkit-scrollbar-thumb {
+                background-color: #555; /* Scrollbar thumb color */
+                border-radius: 10px; /* Roundness of the scrollbar thumb */
+                border: 3px solid #333; /* Padding around the scrollbar thumb */
+            }
+
+            .table-responsive-lg::-webkit-scrollbar-thumb:hover {
+                background-color: #777; /* Scrollbar thumb hover color */
+            }
+            
+            .btn-burger {
+                margin: 5px;
+            }
+
+            .table {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 1rem;
+                background-color: transparent;
+                table-layout: auto;
+            }
+
+            th, td {
+                white-space: nowrap;
+                text-align: center;
+                vertical-align: middle; /* Center vertically */
+            }
+
+            .btn-group {
+                display: flex;
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
+            }
+
+            .btn-group .btn {
+                margin-right: 5px;
+            }
+            
+            .page-description {
+                margin-bottom: 10px; /* Compact margin */
+            }
+
+            .content-wrapper {
+                padding: 10px; /* Compact padding */
+            }
+
+            .example-content {
+                margin-bottom: 10px; /* Compact margin */
+            }
+
+            .table-row {
+                height: auto; /* Allow rows to adjust height based on content */
+            }
+        </style>
+
     </head>
 
     <body>
         <div class="app align-content-stretch d-flex flex-wrap">
             <div class="app-sidebar">
                 <div class="logo">
-                    <a href="index.html" class="logo-icon"><span class="logo-text">Logout</span></a>
+                    <a href="${pageContext.request.contextPath}/logout" method="POST" class="logo-icon"><span class="logo-text">Logout</span></a>
                     <div class="sidebar-user-switcher user-activity-online">
                         <a href="#">
-                            <img src="images/inventory-images/profile-pic.png">
+                            <img src="${pageContext.request.contextPath}/images/inventory-images/profile-pic.png">
                             <span class="activity-indicator"></span>
-                            <span class="user-info-text">Administrator<br><span class="user-state-info">Online</span></span>
+                            <span class="user-info-text">${username}<br><span class="user-state-info">Administrator</span></span>
                         </a>
                     </div>
                 </div>
@@ -137,7 +259,6 @@
                                                 <th scope="col" style="text-align: center">Price</th>
                                                 <th scope="col" style="text-align: center">Quantity</th>
                                                 <th scope="col" style="text-align: center">Actions</th>
-                                                <th scope="col" style="text-align: center"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -151,11 +272,13 @@
                                                 <td style="text-align: center">${pro.size}</td>
                                                 <td style="text-align: center">₱ <fmt:formatNumber value="${pro.price}" maxFractionDigits="0" /></td>
                                                 <td style="text-align: center">${pro.quantity}</td>
-                                                <td>   
-                                                    <a href="${pageContext.request.contextPath}/productlist/delete?productid=${pro.productId}" type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
-                                                </td>
-                                                <td>    
-                                                    <a href="${pageContext.request.contextPath}/productlist/update/form?productid=${pro.productId}"type="button" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</a>     
+                                                <td class="btn-group">
+                                                    <a href="${pageContext.request.contextPath}/productlist/delete?productid=${pro.productId}" class="btn btn-danger btn-burger">
+                                                        <i class="material-icons">delete_outline</i> Delete
+                                                    </a>
+                                                    <a href="${pageContext.request.contextPath}/productlist/update/form?productid=${pro.productId}" class="btn btn-success btn-burger">
+                                                        <i class="material-icons">edit</i> Edit
+                                                    </a>
                                                 </td>
                                             </tr>
                                             </c:forEach>
@@ -166,6 +289,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
         <!-- Javascripts -->
         <script src="${pageContext.request.contextPath}/js/inventory-js/jquery-3.5.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/bootstrap.min.js"></script>

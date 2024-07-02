@@ -44,18 +44,118 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <script type="text/javascript">
+            function confirmDelete(event) {
+                event.preventDefault();
+                const target = event.currentTarget;
+                const confirmation = confirm("Are you sure you want to delete this product?");
+                if (confirmation) {
+                    window.location.href = target.href;  // Proceed with the delete action
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const deleteButtons = document.querySelectorAll('.btn-danger');
+
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', confirmDelete);
+                });
+            });
+        </script>
+
+        <style>
+            
+            .page-description {
+                margin-bottom: 20px;
+                text-align: center; /* Center the header text */
+            }
+            
+            .table-responsive-lg {
+                overflow-x: auto;
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Dark scrollbar styling */
+            .table-responsive-lg::-webkit-scrollbar {
+                height: 12px; /* Scrollbar height for horizontal scrolling */
+            }
+
+            .table-responsive-lg::-webkit-scrollbar-track {
+                background: #333; /* Track color */
+            }
+
+            .table-responsive-lg::-webkit-scrollbar-thumb {
+                background-color: #555; /* Scrollbar thumb color */
+                border-radius: 10px; /* Roundness of the scrollbar thumb */
+                border: 3px solid #333; /* Padding around the scrollbar thumb */
+            }
+
+            .table-responsive-lg::-webkit-scrollbar-thumb:hover {
+                background-color: #777; /* Scrollbar thumb hover color */
+            }
+
+            .btn-burger {
+                margin: 5px;
+            }
+
+            .table {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 1rem;
+                background-color: transparent;
+                table-layout: auto; /* Allow columns to adjust width based on content */
+            }
+
+            th, td {
+                white-space: nowrap; 
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .btn-group {
+                display: flex;
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
+            }
+
+            .btn-group .btn {
+                margin-right: 5px;
+            }
+
+            .page-description {
+                margin-bottom: 10px; /* Compact margin */
+            }
+
+            .content-wrapper {
+                padding: 10px; /* Compact padding */
+            }
+
+            .example-content {
+                margin-bottom: 10px; /* Compact margin */
+            }
+
+            .table-row {
+                height: auto; /* Allow rows to adjust height based on content */
+            }
+            
+        </style>
+
+
+
     </head>
 
     <body>
         <div class="app align-content-stretch d-flex flex-wrap">
             <div class="app-sidebar">
                 <div class="logo">
-                    <a href="#" class="logo-icon"><span class="logo-text">Logout</span></a>
+                    <a href="${pageContext.request.contextPath}/logout" method="POST" class="logo-icon"><span class="logo-text">Logout</span></a>
                     <div class="sidebar-user-switcher user-activity-online">
                         <a href="#">
-                            <img src="images/inventory-images/profile-pic.png">
+                            <img src="${pageContext.request.contextPath}/images/inventory-images/profile-pic.png">
                             <span class="activity-indicator"></span>
-                            <span class="user-info-text">Administrator<br><span class="user-state-info">Online</span></span>
+                            <span class="user-info-text">${username}<br><span class="user-state-info">Administrator</span></span>
                         </a>
                     </div>
                 </div>
@@ -121,57 +221,53 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="example-content">
-                                <div class="table-responsive-lg">${message}</div>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" ></th>
-                                                <th scope="col" style="text-align: center">Role</th>
-                                                <th scope="col" style="text-align: center">User ID</th>
-                                                <th scope="col" style="text-align: center">Username</th>
-                                                <th scope="col" style="text-align: center">Password</th>
-                                                <th scope="col" style="text-align: center">Email</th>
-                                                <th scope="col" style="text-align: center">First Name</th>
-                                                <th scope="col" style="text-align: center">Middle Name</th>
-                                                <th scope="col" style="text-align: center">Last Name</th>
-                                                <th scope="col" style="text-align: center">Address</th>
-                                                <th scope="col" style="text-align: center">Birthday</th>
-                                                <th scope="col" style="text-align: center">Number</th>
-                                                <th scope="col" style="text-align: center">Attempts</th>
-                                                <th scope="col" style="text-align: center">Actions</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <c:forEach items="${userList}" var="user">
-                                            <tr>
-                                                <th scope="row">
-                                                </th>
-                                                <td style="text-align: center">${user.userType}</td>
-                                                <td style="text-align: center">${user.id}</td>
-                                                <td style="text-align: center">${user.username}</td>
-                                                <td style="text-align: center">${user.password}</td>
-                                                <td style="text-align: center">${user.email}</td>
-                                                <td style="text-align: center">${user.firstName}</td>
-                                                <td style="text-align: center">${user.middleName}</td>
-                                                <td style="text-align: center">${user.lastName}</td>
-                                                <td style="text-align: center">${user.address}</td>
-                                                <td style="text-align: center">${user.birthday}</td>
-                                                <td style="text-align: center">${user.number}</td>
-                                                <td style="text-align: center">${user.attempts}</td>
-                                                <td>    
-                                                    <a href="${pageContext.request.contextPath}/userlist/delete?id=${user.id}" type="button" class="btn btn-danger btn-burger"><i class="material-icons">delete_outline</i></button>    
-                                                </td>
-                                                <td>    
-                                                    <a href="${pageContext.request.contextPath}/userlist/update/form?id=${user.id}" type="button" class="btn btn-success btn-burger"><i class="material-icons"></i>Edit</button>    
+                                <div class="table-responsive-lg">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">User ID</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Password</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Middle Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">Birthday</th>
+                                            <th scope="col">Number</th>
+                                            <th scope="col">Attempts</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <c:forEach items="${userList}" var="user">
+                                            <tr class="table-row">
+                                                <td>${user.userType}</td>
+                                                <td>${user.id}</td>
+                                                <td>${user.username}</td>
+                                                <td>${user.password}</td>
+                                                <td>${user.email}</td>
+                                                <td>${user.firstName}</td>
+                                                <td>${user.middleName}</td>
+                                                <td>${user.lastName}</td>
+                                                <td>${user.address}</td>
+                                                <td>${user.birthday}</td>
+                                                <td>${user.number}</td>
+                                                <td>${user.attempts}</td>
+                                                <td class="btn-group">
+                                                    <a href="${pageContext.request.contextPath}/userlist/delete?id=${user.id}" class="btn btn-danger btn-burger">
+                                                        <i class="material-icons">delete</i>DEL
+                                                    </a>
+                                                    <a href="${pageContext.request.contextPath}/userlist/update/form?id=${user.id}" class="btn btn-success btn-burger">
+                                                        <i class="material-icons">edit</i>EDIT
+                                                    </a>
                                                 </td>
                                             </tr>
-                                            </c:forEach>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                        </c:forEach>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

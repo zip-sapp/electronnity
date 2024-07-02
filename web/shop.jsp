@@ -115,7 +115,7 @@
                                 <li class="x-div x-hide-sm x-hide-xs e21968-e95-v0 mgy8-f mgy8-j mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-s mgy8-t mgy8-v mgy8-x mgy8-y mgy8-z mgy8-3">
                                     <c:choose>
                                         <c:when test="${not empty sessionScope.username}">
-                                            <a class="x-div e21968-e95-v1 mgy8-f mgy8-g mgy8-j mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-t mgy8-v mgy8-x mgy8-3" href="${pageContext.request.contextPath}/logout" data-x-effect-provider="colors particles effects" aria-label="Log out" data-sa-event="header_link_Log out">
+                                            <a class="x-div e21968-e95-v1 mgy8-f mgy8-g mgy8-j mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-t mgy8-v mgy8-x mgy8-3" href="${pageContext.request.contextPath}/logout" method="POST" data-x-effect-provider="colors particles effects" aria-label="Log out" data-sa-event="header_link_Log out">
                                                 <span class="x-anchor x-anchor-toggle e21968-e95-v2 mgy8-3x mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-42 mgy8-43 mgy8-44 mgy8-45 mgy8-46 mgy8-47 mgy8-48 mgy8-49 mgy8-4a mgy8-3 mgy8-6 mgy8-7 global_nav__item" tabindex="0" role="button" data-x-toggle="1" data-x-toggleable="e21968-e95-v2" data-x-toggle-hover="1" aria-controls="e21968-e95-v2-dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Toggle Dropdown Content">
                                                     <div class="x-anchor-content">
                                                         <div class="x-anchor-text">

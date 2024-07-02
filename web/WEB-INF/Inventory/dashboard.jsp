@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -49,12 +50,12 @@
         <div class="app align-content-stretch d-flex flex-wrap">
             <div class="app-sidebar">
                 <div class="logo">
-                    <a href="index.html" class="logo-icon"><span class="logo-text">Logout</span></a>
+                    <a href="${pageContext.request.contextPath}/logout" method="POST" class="logo-icon"><span class="logo-text">Logout</span></a>
                     <div class="sidebar-user-switcher user-activity-online">
                         <a href="#">
                             <img src="images/inventory-images/profile-pic.png">
                             <span class="activity-indicator"></span>
-                            <span class="user-info-text">Administrator<br><span class="user-state-info">Online</span></span>
+                            <span class="user-info-text">${username}<br><span class="user-state-info">Administrator</span></span>
                         </a>
                     </div>
                 </div>

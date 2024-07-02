@@ -64,6 +64,15 @@
             src: url(fonts/StickySansIcons-Bold.woff2)format("woff2");
         }
     </style>
+    <script>
+       // Check if page is being refreshed
+        window.onload = function() {
+            if (performance.navigation.type === 1) {
+                // Redirect to /login.jsp
+                window.location.href = 'http://localhost:8080/electronnity/login';
+            }
+        };
+    </script>
 </head>
 <body class="page-template page-template-template-blank-4 page-template-template-blank-4-php page page-id-183 theme-pro woocommerce-account woocommerce-page woocommerce-no-js x-blank x-child-theme-active x-full-width-layout-active pro-v6_4_15">
     <div class="x-root">

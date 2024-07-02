@@ -1,12 +1,6 @@
 <%-- 
-    Document   : lock
-    Created on : Jun 18, 2024, 10:05:00 PM
-    Author     : Aaron
---%>
-
-<%-- 
-    Document   : lock
-    Created on : Jun 18, 2024, 10:05:00 PM
+    Document   : login-error
+    Created on : Jun 20, 2024, 1:07:23 AM
     Author     : Aaron
 --%>
 
@@ -69,17 +63,13 @@
             font-weight: 700;
             src: url(fonts/StickySansIcons-Bold.woff2)format("woff2");
         }
-        
-        .justified-text {
-            text-align: justify;
-        }
     </style>
     <script>
        // Check if page is being refreshed
         window.onload = function() {
             if (performance.navigation.type === 1) {
                 // Redirect to /login.jsp
-                window.location.href = 'http://localhost:8080/electronnity/login';
+                window.location.href = 'http://localhost:8080/electronnity/signup';
             }
         };
     </script>
@@ -102,8 +92,8 @@
                         <div class="x-wc-shop-notices e22311-e226 mh7r-3b">
                             <div class="woocommerce-notices-wrapper">
                                 <ul class="woocommerce-error" role="alert">
-                                    <li class="justified-text">
-                                        <strong>ERROR: </strong> You have reached the 3 attempts limit. Please contact support@electronnity.co for further information! 
+                                    <li>
+                                        <strong>Exception 0xC0000005 at 0x544BC8: </strong> An unknown error has occurred. Please try again!
                                     </li>
                                 </ul>
                             </div>
@@ -176,4 +166,3 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-15280.js"></script>
 </body>
 </html>
-

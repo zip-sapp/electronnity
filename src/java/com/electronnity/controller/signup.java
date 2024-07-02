@@ -131,7 +131,7 @@ public class signup extends HttpServlet {
                     
             } else {
                     // Registration failed, redirect back to signup page
-                    response.sendRedirect("signup");
+                    response.sendRedirect("exception");
                     return;
                 }
             }

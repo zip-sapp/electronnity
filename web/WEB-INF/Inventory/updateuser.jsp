@@ -18,7 +18,7 @@
         <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!-- Title -->
-        <title>electronnity | create-users</title>
+        <title>electronnity | update-users</title>
 
         <!-- Styles -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,8 +35,8 @@
         <link href="${pageContext.request.contextPath}/css/inventory-css/darktheme.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/inventory-css/custom.css" rel="stylesheet">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="images/inventory-images/favicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="images/inventory-images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/images/inventory-images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/images/inventory-images/favicon.png" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,18 +44,27 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        <style>
+
+        .page-description {
+            margin-bottom: 20px;
+            text-align: center; /* Center the header text */
+        }
+
+        </style>
     </head>
 
     <body>
         <div class="app align-content-stretch d-flex flex-wrap">
             <div class="app-sidebar">
                 <div class="logo">
-                    <a href="#" class="logo-icon"><span class="logo-text">Logout</span></a>
+                    <a href="${pageContext.request.contextPath}/logout" method="POST" class="logo-icon"><span class="logo-text">Logout</span></a>
                     <div class="sidebar-user-switcher user-activity-online">
                         <a href="#">
-                            <img src="images/inventory-images/profile-pic.png">
+                            <img src="${pageContext.request.contextPath}/images/inventory-images/profile-pic.png">
                             <span class="activity-indicator"></span>
-                            <span class="user-info-text">Administrator<br><span class="user-state-info">Online</span></span>
+                            <span class="user-info-text">${username}<br><span class="user-state-info">Administrator</span></span>
                         </a>
                     </div>
                 </div>
@@ -111,33 +120,13 @@
                         </div>
                     </nav>
                 </div>
-            <div class="app-container">
-                <div class="search">
-                    <form>
-                        <input class="form-control" type="text" placeholder="Type here..." aria-label="Search">
-                    </form>
-                    <a href="#" class="toggle-search"><i class="material-icons">close</i></a>
-                </div>
-                <div class="app-header">
-                    <nav class="navbar navbar-light navbar-expand-lg">
-                        <div class="container-fluid">
-                            <div class="navbar-nav" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link hide-sidebar-toggle-button" href="#"><i class="material-icons">first_page</i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
                 <div class="app-content">
                     <div class="content-wrapper">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
                                     <div class="page-description">
-                                        <h1>Create Client/Administrator</h1>
+                                        <h1>Update Client/Administrator</h1>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +172,7 @@
                                                 <input type="text" class="form-control" id="birthday" name="birthday" value="<c:out value='${userDetails.birthday}'/>">
                                             </div>
                                             <div class="example-content">
-                                                <label for="mobilenumber" class="form-label">Mobile Number</label>
+                                                <label for="number" class="form-label">Mobile Number</label>
                                                 <input type="text" class="form-control" id="number" name="number" value="<c:out value='${userDetails.number}'/>">
                                             </div>
                                             <div class="example-content">
@@ -193,8 +182,10 @@
                                     </div>
                                 </div>
                             </form>
-                            <button id="add" type="submit" form="form" class="btn btn-primary"><i class="material-icons">add</i>Edit</button>
-                            <button type="button" class="btn btn-danger"><i class="material-icons">delete_outline</i>Cancel</button>
+                            <div class="text-center">
+                                <button type="submit" form="form" class="btn btn-primary"><i class="material-icons">add</i>Edit</button>
+                                <button type="button" class="btn btn-danger"><i class="material-icons">delete_outline</i>Cancel</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,6 +202,19 @@
         <script src="${pageContext.request.contextPath}/js/inventory-js/custom.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/dashboard.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/charts-apex.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Cancel button confirmation
+                const cancelButton = document.querySelector('.btn-danger');
+                cancelButton.addEventListener('click', function(event) {
+                    const confirmation = confirm('Do you want to cancel?');
+                    if (confirmation) {
+                        // Redirect to the desired page if confirmed
+                        window.location.href = '${pageContext.request.contextPath}/userlist';
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
 

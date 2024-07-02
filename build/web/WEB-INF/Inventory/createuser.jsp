@@ -1,9 +1,3 @@
-<%-- 
-    Document   : create-user
-    Created on : Jun 24, 2024, 7:41:40 PM
-    Author     : Aaron
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +8,7 @@
         <meta name="description" content="Responsive Admin Dashboard Template">
         <meta name="keywords" content="admin,dashboard">
         <meta name="author" content="stacks">
-        <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+        
         <!-- Title -->
         <title>electronnity | create-users</title>
 
@@ -36,8 +29,8 @@
         <link href="${pageContext.request.contextPath}/css/inventory-css/darktheme.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/inventory-css/custom.css" rel="stylesheet">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="images/inventory-images/favicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="images/inventory-images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/images/inventory-images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/images/inventory-images/favicon.png" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,25 +38,83 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        <style>
+            .content-wrapper {
+                padding: 20px;
+            }
+
+            .page-description {
+                margin-bottom: 20px;
+                text-align: center; /* Center the header text */
+            }
+
+            .example-content {
+                margin-bottom: 15px;
+            }
+
+            .form-label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .btn {
+                margin: 10px 5px 0 0; /* Margin for spacing between buttons */
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+                cursor: pointer;
+            }
+
+            .btn-primary {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+            .btn-danger {
+                background-color: #dc3545;
+                color: #fff;
+            }
+
+            .btn-danger:hover {
+                background-color: #c82333;
+            }
+
+            .material-icons {
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        </style>
     </head>
 
     <body>
         <div class="app align-content-stretch d-flex flex-wrap">
             <div class="app-sidebar">
                 <div class="logo">
-                    <a href="#" class="logo-icon"><span class="logo-text">Logout</span></a>
+                    <a href="${pageContext.request.contextPath}/logout" method="POST" class="logo-icon"><span class="logo-text">Logout</span></a>
                     <div class="sidebar-user-switcher user-activity-online">
                         <a href="#">
-                            <img src="images/inventory-images/profile-pic.png">
+                            <img src="${pageContext.request.contextPath}/images/inventory-images/profile-pic.png">
                             <span class="activity-indicator"></span>
-                            <span class="user-info-text">Administrator<br><span class="user-state-info">Online</span></span>
+                            <span class="user-info-text">${username}<br><span class="user-state-info">Administrator</span></span>
                         </a>
                     </div>
                 </div>
                 <div class="app-menu">
                     <ul class="accordion-menu">
                         <li>
-                            <a href="${pageContext.request.contextPath}/dashboard"></i>Dashboard</a>
+                            <a href="${pageContext.request.contextPath}/dashboard">Dashboard</a>
                         </li>
 
                         <li>
@@ -173,14 +224,16 @@
                                         </div>
                                     </div>
                                     <script src="${pageContext.request.contextPath}/js/inventory-js/user-validation.js"></script>
-                            <button type="submit" class="btn btn-primary"><i class="material-icons">add</i>Add</button>
-                            <button type="button" class="btn btn-danger"><i class="material-icons">delete_outline</i>Cancel</button>
+                                    <button type="submit" class="btn btn-primary"><i class="material-icons">add</i>Add</button>
+                                    <button type="button" class="btn btn-danger"><i class="material-icons">delete_outline</i>Cancel</button>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Javascripts -->
+        </div>
+        <!-- Javascripts -->
         <script src="${pageContext.request.contextPath}/js/inventory-js/jquery-3.5.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/bootstrap.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/inventory-js/perfect-scrollbar.min.js"></script>
@@ -192,4 +245,3 @@
         <script src="${pageContext.request.contextPath}/js/inventory-js/charts-apex.js"></script>
     </body>
 </html>
-

@@ -64,6 +64,15 @@
             src: url(fonts/StickySansIcons-Bold.woff2)format("woff2");
         }
     </style>
+    <script>
+       // Check if page is being refreshed
+        window.onload = function() {
+            if (performance.navigation.type === 1) {
+                // Redirect to /login.jsp
+                window.location.href = 'http://localhost:8080/electronnity/signup';
+            }
+        };
+    </script>
     <script defer src="${pageContext.request.contextPath}/js/form-validation.js"></script>
 </head>
 <body>
