@@ -17,8 +17,8 @@
         <servlet-class>com.electronnity.controller.forget</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>verifyPin</servlet-name>
-        <servlet-class>com.electronnity.controller.verifyPin</servlet-class>
+        <servlet-name>verifypin</servlet-name>
+        <servlet-class>com.electronnity.controller.verifypin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>changepass</servlet-name>
@@ -132,6 +132,22 @@
         <servlet-name>exception</servlet-name>
         <servlet-class>com.electronnity.controller.exception</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>changepass_error</servlet-name>
+        <servlet-class>com.electronnity.controller.changepass_error</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>verifyaccount</servlet-name>
+        <servlet-class>com.electronnity.controller.verifyaccount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>verifyaccount_error</servlet-name>
+        <servlet-class>com.electronnity.controller.verifyaccount_error</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>completeregistration</servlet-name>
+        <servlet-class>com.electronnity.controller.completeregistration</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -149,8 +165,8 @@
         <url-pattern>/forget</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>verifyPin</servlet-name>
-        <url-pattern>/verifyPin</url-pattern>
+        <servlet-name>verifypin</servlet-name>
+        <url-pattern>/verifypin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>changepass</servlet-name>
@@ -303,6 +319,22 @@
     <servlet-mapping>
         <servlet-name>exception</servlet-name>
         <url-pattern>/exception</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>changepass_error</servlet-name>
+        <url-pattern>/changepass_error</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>verifyaccount</servlet-name>
+        <url-pattern>/verifyaccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>verifyaccount_error</servlet-name>
+        <url-pattern>/verifyaccount_error</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>completeregistration</servlet-name>
+        <url-pattern>/completeregistration</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

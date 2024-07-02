@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form method ="POST" action = "${pageContext.request.contextPath}/changePass" class="x-div e22311-e230 mh7r-7 mh7r-8 mh7r-c mh7r-d mh7r-l mh7r-o mh7r-p mh7r-q mh7r-1l">
+                        <form method ="POST" action = "${pageContext.request.contextPath}/changepass" class="x-div e22311-e230 mh7r-7 mh7r-8 mh7r-c mh7r-d mh7r-l mh7r-o mh7r-p mh7r-q mh7r-1l">
                             <div class="x-div e22311-e231 mh7r-7 mh7r-8 mh7r-d mh7r-g mh7r-i mh7r-k mh7r-q mh7r-r mh7r-w">
                                 <div class="x-div e22311-e232 mh7r-7 mh7r-8 mh7r-d mh7r-l mh7r-q mh7r-r mh7r-1f sa-input-wrapper">
                                     <input id="newPassword" name="newPassword" type="password" required placeholder/>
@@ -125,7 +125,7 @@
                     <div class="x-text x-text-headline e22311-e254 mh7r-1p mh7r-1r mh7r-1s mh7r-1t mh7r-1v mh7r-1y mh7r-24 mh7r-26 mh7r-29 mh7r-2e mh7r-2r mh7r-2s mh7r-3 mh7r-4 mh7r-5">
                         <div class="x-text-content">
                             <div class="x-text-content-text">
-                                <span class="x-text-content-text-primary">Our general <a target="_blank" href="/terms-conditions/">Terms & Condit<ions</a> apply. <br>We handle your data as outlined in our <a target="_blank" href="/privacy-policy/">Privacy Policy</a>. </span>
+                                <span class="x-text-content-text-primary">Our general <a target="_blank">Terms & Conditions</a> apply. <br>We handle your data as outlined in our <a target="_blank">Privacy Policy</a>. </span>
                             </div>
                         </div>
                     </div>

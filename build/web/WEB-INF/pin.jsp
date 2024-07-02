@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form method ="POST" action = "${pageContext.request.contextPath}/verifyPin" class="x-div e22311-e230 mh7r-7 mh7r-8 mh7r-c mh7r-d mh7r-l mh7r-o mh7r-p mh7r-q mh7r-1l">
+                        <form method ="POST" action = "${pageContext.request.contextPath}/verifypin" class="x-div e22311-e230 mh7r-7 mh7r-8 mh7r-c mh7r-d mh7r-l mh7r-o mh7r-p mh7r-q mh7r-1l">
                             <div class="x-div e22311-e231 mh7r-7 mh7r-8 mh7r-d mh7r-g mh7r-i mh7r-k mh7r-q mh7r-r mh7r-w">
                                 <div class="x-div e22311-e232 mh7r-7 mh7r-8 mh7r-d mh7r-l mh7r-q mh7r-r mh7r-1f sa-input-wrapper">
                                     <input type="text" name="pin" id="pin" placeholder=" " />
@@ -106,7 +106,10 @@
                                 <div class="x-text x-text-headline e22311-e254 mh7r-1p mh7r-1r mh7r-1s mh7r-1t mh7r-1v mh7r-1y mh7r-24 mh7r-26 mh7r-29 mh7r-2e mh7r-2r mh7r-2s mh7r-3 mh7r-4 mh7r-5">
                                     <div class="x-text-content">
                                         <div class="x-text-content-text">
-                                        <span class="x-text-content-text-primary">Wait for <a target="_blank" id="countdown">1:00</a> to re-send PIN <br>Check in Inbox or Spam folder <a target="_blank" href="/privacy-policy/">Resend Code</a>. </span>
+                                            <span class="x-text-content-text-primary">
+                                            Wait for <a target="_blank"><span id="timer"> </span></a> to re-send PIN <br>
+                                            Check in Inbox or Spam folder <a target="_blank" href="/privacy-policy/">Resend Code</a>.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -116,20 +119,30 @@
             </div>
         </div>
     </div>
-</div>
 <script>
-    let countdown = 60; // 1 minute
-    let intervalId = setInterval(function() {
-      countdown--;
-      let minutes = Math.floor(countdown / 60);
-      let seconds = countdown % 60;
-      document.getElementById("countdown").innerHTML = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-      if (countdown <= 0) {
-        clearInterval(intervalId);
-        document.getElementById("countdown").innerHTML = "Time's up!";
-      }
-    }, 1000); // 1000ms = 1 second
-  </script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var interval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var oneMinute = 60, // 1 minute in seconds
+            display = document.querySelector('#timer');
+        startTimer(oneMinute, display);
+    };
+</script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-22311.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-21811.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-15280.js"></script>

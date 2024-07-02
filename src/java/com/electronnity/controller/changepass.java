@@ -53,10 +53,21 @@ public class changepass extends HttpServlet {
         HttpSession session = request.getSession();
         String email = (String) session.getAttribute("email");
 
+        // Check if the new password meets the requirements
+        String password = newPassword;
+        int length = password.length();
+        boolean userVerify = password.equals(newPassword);
+        boolean whitespaces = !password.contains(" ");
+        boolean passwordRegex = password.matches("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@$&%*]).{8,16}$");
+
+        if (length < 8 || length > 16 || !userVerify || !whitespaces || !passwordRegex) {
+            response.sendRedirect("changepass_error"); // redirect to error page if password is invalid
+            return;
+        }
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Load the MySQL JDBC driver
-            try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-                 PreparedStatement pstmt = conn.prepareStatement("SELECT password FROM electronnity.clientinfo WHERE email =?")) {
+            try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD); PreparedStatement pstmt = conn.prepareStatement("SELECT password FROM electronnity.clientinfo WHERE email =?")) {
                 pstmt.setString(1, email);
                 ResultSet rs = pstmt.executeQuery();
 

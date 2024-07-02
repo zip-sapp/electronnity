@@ -96,7 +96,7 @@ public class forget extends HttpServlet {
                     session.setAttribute("pin", pin);
                     session.setAttribute("email", email);
 
-                    response.sendRedirect("verifyPin");
+                    response.sendRedirect("verifypin");
                 } else {
                     response.getWriter().println("Email is not registered.");
                     response.sendRedirect("forget");

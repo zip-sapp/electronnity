@@ -105,17 +105,17 @@ form.addEventListener('submit', (x) => { //method used to attach an event handle
         }
     }
 
-    function middleName(f) {
+    /*function middleName(f) { //disabled
         var middlename = f;
-        var length4 = middlename.length;
+        var length4 = middlename.length; 
         var userVerify6 = /^[A-Z.\s]+$/.test(middlename);
 
         if (length4 > 1 || userVerify6 === false) {
             return false;
         } else {
             return true;
-        }6
-    }
+        }
+    } */
 
     function lastName(g) {
         var lastname = g;
