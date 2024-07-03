@@ -237,21 +237,26 @@
                     </div>
 
                     <div class="col-lg-7 col-md-12">
-                        <div class="products-details-desc products-details-desc-sticky">
+                        <div class="products-details-desc">
                             <h3>Signature Hoodie</h3>
-
                             <div class="price">
                                 <span class="new-price">₱500.00</span>
                             </div>
-            
+
                             <ul class="products-info">
-                                <li><span>Availability:</span> <a href="#">In stock</a></li>
-                                <li><span>Product Type:</span> <a href="hoodie.jsp">Hoodie</a></li>
+                                <li><span>Availability:</span> <a>In stock</a></li>
+                                <li><span>Products Type:</span> <a>Plush</a></li>
                             </ul>
 
-                            <div class="products-size-wrapper">
-                                <div class="products-add-to-cart">
-                                    <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <div class="products-container">
+                                <div class="products-size-wrapper" 
+                                     data-product-id="SDKC1F6E4H" 
+                                     data-product-name="Signature Hoodie" 
+                                     data-product-price="₱500.00" 
+                                     data-product-image="images/merch-images/black-hoodie_front.png">
+                                    <div class="products-add-to-cart">
+                                        <button type="button" class="default-btn add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -286,19 +291,13 @@
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
                     <div class="modal-body">
                         <h3>My Cart</h3>
-
-                        <div class="products-cart-content">
-                        </div>
-
+                        <div class="products-cart-content"></div>
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-
                             <span class="subtotal">₱0.00</span>
                         </div>
-
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
                         </div>

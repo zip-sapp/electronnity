@@ -253,24 +253,29 @@
                     </div>
 
                     <div class="col-lg-7 col-md-12">
-                        <div class="products-details-desc products-details-desc-sticky">
-                            <h3>Signature T-Shirt</h2>
-
+                        <div class="products-details-desc">
+                            <h3>Signature T-Shirt</h3>
                             <div class="price">
                                 <span class="new-price">₱150.00</span>
                             </div>
-            
+
                             <ul class="products-info">
-                                <li><span>Availability:</span> <a href="#">In stock</a></li>
-                                <li><span>Products Type:</span> <a href="#">T-Shirt</a></li>
+                                <li><span>Availability:</span> <a>In stock</a></li>
+                                <li><span>Products Type:</span> <a>Plush</a></li>
                             </ul>
 
-                            <div class="products-size-wrapper">
-                                <div class="products-add-to-cart">
-                                    <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <div class="products-container">
+                                <div class="products-size-wrapper" 
+                                     data-product-id="SDKJ2E5H9N" 
+                                     data-product-name="Signature T-Shirt" 
+                                     data-product-price="₱150.00" 
+                                     data-product-image="images/merch-images/gray-shirt_front.png">
+                                    <div class="products-add-to-cart">
+                                        <button type="button" class="default-btn add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                            
+
 
                             <div class="products-details-accordion">
                                 <ul class="accordion">
@@ -328,72 +333,15 @@
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
                     <div class="modal-body">
-                        <h3>My Cart (3)</h3>
-
-                        <div class="products-cart-content">
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img1.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Long Sleeve Leopard T-Shirt</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$250.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img2.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Causal V-Neck Soft Raglan</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img3.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Hanes Men's Pullover</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-                        </div>
-
+                        <h3>My Cart</h3>
+                        <div class="products-cart-content"></div>
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-
-                            <span class="subtotal">$524.00</span>
+                            <span class="subtotal">₱0.00</span>
                         </div>
-
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
-                            <a href="#" class="optional-btn">View Shopping Cart</a>
                         </div>
                     </div>
                 </div>

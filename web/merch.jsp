@@ -382,9 +382,14 @@
 
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-                            <span class="subtotal">₱0.00</span>
+                            <span class="subtotal">
+                                ₱<c:set var="subtotal" value="${0}"/>
+                                <c:forEach var="item" items="${cartItems}">
+                                    <c:set var="subtotal" value="${subtotal + item.price * item.quantity}"/>
+                                </c:forEach>
+                                <fmt:formatNumber value="${subtotal}" type="currency" currencySymbol="₱" maxFractionDigits="2"/>
+                            </span>
                         </div>
-
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
                         </div>
