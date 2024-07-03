@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
     <head>
@@ -31,6 +32,64 @@
         <title>electronnity | guitar plush</title>
 
         <link rel="icon" type="image/png" href="images/inventory-images/favicon.png">
+        
+        <style>
+            @font-face {
+                font-family: 'Boxicons';
+                font-weight: 400;
+                font-style: normal;
+                src: url('${pageContext.request.contextPath}/fonts/boxicons.eot');
+                src: url('${pageContext.request.contextPath}/fonts/boxicons.eot?#iefix') format('embedded-opentype'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.woff2') format('woff2'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.woff') format('woff'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.ttf') format('truetype'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.svg?#Boxicons') format('svg');
+            }
+            
+            @font-face {
+                font-family: "Flaticon";
+                src: url('${pageContext.request.contextPath}/fonts/Flaticon.eot');
+                src: url('${pageContext.request.contextPath}/fonts/Flaticon.eot?#iefix') format('embedded-opentype'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.woff2') format('woff2'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.woff') format('woff'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.ttf') format('truetype'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.svg#Flaticon') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                @font-face {
+                    font-family: "Flaticon";
+                    src: url('${pageContext.request.contextPath}/fonts/Flaticon.svg#Flaticon') format('svg');
+                }
+            }
+            
+            .switch-box .slider:before {
+                position: absolute;
+                content: "";
+                height: 30px;
+                width: 30px;
+                left: 2.5px;
+                bottom: 4px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                transition: 0.4s;
+                box-shadow: 0 0px 15px rgba(32, 32, 32, 0.2392156863);
+                background: url('${pageContext.request.contextPath}/images/merch-images/night.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            .switch-box input:checked + .slider:before {
+                transform: translateX(24px);
+                background: url('${pageContext.request.contextPath}/images/merch-images/sunny.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+        </style>
     </head>
     <body>
         
@@ -40,7 +99,7 @@
                 <div class="container">
                     <div class="xton-responsive-menu">
                         <div class="logo">
-                            <a href="home.jsp">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
                                 <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
                                 <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
@@ -52,24 +111,19 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="home.html">
-                            <img src="images/merch-images/logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/white-logo.png" class="white-logo" alt="logo">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
+                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home </a>
-                                
-                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop </a>             
-
-                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login </a>
-                                
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
-
-                                </li>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link ">Home</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link active">Products</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
                             </ul>
-
+                        
                             <div class="others-option">
                                 <div class="option-item">
                                     <div class="search-btn-box">
@@ -95,20 +149,20 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="home.html">
-                            <img src="images/merch-imagesg/logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/img/white-logo.png" class="white-logo" alt="logo">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/merch">
+                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="home.jsp" class="nav-link">Home </a>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a>
                                   
-                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link active">Shop </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
 
-                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
                                    
-                                <li class="nav-item megamenu"><a href="#" class="nav-link">Main </a>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -161,9 +215,9 @@
         <div class="page-title-area">
             <div class="container">
                 <div class="page-title-content">
-                    <h1>Electric Guitar Plushie</h1>
+                    <h2>Electric Guitar Plushie</h1>
                     <ul>
-                        <li><a href="home.jsp">Home</a></li>
+                        <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                         <li>Products Details</li>
                     </ul>
                 </div>
@@ -192,61 +246,16 @@
                             </div>
             
                             <ul class="products-info">
-                                <li><span>Vendor:</span> <a href="#">Lereve</a></li>
-                                <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
+                                <li><span>Availability:</span> <a href="#">In stock</a></li>
                                 <li><span>Products Type:</span> <a href="guitar_plush.jsp">Plush</a></li>
                             </ul>
-
-                            <div class="products-color-switch">
-                                <span>Color:</span>
-
-                                <ul>
-                                    <li><a href="#" title="Black" class="color-black"></a></li>
-                                    <li><a href="#" title="White" class="color-white"></a></li>
-                                    <li class="active"><a href="#" title="Green" class="color-green"></a></li>
-                                    <li><a href="#" title="Yellow Green" class="color-yellowgreen"></a></li>
-                                    <li><a href="#" title="Teal" class="color-teal"></a></li>
-                                </ul>
-                            </div>
-
+                            
                             <div class="products-size-wrapper">
-                                <span>Size:</span>
-
-                                <ul>
-                                    <li class="active"><a href="#">S</a></li>
-                                    <li><a href="#">M</a></li>
-                                    <li><a href="#">L</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="products-add-to-cart">
-                                <div class="input-counter">
-                                    <span class="minus-btn"><i class='bx bx-minus'></i></span>
-                                    <input type="text" value="1">
-                                    <span class="plus-btn"><i class='bx bx-plus'></i></span>
-                                </div>
-
-                                <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
-                            </div>
-
-                            <div class="buy-checkbox-btn">
-                                <div class="item">
-                                    <input class="inp-cbx" id="cbx" type="checkbox">
-                                    <label class="cbx" for="cbx">
-                                        <span>
-                                            <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                            </svg>
-                                        </span>
-                                        <span>I agree with the terms and conditions</span>
-                                    </label>
-                                </div>
-
-                                <div class="item">
-                                    <a href="#" class="default-btn">Buy it now!</a>
+                                <div class="products-add-to-cart">
+                                    <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
                                 </div>
                             </div>
-
+                            
                             <div class="products-details-accordion">
                                 <ul class="accordion">
                                     <li class="accordion-item">
@@ -298,6 +307,7 @@
                                                  <li><b>Depth:</b>4 inches (10 cm)</li>
                                              </ul>
                                          </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -307,7 +317,7 @@
         </section>
         <!-- End Product Details Area -->
 
-        <!-- Start Shopping Cart Modal -->
+       <!-- Start Shopping Cart Modal -->
         <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -316,76 +326,26 @@
                     </button>
 
                     <div class="modal-body">
-                        <h3>My Cart (3)</h3>
+                        <h3>My Cart</h3>
 
                         <div class="products-cart-content">
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img1.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Long Sleeve Leopard T-Shirt</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$250.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img2.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Causal V-Neck Soft Raglan</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/img3.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Hanes Men's Pullover</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
 
-                            <span class="subtotal">$524.00</span>
+                            <span class="subtotal">₱0.00</span>
                         </div>
 
                         <div class="products-cart-btn">
                             <a href="#" class="default-btn">Proceed to Checkout</a>
-                            <a href="#" class="optional-btn">View Shopping Cart</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End Shopping Cart Modal -->
+
 
         <!-- Start Shipping Modal Area -->
         <div class="modal fade productsShippingModal" id="productsShippingModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -508,9 +468,9 @@
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
         <!-- Links of JS files -->
-        <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/parallax.min.js"></script>

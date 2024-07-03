@@ -10,7 +10,7 @@ let cartItems = [];
 // Load cart items from sessionStorage
 if (sessionStorage.getItem('cartItems')) {
   cartItems = JSON.parse(sessionStorage.getItem('cartItems'));
-  updateShoppingCartModal(); // Load cart items from sessionStorage
+  updateShoppingCartModal();
 }
 
 // Add event listener to the add to cart button
@@ -18,12 +18,13 @@ addToCartButton.addEventListener('click', (e) => {
   e.preventDefault();
 
   // Get product details
+  const productID = document.querySelector('.products-details-desc').dataset.productId;
   const productTitle = document.querySelector('.products-details-desc h3').textContent;
   const productPrice = document.querySelector('.price .new-price').textContent;
   const productImage = document.querySelector('.products-details-image img').src;
 
   // Check if product is already in cart
-  const existingCartItem = cartItems.find((cartItem) => cartItem.title === productTitle);
+  const existingCartItem = cartItems.find((cartItem) => cartItem.id === productID);
 
   if (existingCartItem) {
     // Increment quantity if product is already in cart
@@ -31,6 +32,7 @@ addToCartButton.addEventListener('click', (e) => {
   } else {
     // Create new cart item object
     const cartItem = {
+      id: productID,
       title: productTitle,
       price: productPrice,
       image: productImage,
@@ -87,22 +89,24 @@ function updateShoppingCartModal() {
   subtotalElement.textContent = `₱${subtotal.toFixed(2)}`;
 }
 
-// Add event listener to remove cart item buttons
+// Add event listener to productsCartContent for delegation
 productsCartContent.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove-cart-item')) {
     const index = e.target.dataset.index;
     cartItems.splice(index, 1);
+    sessionStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update sessionStorage
     updateShoppingCartModal();
   }
 });
 
-// Add event listener to quantity input fields
+// Add event listener to quantity input fields for delegation
 productsCartContent.addEventListener('input', (e) => {
   if (e.target.tagName === 'INPUT' && e.target.type === 'number') {
     const index = e.target.dataset.index;
     const newQuantity = parseInt(e.target.value, 10);
     if (newQuantity > 0) {
       cartItems[index].quantity = newQuantity;
+      sessionStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update sessionStorage
       updateShoppingCartModal();
     }
   }

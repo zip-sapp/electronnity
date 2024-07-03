@@ -27,10 +27,68 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/dark.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/responsive.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/merch-css/cart-modal.css">
+        
+        <style>
+            @font-face {
+                font-family: 'Boxicons';
+                font-weight: 400;
+                font-style: normal;
+                src: url('${pageContext.request.contextPath}/fonts/boxicons.eot');
+                src: url('${pageContext.request.contextPath}/fonts/boxicons.eot?#iefix') format('embedded-opentype'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.woff2') format('woff2'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.woff') format('woff'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.ttf') format('truetype'),
+                     url('${pageContext.request.contextPath}/fonts/boxicons.svg?#Boxicons') format('svg');
+            }
+            
+            @font-face {
+                font-family: "Flaticon";
+                src: url('${pageContext.request.contextPath}/fonts/Flaticon.eot');
+                src: url('${pageContext.request.contextPath}/fonts/Flaticon.eot?#iefix') format('embedded-opentype'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.woff2') format('woff2'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.woff') format('woff'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.ttf') format('truetype'),
+                    url('${pageContext.request.contextPath}/fonts/Flaticon.svg#Flaticon') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
 
-        <title>Electronnity | Merch</title>
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                @font-face {
+                    font-family: "Flaticon";
+                    src: url('${pageContext.request.contextPath}/fonts/Flaticon.svg#Flaticon') format('svg');
+                }
+            }
+            
+            .switch-box .slider:before {
+                position: absolute;
+                content: "";
+                height: 30px;
+                width: 30px;
+                left: 2.5px;
+                bottom: 4px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                transition: 0.4s;
+                box-shadow: 0 0px 15px rgba(32, 32, 32, 0.2392156863);
+                background: url('${pageContext.request.contextPath}/images/merch-images/night.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            .switch-box input:checked + .slider:before {
+                transform: translateX(24px);
+                background: url('${pageContext.request.contextPath}/images/merch-images/sunny.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+        </style>
 
-        <link rel="icon" type="image/png" href="images/inventory-images/favicon.png">
+        <title>electronnity | merch</title>
+
+        <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/inventory-images/favicon.png">
     </head>
     <body>
 
@@ -41,8 +99,8 @@
                     <div class="xton-responsive-menu">
                         <div class="logo">
                             <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
-                                <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                                <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                                <img src="${pageContext.request.contextPath}/images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                                <img src="${pageContext.request.contextPath}/images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -52,22 +110,17 @@
             <div class="xton-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand">
-                            <img src="images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
+                        <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
+                            <img src="${pageContext.request.contextPath}/images/merch-images/light-mode_logo.png" class="main-logo" alt="logo">
+                            <img src="${pageContext.request.contextPath}/images/merch-images/dark-mode_logo.png" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="merch.jsp" class="nav-link">Home</a>
-                                    
-                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a>
-                                    
-                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
-
-                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
-
-                                </li>
+                                <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link">Home</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a></li>
+                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
                             </ul>
 
                             <div class="others-option">
@@ -89,51 +142,6 @@
             </div>
         </div>
         <!-- End Navbar Area -->
-
-        <!-- Start Sticky Navbar Area -->
-        <div class="navbar-area header-sticky">
-            <div class="xton-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand">
-                            <img src="images/merch-images/logo.png" class="main-logo" alt="logo">
-                            <img src="images/merch-images/white-logo.png" class="white-logo" alt="logo">
-                        </a>
-
-                        <div class="collapse navbar-collapse mean-menu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a href="merch.jsp" class="nav-link">Home</a>
-
-                                <li class="nav-item megamenu"><a href="shop.jsp" class="nav-link">Shop</a> 
-
-                                <li class="nav-item megamenu"><a href="all_products.jsp" class="nav-link">Products</a>
-                                
-                                <li class="nav-item megamenu"><a href="login.jsp" class="nav-link">Login</a>
-                                    
-                                </li>
-                            </ul>
-
-                            <div class="others-option">
-                                <div class="option-item">
-                                    <div class="search-btn-box">
-                                        <i class="search-btn bx bx-search-alt"></i>
-                                    </div>
-                                </div>
-
-                                <div class="option-item">
-                                    <div class="cart-btn">
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#shoppingCartModal"><i class='bx bx-shopping-bag'></i><span>0</span></a>
-                                    </div>
-                                </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Area -->
 
         <!-- Start Search Overlay -->
         <div class="search-overlay">
@@ -158,56 +166,30 @@
             </div>
         </div>
         <!-- End Search Overlay -->
-
-        <!-- Start Main Banner Area -->
-            <div class="main-banner banner-bg2">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 col-md-12">
-                                    <div class="main-banner-content text-white">
-                                        <span class="sub-title">Exclusive Offer!</span>
-                                        <h1>Summer-2024!</h1>
-                                        <p>Leap year offer ‘Sale Must-Haves'</p>
-                                        <div class="btn-box">
-                                            <a href="all_products.jsp" class="default-btn">All Products</a>
-                                            <a href="guitar_plush.jsp" class="optional-btn">Limited Edition</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Main Banner Area -->
         
         <!-- Start All Products Area -->
         <section class="all-products-area ptb-100 bg-f5f5f5">
             <div class="container">
-
                 <!-- Start Products Area -->
                 <section class="products-area pt-100 pb-70">
                     <div class="container">
                         <div class="section-title text-start">
                             <span class="sub-title">See Our Collection</span>
                             <h2>Recent Products</h2>
-                            <a href="all_products.jsp" class="default-btn">Shop More</a>
+                            <a href="${pageContext.request.contextPath}/all_products" class="default-btn">Shop More</a>
                         </div>
 
                         <div class="products-slides owl-carousel owl-theme">
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="hoodie.jsp">
-                                        <img src="images/merch-images/hoodie_merch2.png" class="main-image" alt="image">
-                                        <img src="images/merch-images/model_hoodie.png" class="hover-image" alt="image">
+                                    <a href="${pageContext.request.contextPath}/hoodie">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/hoodie_merch2.png" class="main-image" alt="image">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/model_hoodie.png" class="hover-image" alt="image">
                                     </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="hoodie.jsp">Signature Hoodie</a></h2>
+                                    <h3><a href="${pageContext.request.contextPath}/hoodie">Signature Hoodie</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱500</span>
                                     </div>
@@ -216,15 +198,15 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="shirt.jsp">
-                                        <img src="images/merch-images/shirt_merch.png" class="main-image" alt="image">
-                                        <img src="images/merch-images/shirt_model.png" class="hover-image" alt="image">
+                                    <a href="${pageContext.request.contextPath}/shirt">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/shirt_merch.png" class="main-image" alt="image">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/shirt_model.png" class="hover-image" alt="image">
                                     </a>
                                     
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="shirt.jsp">Classic Patch Tee</a></h2>
+                                    <h3><a href="${pageContext.request.contextPath}/shirt">Signature T-Shirt</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱150</span>
                                     </div>
@@ -233,14 +215,14 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="jacket.jsp">
-                                        <img src="images/merch-images/jacket_merch1.png" class="main-image" alt="image">
-                                        <img src="images/merch-images/jacket_merch2.png" class="hover-image" alt="image">
+                                    <a href="${pageContext.request.contextPath}/jacket">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/jacket_merch1.png" class="main-image" alt="image">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/jacket_merch2.png" class="hover-image" alt="image">
                                     </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="jacket.jsp">Windbreaker</a></h3>
+                                    <h3><a href="${pageContext.request.contextPath}/jacket">Windbreaker</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱500</span>
                                     </div>
@@ -249,14 +231,14 @@
 
                             <div class="single-products-box">
                                 <div class="products-image">
-                                    <a href="cap.jsp">
-                                        <img src="images/merch-images/cap_merch2.png" class="main-image" alt="image">
-                                        <img src="images/merch-images/cap_merch2.png" class="hover-image" alt="image">
+                                    <a href="${pageContext.request.contextPath}/cap">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/cap_merch2.png" class="main-image" alt="image">
+                                        <img src="${pageContext.request.contextPath}/images/merch-images/cap_merch2.png" class="hover-image" alt="image">
                                     </a>
                                 </div>
     
                                 <div class="products-content">
-                                    <h3><a href="cap.jsp">Signature Cap</a></h3>
+                                    <h3><a href="${pageContext.request.contextPath}/cap">Signature Cap</a></h3>
                                     <div class="price">
                                         <span class="new-price">₱200</span>
                                     </div>
@@ -335,56 +317,55 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="images/merch-images/black-hoodie_front.png" alt="image">
+                                    <img src="${pageContext.request.contextPath}/images/merch-images/black-hoodie_front.png" alt="image">
 
                                     <div class="content">
                                         <span>Hoodie</span>                                                                     
-                                        <a href="hoodie.jsp" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/hoodie" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="hoodie.jsp" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/hoodie" class="link-btn"></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="images/merch-images/gray-shirt_front.png" alt="image">
+                                    <img src="${pageContext.request.contextPath}/images/merch-images/gray-shirt_front.png" alt="image">
 
                                     <div class="content">
                                         <span>Shirt</span>                                     
-                                        <a href="shirt.jsp" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/shirt" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="shirt.jsp" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/shirt" class="link-btn"></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="images/merch-images/jacket_merch1.png" alt="image">
+                                    <img src="${pageContext.request.contextPath}/images/merch-images/jacket_merch1.png" alt="image">
 
                                     <div class="content">
                                         <span>Jacket</span>                                       
-                                        <a href="jacket.jsp" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/jacket" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="jacket.jsp" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/jacket" class="link-btn"></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="single-categories-box">
-                                    <img src="images/merch-images/MODEL CAP.png" alt="image">
+                                    <img src="${pageContext.request.contextPath}/images/merch-images/MODEL CAP.png" alt="image">
 
                                     <div class="content">
                                         <span>Cap</span>                                       
-                                        <a href="cap.jsp" class="default-btn">Discover Now</a>
+                                        <a href="${pageContext.request.contextPath}/cap" class="default-btn">Discover Now</a>
                                     </div>
-                                    <a href="cap.jsp" class="link-btn"></a>
+                                    <a href="${pageContext.request.contextPath}/cap" class="link-btn"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- End Categories Banner Area -->
+                </section>
+                <!-- End Categories Banner Area -->
 
         <!-- Start Shopping Cart Modal -->
         <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
@@ -397,12 +378,10 @@
                     <div class="modal-body">
                         <h3>My Cart</h3>
 
-                        <div class="products-cart-content">
-                        </div>
+                        <div class="products-cart-content"></div>
 
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-
                             <span class="subtotal">₱0.00</span>
                         </div>
 
@@ -447,8 +426,9 @@
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
         <!-- Links of JS files -->
-        <script src="${pageContext.request.contextPath}/js/merch-js/jquery.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery.min.3.7.1.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/bootstrap.bundle.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/merch-js/popper.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/owl.carousel.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/magnific-popup.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/merch-js/parallax.min.js"></script>

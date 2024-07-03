@@ -148,6 +148,18 @@
         <servlet-name>completeregistration</servlet-name>
         <servlet-class>com.electronnity.controller.completeregistration</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>guitar_plush</servlet-name>
+        <servlet-class>com.electronnity.controller.guitar_plush</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shirt</servlet-name>
+        <servlet-class>com.electronnity.controller.shirt</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cap</servlet-name>
+        <servlet-class>com.electronnity.controller.cap</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -335,6 +347,18 @@
     <servlet-mapping>
         <servlet-name>completeregistration</servlet-name>
         <url-pattern>/completeregistration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>guitar_plush</servlet-name>
+        <url-pattern>/guitar_plush</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shirt</servlet-name>
+        <url-pattern>/shirt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cap</servlet-name>
+        <url-pattern>/cap</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

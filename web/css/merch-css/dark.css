@@ -28,33 +28,12 @@ Default CSS
   background: #4d4949;
   transition: 0.4s;
 }
-.switch-box .slider:before {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 30px;
-  left: 2.5px;
-  bottom: 4px;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  transition: 0.4s;
-  box-shadow: 0 0px 15px rgba(32, 32, 32, 0.2392156863);
-  background: url(../../assets/img/night.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .switch-box input:checked + .slider {
   background-color: #cbc1c1;
 }
 .switch-box input:focus + .slider {
   background-color: #4d4949;
-}
-.switch-box input:checked + .slider:before {
-  transform: translateX(24px);
-  background: url(../../assets/img/sunny.png);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .switch-box .slider.round {
   border-radius: 50px;
