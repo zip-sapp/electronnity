@@ -1,6 +1,7 @@
 package com.electronnity.controller;
 
 import com.electronnity.dao.ClientDao;
+import com.lambdaworks.crypto.SCryptUtil;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -111,9 +112,12 @@ public class signup extends HttpServlet {
                 return;
                 
             } else {
+                // Hash the password using WS/Scrypt
+                String hashedPassword = SCryptUtil.scrypt(password, 16384, 8, 1);
+
                 // Forward to verifyaccount servlet with user details
                 request.setAttribute("username", username);
-                request.setAttribute("password", password);
+                request.setAttribute("password", hashedPassword);
                 request.setAttribute("email", email);
                 request.setAttribute("firstname", firstname);
                 request.setAttribute("middlename", middlename);

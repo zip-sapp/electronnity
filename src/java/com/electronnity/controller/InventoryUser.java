@@ -4,6 +4,9 @@
  */
 package com.electronnity.controller;
 
+import com.electronnity.dao.UserDao;
+import com.electronnity.model.UserModel;
+import com.lambdaworks.crypto.SCryptUtil;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
@@ -11,15 +14,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.electronnity.dao.UserDao;
-import com.electronnity.model.UserModel;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-/**
- *
- * @author Aaron
- */
 
 public class InventoryUser extends HttpServlet {
 
@@ -27,84 +23,81 @@ public class InventoryUser extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getServletPath();
-        String usertype = (String) request.getSession().getAttribute("usertype"); // Get the user's role from the session
+        String usertype = (String) request.getSession().getAttribute("usertype");
 
-        if (usertype == null || !usertype.equals("Administrator")) { // Check if the user is not an admin
-            response.setStatus(HttpServletResponse.SC_FORBIDDEN); // Return 403 Forbidden response
+        if (usertype == null || !usertype.equals("Administrator")) {
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
             return;
         }
-        
+
         switch (action) {
-            case "/userlist/create/form" -> showUserCreateForm(request, response);
-            case "/userlist/create" -> {
+            case "/userlist/create/form":
+                showUserCreateForm(request, response);
+                break;
+            case "/userlist/create":
                 try {
                     createUser(request, response);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InventoryUser.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-
-            case "/userlist/update/form" -> {
+                break;
+            case "/userlist/update/form":
                 try {
                     showUserUpdateForm(request, response);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InventoryUser.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-
-            case "/userlist/update" -> {
+                break;
+            case "/userlist/update":
                 try {
                     updateUser(request, response);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InventoryUser.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-
-            case "/userlist/delete" -> {
+                break;
+            case "/userlist/delete":
                 try {
                     deleteUser(request, response);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InventoryUser.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-
-            default -> {
+                break;
+            default:
                 try {
                     viewUser(request, response);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InventoryUser.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-
-
+                break;
         }
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
     }
-    
+
     private void viewUser(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
-        UserDao user = new UserDao();
-        ArrayList<UserModel> userList = user.getUserList();
+        UserDao userDao = new UserDao();
+        ArrayList<UserModel> userList = userDao.getUserList();
         request.setAttribute("userList", userList);
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/WEB-INF/Inventory/userlist.jsp");
         rd.forward(request, response);
     }
-    
+
     private void showUserCreateForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/WEB-INF/Inventory/createuser.jsp");
         rd.forward(request, response);
     }
-    
+
     private void createUser(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
@@ -116,27 +109,30 @@ public class InventoryUser extends HttpServlet {
         String number = request.getParameter("number");
         String usertype = request.getParameter("usertype");
 
-        UserDao user = new UserDao();
+        // Hash the password using SCrypt
+        String hashedPassword = SCryptUtil.scrypt(password, 16384, 8, 1);
+
+        UserDao userDao = new UserDao();
         UserModel createUser = new UserModel(
-                username, password, email, firstname, middlename, lastname, address, birthday, number, usertype);
-        user.createUser(createUser);
+                username, hashedPassword, email, firstname, middlename, lastname, address, birthday, number, usertype);
+        userDao.createUser(createUser);
         response.sendRedirect(request.getContextPath() + "/userlist");
     }
-    
+
     private void showUserUpdateForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
         int id = Integer.parseInt(request.getParameter("id"));
-        UserDao user = new UserDao();
-        UserModel userDetails = user.getUserDetails(id);
+        UserDao userDao = new UserDao();
+        UserModel userDetails = userDao.getUserDetails(id);
         request.setAttribute("userDetails", userDetails);
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/WEB-INF/Inventory/updateuser.jsp");
         rd.forward(request, response);
     }
-    
+
     private void updateUser(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
-        int id = Integer.parseInt(request.getParameter("id")); // Get the user's ID
+        int id = Integer.parseInt(request.getParameter("id"));
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
@@ -148,20 +144,29 @@ public class InventoryUser extends HttpServlet {
         String number = request.getParameter("number");
         String usertype = request.getParameter("usertype");
         String attempts = request.getParameter("attempts");
-        
-        UserDao user = new UserDao();
+
+        UserDao userDao = new UserDao();
+        UserModel existingUser = userDao.getUserDetails(id);
+
+        // Hash the password using SCrypt only if it is provided
+        String hashedPassword;
+        if (password != null && !password.isEmpty()) {
+            hashedPassword = SCryptUtil.scrypt(password, 16384, 8, 1);
+        } else {
+            hashedPassword = existingUser.getPassword(); // Use the existing hashed password if no new password is provided
+        }
+
         UserModel updateUser = new UserModel(
-                id, username, password, email, firstname, middlename, lastname, address, birthday, number, usertype, attempts);
-        user.updateUser(updateUser);
-        response.sendRedirect(request.getContextPath() + "/userlist");
-    }
-    
-    private void deleteUser(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, ClassNotFoundException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        UserDao user = new UserDao();
-        user.deleteUser(id);
+                id, username, hashedPassword, email, firstname, middlename, lastname, address, birthday, number, usertype, attempts);
+        userDao.updateUser(updateUser);
         response.sendRedirect(request.getContextPath() + "/userlist");
     }
 
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, ClassNotFoundException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        UserDao userDao = new UserDao();
+        userDao.deleteUser(id);
+        response.sendRedirect(request.getContextPath() + "/userlist");
+    }
 }

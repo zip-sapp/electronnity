@@ -63,7 +63,7 @@ public class ProcessOrderRoute extends HttpServlet {
                 } else {
                     // Clear cart items
                     req.getSession().removeAttribute("cartItems");
-                    resp.sendRedirect(req.getContextPath() + "/order-success.jsp");
+                    resp.sendRedirect(req.getContextPath() + "/ordersuccess");
                 }
             } catch (SQLException e) {
                 LOGGER.log(Level.SEVERE, "Error processing order", e);

@@ -326,7 +326,11 @@
                             <span class="subtotal">₱0.00</span>
                         </div>
                         <div class="products-cart-btn">
-                            <a href="#" class="default-btn">Proceed to Checkout</a>
+                            <!-- Use a form to submit the cart data -->
+                            <form id="checkout-form" action="${pageContext.request.contextPath}/ProcessOrderRoute" method="POST">
+                                <input type="hidden" name="cartItems" id="cartItemsInput">
+                                <button type="submit" class="checkout-button">Proceed to Checkout</button>
+                            </form>
                         </div>
                     </div>
                 </div>

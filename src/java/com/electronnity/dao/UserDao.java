@@ -202,35 +202,44 @@ public class UserDao {
         boolean success = false;
         Connection conn = null;
         PreparedStatement ps = null;
-        String query = "update clientinfo set "
-                + "username = ?, "
-                + "password = ?, "
-                + "email = ?, "
-                + "firstname = ?, "
-                + "middlename = ?, "
-                + "lastname = ?, "
-                + "address = ?, "
-                + "birthday = ?, "
-                + "number = ?, "
-                + "usertype = ?, "
-                + "attempts = ? "
-                + "where id = ? ";
+        String query = "update clientinfo set username = ?, email = ?, firstname = ?, middlename = ?, lastname = ?, address = ?, birthday = ?, number = ?, usertype = ?, attempts = ? where id = ?";
         try {
             conn = ConnectionPool.getConnection();
             conn.setAutoCommit(false); // Start transaction
+
+            // Update the password only if a new password is provided
+            if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+                query = "update clientinfo set username = ?, password = ?, email = ?, firstname = ?, middlename = ?, lastname = ?, address = ?, birthday = ?, number = ?, usertype = ?, attempts = ? where id = ?";
+            }
+
             ps = conn.prepareStatement(query);
             ps.setString(1, user.getUsername());
-            ps.setString(2, user.getPassword());
-            ps.setString(3, user.getEmail());
-            ps.setString(4, user.getFirstName());
-            ps.setString(5, user.getMiddleName());
-            ps.setString(6, user.getLastName());
-            ps.setString(7, user.getAddress());
-            ps.setString(8, user.getBirthday());
-            ps.setString(9, user.getNumber());
-            ps.setString(10, user.getUserType());
-            ps.setString(11, user.getAttempts());
-            ps.setInt(12, user.getId()); // Set the id parameter last
+
+            if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+                ps.setString(2, user.getPassword());
+                ps.setString(3, user.getEmail());
+                ps.setString(4, user.getFirstName());
+                ps.setString(5, user.getMiddleName());
+                ps.setString(6, user.getLastName());
+                ps.setString(7, user.getAddress());
+                ps.setString(8, user.getBirthday());
+                ps.setString(9, user.getNumber());
+                ps.setString(10, user.getUserType());
+                ps.setString(11, user.getAttempts());
+                ps.setInt(12, user.getId());
+            } else {
+                ps.setString(2, user.getEmail());
+                ps.setString(3, user.getFirstName());
+                ps.setString(4, user.getMiddleName());
+                ps.setString(5, user.getLastName());
+                ps.setString(6, user.getAddress());
+                ps.setString(7, user.getBirthday());
+                ps.setString(8, user.getNumber());
+                ps.setString(9, user.getUserType());
+                ps.setString(10, user.getAttempts());
+                ps.setInt(11, user.getId());
+            }
+
             int rowAffected = ps.executeUpdate();
             if (rowAffected != 0) {
                 conn.commit(); // Commit transaction
@@ -263,7 +272,7 @@ public class UserDao {
         }
         return success;
     }
-
+    
     public boolean deleteUser(int id) throws ClassNotFoundException {
         boolean success = false;
         Connection conn  = null;

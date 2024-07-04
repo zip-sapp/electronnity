@@ -29,7 +29,7 @@ public class ordersuccess extends HttpServlet {
         }*/
         
         // Forward the request to verifyPin.jsp
-        request.getRequestDispatcher("/WEB-INF/order-success.jsp").forward(request, response);
+        request.getRequestDispatcher("/order-success.jsp").forward(request, response);
     }
 
     private boolean isValidRequest(HttpServletRequest request) {

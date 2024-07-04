@@ -16,15 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateShoppingCartModal();
     }
 
-    // Function to check if the user is logged in
-    function isLoggedIn() {
-        // Check if the user is logged in
-        // This function should return true if the user is logged in, otherwise false
-        // You might want to check a session or a cookie to verify login status
-        const userRole = sessionStorage.getItem('userRole'); // Example: Get the user's role from sessionStorage
-        return userRole === 'Client' || userRole === 'Administrator';
-    }
-
     // Add event listeners to all add to cart buttons
     document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         button.addEventListener('click', (e) => {
@@ -131,12 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to checkout form
     checkoutForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Prevent the default form submission
-
-        // Check if the user is logged in
-        if (!isLoggedIn()) {
-            window.location.href = 'http://localhost:8080/electronnity/login_warning'; // Redirect to the login page
-            return;
-        }
 
         // Check if the cart is empty
         if (cartItems.length === 0) {

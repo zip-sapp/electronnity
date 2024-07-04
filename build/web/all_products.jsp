@@ -389,20 +389,19 @@
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
                     <div class="modal-body">
                         <h3>My Cart</h3>
-
-                        <div class="products-cart-content">
-                        </div>
-
+                        <div class="products-cart-content"></div>
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
                             <span class="subtotal">₱0.00</span>
                         </div>
-
                         <div class="products-cart-btn">
-                            <a href="#" class="default-btn">Proceed to Checkout</a>
+                            <!-- Use a form to submit the cart data -->
+                            <form id="checkout-form" action="${pageContext.request.contextPath}/ProcessOrderRoute" method="POST">
+                                <input type="hidden" name="cartItems" id="cartItemsInput">
+                                <button type="submit" class="checkout-button">Proceed to Checkout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
