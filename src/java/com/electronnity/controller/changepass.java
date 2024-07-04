@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to changepass this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package com.electronnity.controller;
 
+import com.lambdaworks.crypto.SCryptUtil;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -35,15 +32,14 @@ public class changepass extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
             return;
         }
-        // Forward the request to verifyPin.jsp
+        // Forward the request to change.jsp
         request.getRequestDispatcher("/WEB-INF/change.jsp").forward(request, response);
     }
 
     private boolean isValidRequest(HttpServletRequest request) {
         // Check if the request is coming from a valid source
-        // For example, you can check the referrer or the request headers
         String referrer = request.getHeader("Referer");
-        return referrer!= null && referrer.startsWith("http://localhost:8080/electronnity"); // adjust the URL to your needs
+        return referrer != null && referrer.startsWith("http://localhost:8080/electronnity"); // adjust the URL to your needs
     }
 
     @Override
@@ -67,18 +63,21 @@ public class changepass extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Load the MySQL JDBC driver
-            try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD); PreparedStatement pstmt = conn.prepareStatement("SELECT password FROM electronnity.clientinfo WHERE email =?")) {
+            try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+                 PreparedStatement pstmt = conn.prepareStatement("SELECT password FROM electronnity.clientinfo WHERE email =?")) {
                 pstmt.setString(1, email);
                 ResultSet rs = pstmt.executeQuery();
 
                 if (rs.next()) {
+                    // Hash the new password using WS/Scrypt
+                    String hashedPassword = SCryptUtil.scrypt(newPassword, 16384, 8, 1);
+
                     // Update the password
                     try (PreparedStatement updatePstmt = conn.prepareStatement("UPDATE electronnity.clientinfo SET password =? WHERE email =?")) {
-                        updatePstmt.setString(1, newPassword);
+                        updatePstmt.setString(1, hashedPassword);
                         updatePstmt.setString(2, email);
                         updatePstmt.executeUpdate();
 
-                        response.getWriter().println("Password changed successfully.");
                         response.sendRedirect("changepass_success");
                     }
                 } else {

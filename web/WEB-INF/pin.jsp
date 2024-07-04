@@ -108,7 +108,7 @@
                                         <div class="x-text-content-text">
                                             <span class="x-text-content-text-primary">
                                             Wait for <a target="_blank"><span id="timer"> </span></a> to re-send PIN <br>
-                                            Check in Inbox or Spam folder <a target="_blank" href="/privacy-policy/">Resend Code</a>.
+                                            Check in Inbox or Spam folder <a target="_blank">Resend Code</a>.
                                         </span>
                                     </div>
                                 </div>

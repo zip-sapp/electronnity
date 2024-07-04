@@ -95,10 +95,10 @@
                                 </div>
                             </div>
                         </div>
-                        <form method ="POST" action = "${pageContext.request.contextPath}/verifyPin" class="x-div e22311-e230 mh7r-7 mh7r-8 mh7r-c mh7r-d mh7r-l mh7r-o mh7r-p mh7r-q mh7r-1l">
+                        <form method ="POST" action = "${pageContext.request.contextPath}/verifypin" class="x-div e22311-e230 mh7r-7 mh7r-8 mh7r-c mh7r-d mh7r-l mh7r-o mh7r-p mh7r-q mh7r-1l">
                             <div class="x-div e22311-e231 mh7r-7 mh7r-8 mh7r-d mh7r-g mh7r-i mh7r-k mh7r-q mh7r-r mh7r-w">
                                 <div class="x-div e22311-e232 mh7r-7 mh7r-8 mh7r-d mh7r-l mh7r-q mh7r-r mh7r-1f sa-input-wrapper">
-                                    <input type="pin" name="pin" id="pin" placeholder=" " />
+                                    <input type="text" name="pin" id="pin" placeholder=" " />
                                     <label for="pin">Enter Pin</label>
                                 </div>
                             </div>
@@ -109,16 +109,49 @@
                                     <span class="sc-busy">
                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.9042 8.61199C13.7024 9.77403 13.1883 10.8593 12.4168 11.7514C11.6454 12.6436 10.6458 13.3091 9.52506 13.6765C8.40433 14.0439 7.20474 14.0995 6.05484 13.8373C4.90493 13.5751 3.84804 13.0049 2.99741 12.1879C2.14679 11.3709 1.53448 10.3379 1.22611 9.1995C0.917735 8.0611 0.924914 6.86025 1.24688 5.72561C1.56884 4.59098 2.19345 3.56534 3.05378 2.75857C3.91412 1.9518 4.97775 1.39432 6.13071 1.14586" stroke="var(--white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                </button>
+                                    </svg>
+                                </span>
+                            </button>
+                                <div class="x-text x-text-headline e22311-e254 mh7r-1p mh7r-1r mh7r-1s mh7r-1t mh7r-1v mh7r-1y mh7r-24 mh7r-26 mh7r-29 mh7r-2e mh7r-2r mh7r-2s mh7r-3 mh7r-4 mh7r-5">
+                                    <div class="x-text-content">
+                                        <div class="x-text-content-text">
+                                            <span class="x-text-content-text-primary">
+                                            Wait for <a target="_blank"><span id="timer"> </span></a> to re-send PIN <br>
+                                            Check in Inbox or Spam folder <a target="_blank">Resend Code</a>.
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+<script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var interval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var oneMinute = 60, // 1 minute in seconds
+            display = document.querySelector('#timer');
+        startTimer(oneMinute, display);
+    };
+</script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-22311.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-21811.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/cs-15280.js"></script>
