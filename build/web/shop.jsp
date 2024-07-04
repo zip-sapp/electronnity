@@ -233,7 +233,7 @@
                                         </div>
                                     </div>
                                     <div class="x-div e22655-e15 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-y mhhb-10">
-                                        <div class="x-div e22655-e16 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-s mhhb-t mhhb-v mhhb-y mhhb-10 mhhb-15"><span class="x-image e22655-e17 mhhb-4k mhhb-4l mhhb-4m mhhb-3 mhhb-5"><img src="images/merch-images/logo (transparent).png" width="200" height="200" alt="Image"></span></div>
+                                        <div class="x-div e22655-e16 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-s mhhb-t mhhb-v mhhb-y mhhb-10 mhhb-15"><span class="x-image e22655-e17 mhhb-4k mhhb-4l mhhb-4m mhhb-3 mhhb-5"><img src="" width="300" height="200" alt="Image"></span></div>
                                         <div class="x-div e22655-e19 mhhb-8 mhhb-9 mhhb-a mhhb-f mhhb-g mhhb-h mhhb-i mhhb-l mhhb-m mhhb-o mhhb-p mhhb-s mhhb-t mhhb-y mhhb-14 mhhb-16 mhhb-17 mhhb-18">
                                             <div class="x-div e22655-e20 mhhb-8 mhhb-9 mhhb-a mhhb-g mhhb-h mhhb-l mhhb-m mhhb-q mhhb-10">
                                                 <div class="x-text x-text-headline e22655-e21 mhhb-1x mhhb-1y mhhb-1z mhhb-23 mhhb-29 mhhb-2c mhhb-2d mhhb-2j mhhb-2k mhhb-2l mhhb-2m">
@@ -246,7 +246,7 @@
                                                 <a class="x-anchor x-anchor-button has-particle e22655-e28 mhhb-3m mhhb-3r mhhb-3s mhhb-3t mhhb-3u mhhb-3v mhhb-3w mhhb-3x mhhb-3 mhhb-4" tabindex="0">
                                                     <span class="x-particle is-primary" data-x-particle="inside-c_c" aria-hidden="true"></span>
                                                     <div class="x-anchor-content">
-                                                        <div class="x-anchor-text"><span class="x-anchor-text-primary">SOON</span></div>
+                                                        <div class="x-anchor-text"><span class="x-anchor-text-primary">PRE-ORDER</span></div>
                                                     </div>
                                                 </a>
                                             </div>
@@ -710,7 +710,7 @@
                             </div>
                         </li>
                         <li class="x-div e21968-e15-v0 mgy8-f mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-s mgy8-u mgy8-v mgy8-x mgy8-18 mgy8-3">
-                            <a class="x-anchor x-anchor-button e21968-e15-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7 coming-soon">
+                            <a class="x-anchor x-anchor-button e21968-e15-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7 ">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">LA BELLE</span>
@@ -719,7 +719,7 @@
                             </a>
                         </li>
                         <li class="x-div e21968-e16-v0 mgy8-f mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-s mgy8-u mgy8-v mgy8-x mgy8-18 mgy8-3">
-                            <a class="x-anchor x-anchor-button e21968-e16-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7 coming-soon">
+                            <a class="x-anchor x-anchor-button e21968-e16-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7 ">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">DUALITY</span>
@@ -728,7 +728,7 @@
                             </a>
                         </li>
                         <li class="x-div e21968-e17-v0 mgy8-f mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-s mgy8-u mgy8-v mgy8-x mgy8-18 mgy8-3">
-                            <a class="x-anchor x-anchor-button e21968-e17-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7" tabindex="0" style="--_item-number: 4;" data-sa-event="header_dropdowm_HEARTS">
+                            <a class="x-anchor x-anchor-button e21968-e17-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">REVVING</span>
@@ -737,7 +737,7 @@
                             </a>
                         </li>
                         <li class="x-div e21968-e18-v0 mgy8-f mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-s mgy8-u mgy8-v mgy8-x mgy8-18 mgy8-3">
-                            <a class="x-anchor x-anchor-button e21968-e18-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7" tabindex="0" style="--_item-number: 5;" data-sa-event="header_dropdowm_NURTURE">
+                            <a class="x-anchor x-anchor-button e21968-e18-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">KAISEN</span>
@@ -746,7 +746,7 @@
                             </a>
                         </li>
                         <li class="x-div e21968-e19-v0 mgy8-f mgy8-m mgy8-n mgy8-o mgy8-p mgy8-q mgy8-r mgy8-s mgy8-u mgy8-v mgy8-x mgy8-18 mgy8-3">
-                            <a class="x-anchor x-anchor-button e21968-e19-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7" tabindex="0" style="--_item-number: 6;" data-sa-event="header_dropdowm_CHROMA">
+                            <a class="x-anchor x-anchor-button e21968-e19-v1 mgy8-3y mgy8-3z mgy8-40 mgy8-41 mgy8-43 mgy8-44 mgy8-47 mgy8-4a mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f mgy8-3 mgy8-6 mgy8-7">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">UNIVERSITY</span>

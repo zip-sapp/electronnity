@@ -120,7 +120,6 @@
                                 <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link ">Home</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link active">Products</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
                             </ul>
                         
                             <div class="others-option">

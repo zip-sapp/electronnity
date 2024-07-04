@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const shoppingCartModal = document.querySelector('#shoppingCartModal');
     const productsCartContent = document.querySelector('.products-cart-content');
     const subtotalElement = document.querySelector('.subtotal');
+    const checkoutForm = document.querySelector('#checkout-form');
+    const cartItemsInput = document.querySelector('#cartItemsInput');
+    const checkoutButton = document.querySelector('.checkout-button');
 
     // Cart items array
     let cartItems = [];
@@ -11,6 +14,15 @@ document.addEventListener("DOMContentLoaded", function() {
     if (sessionStorage.getItem('cartItems')) {
         cartItems = JSON.parse(sessionStorage.getItem('cartItems'));
         updateShoppingCartModal();
+    }
+
+    // Function to check if the user is logged in
+    function isLoggedIn() {
+        // Check if the user is logged in
+        // This function should return true if the user is logged in, otherwise false
+        // You might want to check a session or a cookie to verify login status
+        const userRole = sessionStorage.getItem('userRole'); // Example: Get the user's role from sessionStorage
+        return userRole === 'Client' || userRole === 'Administrator';
     }
 
     // Add event listeners to all add to cart buttons
@@ -114,6 +126,53 @@ document.addEventListener("DOMContentLoaded", function() {
                 updateShoppingCartModal();
             }
         }
+    });
+
+    // Add event listener to checkout form
+    checkoutForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Check if the user is logged in
+        if (!isLoggedIn()) {
+            window.location.href = 'http://localhost:8080/electronnity/login_warning'; // Redirect to the login page
+            return;
+        }
+
+        // Check if the cart is empty
+        if (cartItems.length === 0) {
+            alert('Your cart is empty. Please add items to the cart before checking out.');
+            return;
+        }
+
+        // Prepare cart items as a JSON string
+        cartItemsInput.value = JSON.stringify(cartItems);
+
+        // Now submit the form
+        fetch(checkoutForm.action, {
+            method: checkoutForm.method,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(new FormData(checkoutForm))
+        })
+        .then(response => {
+            if (response.redirected) {
+                // Clear the cart
+                sessionStorage.removeItem('cartItems');
+                cartItems.length = 0;
+                updateShoppingCartModal();
+                // Redirect to the success page
+                window.location.href = response.url;
+            } else {
+                return response.text().then(text => {
+                    alert('Error processing order: ' + text);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error processing order');
+        });
     });
 
     // Function to close the modal

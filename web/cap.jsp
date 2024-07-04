@@ -120,7 +120,6 @@
                                 <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link ">Home</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link active">Products</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
                             </ul>
                         
                             <div class="others-option">
@@ -160,8 +159,6 @@
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
 
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
-                                   
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -338,28 +335,26 @@
         <!-- End Shopping Cart Modal -->
 
         <!-- Start Shipping Modal Area -->
-        <div class="modal fade productsShippingModal" id="productsShippingModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
-                    <div class="shipping-content">
-                        <h3>Shipping</h3>
-                        <ul>
-                            <li>Complimentary ground shipping within 1 to 7 business days</li>
-                            <li>In-store collection available within 1 to 7 business days</li>
-                            <li>Next-day and Express delivery options also available</li>
-                            <li>Purchases are delivered in an orange box tied with a Bolduc ribbon, with the exception of certain items</li>
-                            <li>See the delivery FAQs for details on shipping methods, costs and delivery times</li>
-                        </ul>
-
-                        <h3>Returns and Exchanges</h3>
-                        <ul>
-                            <li>Easy and complimentary, within 14 days</li>
-                            <li>See conditions and procedure in our return FAQs</li>
-                        </ul>
+                    <div class="modal-body">
+                        <h3>My Cart</h3>
+                        <div class="products-cart-content"></div>
+                        <div class="products-cart-subtotal">
+                            <span>Subtotal</span>
+                            <span class="subtotal">₱0.00</span>
+                        </div>
+                        <div class="products-cart-btn">
+                            <!-- Use a form to submit the cart data -->
+                            <form id="checkout-form" action="${pageContext.request.contextPath}/ProcessOrderRoute" method="POST">
+                                <input type="hidden" name="cartItems" id="cartItemsInput">
+                                <button type="submit" class="checkout-button">Proceed to Checkout</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

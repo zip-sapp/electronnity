@@ -271,7 +271,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="x-text x-text-headline e8-e33 m8-1i m8-1j m8-1l m8-1m m8-1n m8-1o m8-1q m8-1r m8-1v m8-1y m8-2e m8-2f">
+                                            <div class="x-text x-text-headline e8-e33 m8-1i m8-1j m8-1l m8-1m m8-1n m8-1o m8-1q m8-1r m8-1v m8-1y m8-2e m8-2f" >
                                                 <div class="x-text-content">
                                                     <div class="x-text-content-text">
                                                         <h3 class="x-text-content-text-primary">UNIVERSITY</h3>
@@ -279,7 +279,7 @@
                                                 </div>
                                             </div>
                                             <span class="x-image e8-e34 m8-3d m8-3e">
-                                                <img decoding="async" src="data:image/svg+xml,%3Csvg%20
+                                                <img decoding="async" src="data:image/svg+xml,%3Csvg%20 
                                                      xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" width="200" height="200" alt="Image" data-lazy-src="">
                                                 <noscript>
                                                 <img decoding="async" src="" width="200" height="200" alt="Image">
@@ -394,7 +394,7 @@
                                             <div class="x-text x-text-headline e8-e47 m8-1i m8-1j m8-1l m8-1m m8-1n m8-1o m8-1q m8-1r m8-1v m8-1y m8-2e m8-2f">
                                                 <div class="x-text-content">
                                                     <div class="x-text-content-text">
-                                                        <h3 class="x-text-content-text-primary">MUGS</h3>
+                                                        <h3 class="x-text-content-text-primary">JACKET</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -821,7 +821,7 @@
                             </div>
                         </li>
                         <li class="x-div filler5-v0 bar-text col inn-col s-col bar-margin8 bar-margin_2">
-                            <a class="x-anchor x-anchor-button filler5-v1 bar-margin_2y bar-margin_2z mg-up mg-op mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f bar-margin_2  coming-soon">
+                            <a class="x-anchor x-anchor-button filler5-v1 bar-margin_2y bar-margin_2z mg-up mg-op mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f bar-margin_2">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">LA BELLE</span>
@@ -830,7 +830,7 @@
                             </a>
                         </li>
                         <li class="x-div filler6-v0 bar-text col inn-col s-col bar-margin8 bar-margin_2">
-                            <a class="x-anchor x-anchor-button filler6-v1 bar-margin_2y bar-margin_2z mg-up mg-op mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f bar-margin_2  coming-soon">
+                            <a class="x-anchor x-anchor-button filler6-v1 bar-margin_2y bar-margin_2z mg-up mg-op mgy8-4b mgy8-4c mgy8-4d mgy8-4e mgy8-4f bar-margin_2">
                                 <div class="x-anchor-content">
                                     <div class="x-anchor-text">
                                         <span class="x-anchor-text-primary">DUALITY</span>
