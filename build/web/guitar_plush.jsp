@@ -121,7 +121,6 @@
                                 <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link ">Home</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link active">Products</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
                             </ul>
                         
                             <div class="others-option">
@@ -161,8 +160,6 @@
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
 
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
-                                   
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -227,35 +224,40 @@
 
         <!-- Start Product Details Area -->
         <section class="product-details-area pt-100 pb-70">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-12">
-                        <div class="products-details-image">
-                            <div class="single-products-details-image">
-                                <img src="images/merch-images/guitar_plush.png" alt="image">
-                            </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-12">
+                    <div class="products-details-image">
+                        <div class="single-products-details-image">
+                            <img src="images/merch-images/guitar_plush.png" alt="image">
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-7 col-md-12">
-                        <div class="products-details-desc products-details-desc-sticky">
-                            <h3>Electric Guitar Plush</h2>
+                <div class="col-lg-7 col-md-12">
+                    <div class="products-details-desc">
+                        <h3>Electric Guitar Plush</h3>
+                        <div class="price">
+                            <span class="new-price">₱150.00</span>
+                        </div>
 
-                            <div class="price">
-                                <span class="new-price">₱150.00</span>
-                            </div>
-            
-                            <ul class="products-info">
-                                <li><span>Availability:</span> <a href="#">In stock</a></li>
-                                <li><span>Products Type:</span> <a href="guitar_plush.jsp">Plush</a></li>
-                            </ul>
-                            
-                            <div class="products-size-wrapper">
+                        <ul class="products-info">
+                            <li><span>Availability:</span> <a>In stock</a></li>
+                            <li><span>Products Type:</span> <a>Plush</a></li>
+                        </ul>
+
+                        <div class="products-container">
+                            <div class="products-size-wrapper" 
+                                 data-product-id="SDK43A9L8M" 
+                                 data-product-name="Electric Guitar Plush" 
+                                 data-product-price="₱150.00" 
+                                 data-product-image="images/merch-images/guitar_plush.png">
                                 <div class="products-add-to-cart">
-                                    <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                    <button type="button" class="default-btn add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
                                 </div>
                             </div>
-                            
+                        </div>
+
                             <div class="products-details-accordion">
                                 <ul class="accordion">
                                     <li class="accordion-item">
@@ -317,28 +319,26 @@
         </section>
         <!-- End Product Details Area -->
 
-       <!-- Start Shopping Cart Modal -->
+        <!-- Include your shopping cart modal -->
         <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
                     <div class="modal-body">
                         <h3>My Cart</h3>
-
-                        <div class="products-cart-content">
-                        </div>
-
+                        <div class="products-cart-content"></div>
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-
                             <span class="subtotal">₱0.00</span>
                         </div>
-
                         <div class="products-cart-btn">
-                            <a href="#" class="default-btn">Proceed to Checkout</a>
+                            <!-- Use a form to submit the cart data -->
+                            <form id="checkout-form" action="${pageContext.request.contextPath}/ProcessOrderRoute" method="POST">
+                                <input type="hidden" name="cartItems" id="cartItemsInput">
+                                <button type="submit" class="checkout-button">Proceed to Checkout</button>
+                            </form>
                         </div>
                     </div>
                 </div>

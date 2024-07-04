@@ -73,28 +73,21 @@ public class ProductDao {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        String query = ""
-                + "SELECT productid, "
-                + "productname, "
-                + "description, "
-                + "size, "
-                + "price, "
-                + "quantity "
-                + "FROM productinfo "
-                + "WHERE productid = ? ";
+        String query = "SELECT * FROM productinfo WHERE productid = ?";
         try {
             conn = ConnectionPool.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, productid);
             rs = ps.executeQuery();
             if (rs.next()) {
-                productid = rs.getString("productid");
-                String productname = rs.getString("productname");
-                String description = rs.getString("description");
-                String size = rs.getString("size");
-                BigDecimal price = rs.getBigDecimal("price");
-                int quantity = rs.getInt("quantity");
-                productDetails = new ProductModel(productid, productname, description, size, price, quantity);
+                productDetails = new ProductModel(
+                    rs.getString("productid"),
+                    rs.getString("productname"),
+                    rs.getString("description"),
+                    rs.getString("size"),
+                    rs.getBigDecimal("price"),
+                    rs.getInt("quantity")
+                );
             }
         } catch (SQLException e) {
             System.out.println("getProductDetails Error: " + e);
@@ -120,7 +113,6 @@ public class ProductDao {
                     //ignore
                 }
             }
-
         }
         return productDetails;
     }
@@ -252,5 +244,34 @@ public class ProductDao {
 
         }
         return success;
+    }
+    
+    public boolean reduceProductQuantity(String productId, int quantity) throws ClassNotFoundException, SQLException {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        String query = "UPDATE productinfo SET quantity = quantity - ? WHERE productid = ?";
+
+        try {
+            conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false); // Start a transaction
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, quantity);
+            ps.setString(2, productId);
+            int rowsUpdated = ps.executeUpdate();
+            conn.commit(); // Commit the transaction
+            return rowsUpdated > 0;
+        } catch (SQLException e) {
+            if (conn != null) {
+                conn.rollback(); // Roll back the transaction if an exception occurs
+            }
+            throw e; // Rethrow the exception
+        } finally {
+            if (ps != null) {
+                ps.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
     }
 }

@@ -120,7 +120,6 @@
                                 <li class="nav-item"><a href="${pageContext.request.contextPath}/merch" class="nav-link ">Home</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a></li>
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link active">Products</a></li>
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a></li>
                             </ul>
                         
                             <div class="others-option">
@@ -160,8 +159,6 @@
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/shop" class="nav-link">Shop</a>
 
                                 <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/all_products" class="nav-link">Products</a>
-                                   
-                                <li class="nav-item megamenu"><a href="${pageContext.request.contextPath}/login" class="nav-link">Login</a>
 
                                 </li>
                             </ul>
@@ -253,21 +250,26 @@
                     </div>
 
                     <div class="col-lg-7 col-md-12">
-                        <div class="products-details-desc products-details-desc-sticky">
+                        <div class="products-details-desc">
                             <h3>Signature Cap</h3>
-
                             <div class="price">
                                 <span class="new-price">₱200.00</span>
                             </div>
-            
+
                             <ul class="products-info">
-                                <li><span>Availability:</span> <a href="#">In stock</a></li>
-                                <li><span>Products Type:</span> <a href="#">Cap</a></li>
+                                <li><span>Availability:</span> <a>In stock</a></li>
+                                <li><span>Products Type:</span> <a>Plush</a></li>
                             </ul>
 
-                            <div class="products-size-wrapper">
-                                <div class="products-add-to-cart">
-                                    <button type="submit" class="default-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <div class="products-container">
+                                <div class="products-size-wrapper" 
+                                     data-product-id="SDKR4T7Y3B" 
+                                     data-product-name="Signature Cap" 
+                                     data-product-price="₱200.00" 
+                                     data-product-image="images/merch-images/black-cap_front.png">
+                                    <div class="products-add-to-cart">
+                                        <button type="button" class="default-btn add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -298,8 +300,8 @@
                                                 <li><b>Small/Medium:</b> Head Circumference 21 to 23 inches (53 to 58 cm)</li>
                                                 <li><b>Large/X-Large:</b> Head Circumference 23 to 25 inches (58 to 63 cm)</li>
                                                 <li><b>Colors:</b> Black,Blue, Teal, Green, Red</li>
-                                            </ul>
-                                        </div>
+                                        </ul>
+                                    </div>
                                 </ul>
                             </div>
                         </div>
@@ -316,72 +318,19 @@
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
                     <div class="modal-body">
-                        <h3>My Cart (3)</h3>
-
-                        <div class="products-cart-content">
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/sp_black-cap_front.png" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Signature Cap</a></h3>
-                                    <span>Black / S</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">₱200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/products/img2.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Causal V-Neck Soft Raglan</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-
-                            <div class="products-cart">
-                                <div class="products-image">
-                                    <a href="#"><img src="images/merch-images/products/img3.jpg" alt="image"></a>
-                                </div>
-
-                                <div class="products-content">
-                                    <h3><a href="#">Hanes Men's Pullover</a></h3>
-                                    <span>Blue / XS</span>
-                                    <div class="products-price">
-                                        <span>1</span>
-                                        <span>x</span>
-                                        <span class="price">$200.00</span>
-                                    </div>
-                                    <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
-                                </div>
-                            </div>
-                        </div>
-
+                        <h3>My Cart</h3>
+                        <div class="products-cart-content"></div>
                         <div class="products-cart-subtotal">
                             <span>Subtotal</span>
-
-                            <span class="subtotal">$524.00</span>
+                            <span class="subtotal">₱0.00</span>
                         </div>
-
                         <div class="products-cart-btn">
-                            <a href="#" class="default-btn">Proceed to Checkout</a>
-                            <a href="#" class="optional-btn">View Shopping Cart</a>
+                            <!-- Use a form to submit the cart data -->
+                            <form id="checkout-form" action="${pageContext.request.contextPath}/ProcessOrderRoute" method="POST">
+                                <input type="hidden" name="cartItems" id="cartItemsInput">
+                                <button type="submit" class="checkout-button">Proceed to Checkout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -390,28 +339,26 @@
         <!-- End Shopping Cart Modal -->
 
         <!-- Start Shipping Modal Area -->
-        <div class="modal fade productsShippingModal" id="productsShippingModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class='bx bx-x'></i></span>
                     </button>
-
-                    <div class="shipping-content">
-                        <h3>Shipping</h3>
-                        <ul>
-                            <li>Complimentary ground shipping within 1 to 7 business days</li>
-                            <li>In-store collection available within 1 to 7 business days</li>
-                            <li>Next-day and Express delivery options also available</li>
-                            <li>Purchases are delivered in an orange box tied with a Bolduc ribbon, with the exception of certain items</li>
-                            <li>See the delivery FAQs for details on shipping methods, costs and delivery times</li>
-                        </ul>
-
-                        <h3>Returns and Exchanges</h3>
-                        <ul>
-                            <li>Easy and complimentary, within 14 days</li>
-                            <li>See conditions and procedure in our return FAQs</li>
-                        </ul>
+                    <div class="modal-body">
+                        <h3>My Cart</h3>
+                        <div class="products-cart-content"></div>
+                        <div class="products-cart-subtotal">
+                            <span>Subtotal</span>
+                            <span class="subtotal">₱0.00</span>
+                        </div>
+                        <div class="products-cart-btn">
+                            <!-- Use a form to submit the cart data -->
+                            <form id="checkout-form" action="${pageContext.request.contextPath}/ProcessOrderRoute" method="POST">
+                                <input type="hidden" name="cartItems" id="cartItemsInput">
+                                <button type="submit" class="checkout-button">Proceed to Checkout</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

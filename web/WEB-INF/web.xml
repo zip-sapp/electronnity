@@ -160,6 +160,14 @@
         <servlet-name>cap</servlet-name>
         <servlet-class>com.electronnity.controller.cap</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProcessOrderRoute</servlet-name>
+        <servlet-class>com.electronnity.controller.ProcessOrderRoute</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ordersuccess</servlet-name>
+        <servlet-class>com.electronnity.controller.ordersuccess</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -359,6 +367,14 @@
     <servlet-mapping>
         <servlet-name>cap</servlet-name>
         <url-pattern>/cap</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcessOrderRoute</servlet-name>
+        <url-pattern>/ProcessOrderRoute</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ordersuccess</servlet-name>
+        <url-pattern>/ordersuccess</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

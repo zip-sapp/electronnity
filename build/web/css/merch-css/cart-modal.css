@@ -91,3 +91,56 @@
   .shopping-cart-modal.modal-content.products-cart-btn button:hover {
     background-color: #23527c;
   }
+  
+  /* Shopping Cart Modal Styles */
+  .shopping-cart-modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .shopping-cart-modal.show {
+      display: flex;
+  }
+
+  .shopping-cart-modal .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+  }
+
+  .shopping-cart-modal .modal-content h3 {
+      font-size: 24px;
+      margin: 0 0 10px;
+  }
+
+  .shopping-cart-modal .modal-content .subtotal {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0;
+  }
+
+  .shopping-cart-modal .modal-content .products-cart-btn {
+      margin: 20px 0;
+  }
+
+  .shopping-cart-modal .modal-content .products-cart-btn button {
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+
+  .shopping-cart-modal .modal-content .products-cart-btn button:hover {
+      background-color: #23527c;
+  }

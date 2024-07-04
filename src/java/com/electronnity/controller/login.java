@@ -4,6 +4,7 @@
  */
 package com.electronnity.controller;
 
+import com.lambdaworks.crypto.SCryptUtil;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -58,7 +59,7 @@ public class login extends HttpServlet {
         String password = request.getParameter("password");
 
         // Premade administrator account
-        if (email.equals("administrator@electronnity.co") && password.equals("Giraffe#LemonTree88!")) {
+        if (email.equals("administrator@electronnity.co") && password.equals("@AdminNity3115!")) {
             // Administrator account, set usertype to "Administrator"
             request.getSession().setAttribute("usertype", "Administrator");
             request.getSession().setAttribute("username", "Administrator"); // Set username to "Administrator"
@@ -88,7 +89,8 @@ public class login extends HttpServlet {
                         return;
                     }
 
-                    if (!password.equals(storedPassword)) {
+                    // Verify the password using WS/Scrypt
+                    if (!SCryptUtil.check(password, storedPassword)) {
                         // Invalid password, increment attempts
                         attempts++;
                         pstmt = conn.prepareStatement("UPDATE electronnity.clientinfo SET attempts =? WHERE email =?");

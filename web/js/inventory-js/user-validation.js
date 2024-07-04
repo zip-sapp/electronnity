@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
         function userRoles(k) {
             var usertype = k;
             var whitespaces10 = usertype.trim();
-            if (k!== "Administrator" && k!== "Client" || whitespaces10 === "") {
+            if (k !== "Administrator" && k !== "Client" || whitespaces10 === "") {
                 errorMessage += "Error: Invalid user role. Please select either Administrator or Client.\n";
             }
         }
@@ -145,6 +145,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (errorMessage !== '') {
             alert(errorMessage);
             event.preventDefault();
+        } else {
+            alert("All validations are correct. Form will be submitted.");
         }
     });
 });
