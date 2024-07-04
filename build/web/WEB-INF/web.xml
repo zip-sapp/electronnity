@@ -17,10 +17,6 @@
         <servlet-class>com.electronnity.controller.forget</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>verifypin</servlet-name>
-        <servlet-class>com.electronnity.controller.verifypin</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>changepass</servlet-name>
         <servlet-class>com.electronnity.controller.changepass</servlet-class>
     </servlet>
@@ -168,6 +164,10 @@
         <servlet-name>ordersuccess</servlet-name>
         <servlet-class>com.electronnity.controller.ordersuccess</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>verifypin</servlet-name>
+        <servlet-class>com.electronnity.controller.verifypin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -183,10 +183,6 @@
     <servlet-mapping>
         <servlet-name>forget</servlet-name>
         <url-pattern>/forget</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>verifypin</servlet-name>
-        <url-pattern>/verifypin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>changepass</servlet-name>
@@ -375,6 +371,10 @@
     <servlet-mapping>
         <servlet-name>ordersuccess</servlet-name>
         <url-pattern>/ordersuccess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>verifypin</servlet-name>
+        <url-pattern>/verifypin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
