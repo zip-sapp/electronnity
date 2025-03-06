@@ -1,7 +1,7 @@
-# Electronnity
+# Electron Nity
 
 ## 📌 Overview
-**Electronnity** is a cutting-edge website designed for artists and producers, providing high-quality samples, loops, and presets to keep creativity flowing. It also features a standalone merchandise store with e-commerce functionality. This project was developed as part of the **Polytechnic University of the Philippines Web Development II** course and received a **perfect grade of 1.00**.
+**Electron Nity (electronnity.co)** is a cutting-edge website designed for artists and producers, providing high-quality samples, loops, and presets to keep creativity flowing. It also features a standalone merchandise store with e-commerce functionality. This project was developed as part of the **Polytechnic University of the Philippines Web Development II** course and received a **perfect grade of 1.00**.
 
 ### 🌟 Inspiration
 The design and functionality of Electronnity are inspired by [Stickz.co](https://stickz.co/) and **Pro Theme** in WordPress. The website integrates multiple modern web features, including:
